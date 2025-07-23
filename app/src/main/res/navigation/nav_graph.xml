@@ -49,4 +49,8 @@
         android:id="@+id/gallery_fragment"
         android:name="com.google.mediapipe.examples.objectdetection.fragments.GalleryFragment"
         android:label="GalleryFragment" />
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.google.mediapipe.examples.objectdetection.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>

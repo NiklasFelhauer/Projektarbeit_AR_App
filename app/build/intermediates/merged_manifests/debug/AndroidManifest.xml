@@ -43,16 +43,16 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo_round"
         android:taskAffinity=""
         android:testOnly="true" >
         <activity
             android:name="com.google.mediapipe.examples.objectdetection.MainActivity"
             android:clearTaskOnLaunch="true"
             android:exported="true"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@mipmap/logo"
             android:resizeableActivity="true"
             android:rotationAnimation="seamless"
             android:theme="@style/AppTheme" >

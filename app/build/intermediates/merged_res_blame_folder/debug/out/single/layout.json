@@ -1,15 +1,23 @@
 [
     {
-        "merged": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:/layout/info_bottom_sheet.xml",
-        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/info_bottom_sheet.xml"
+        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:\\layout\\fragment_gallery.xml",
+        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\layout\\fragment_gallery.xml"
     },
     {
-        "merged": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:/layout/fragment_camera.xml",
-        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/fragment_camera.xml"
+        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:/layout/fragment_gallery.xml",
-        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/fragment_gallery.xml"
+        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:\\layout\\fragment_camera.xml",
+        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\layout\\fragment_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:\\layout\\fragment_settings.xml",
+        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\layout\\fragment_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:\\layout\\info_bottom_sheet.xml",
+        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\layout\\info_bottom_sheet.xml"
     },
     {
         "merged": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:/layout/activity_main.xml",

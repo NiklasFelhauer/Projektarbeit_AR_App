@@ -837,7 +837,8 @@ int color highlighted_text_material_light 0x7f060046
 int color icActive 0x7f060047
 int color icFocused 0x7f060048
 int color icPressed 0x7f060049
-int color ic_launcher_background 0x7f06004a
+int color logo 0x7f06008d
+int color logo_background 0x7f06008e
 int color material_blue_grey_800 0x7f06004b
 int color material_blue_grey_900 0x7f06004c
 int color material_blue_grey_950 0x7f06004d
@@ -1235,14 +1236,14 @@ int drawable design_snackbar_background 0x7f080064
 int drawable ic_baseline_add_24 0x7f080065
 int drawable ic_baseline_photo_camera_24 0x7f080066
 int drawable ic_baseline_photo_library_24 0x7f080067
-int drawable ic_launcher_foreground 0x7f080068
 int drawable ic_minus 0x7f080069
 int drawable ic_mtrl_chip_checked_black 0x7f08006a
 int drawable ic_mtrl_chip_checked_circle 0x7f08006b
 int drawable ic_mtrl_chip_close_circle 0x7f08006c
 int drawable ic_plus 0x7f08006d
 int drawable icn_chevron_up 0x7f08006e
-int drawable media_pipe_banner 0x7f08006f
+int drawable logo 0x7f080081
+int drawable logo_background 0x7f080083
 int drawable mtrl_snackbar_background 0x7f080070
 int drawable mtrl_tabs_default_indicator 0x7f080071
 int drawable navigation_empty_icon 0x7f080072
@@ -1258,6 +1259,7 @@ int drawable notification_template_icon_bg 0x7f08007b
 int drawable notification_template_icon_low_bg 0x7f08007c
 int drawable notification_tile_bg 0x7f08007d
 int drawable notify_panel_notification_icon_bg 0x7f08007e
+int drawable settings_24px 0x7f080082
 int drawable tooltip_frame_dark 0x7f08007f
 int drawable tooltip_frame_light 0x7f080080
 int id ALT 0x7f090000
@@ -1529,6 +1531,7 @@ int id search_src_text 0x7f090109
 int id search_voice_btn 0x7f09010a
 int id select_dialog_listview 0x7f09010b
 int id selected 0x7f09010c
+int id settings_fragment 0x7f09016c
 int id shortcut 0x7f09010d
 int id showCustom 0x7f09010e
 int id showHome 0x7f09010f
@@ -1698,6 +1701,7 @@ int layout design_navigation_menu_item 0x7f0c002a
 int layout design_text_input_password_icon 0x7f0c002b
 int layout fragment_camera 0x7f0c002c
 int layout fragment_gallery 0x7f0c002d
+int layout fragment_settings 0x7f0c003b
 int layout info_bottom_sheet 0x7f0c002e
 int layout mtrl_layout_snackbar 0x7f0c002f
 int layout mtrl_layout_snackbar_include 0x7f0c0030
@@ -1712,8 +1716,9 @@ int layout select_dialog_multichoice_material 0x7f0c0038
 int layout select_dialog_singlechoice_material 0x7f0c0039
 int layout support_simple_spinner_dropdown_item 0x7f0c003a
 int menu menu_bottom_nav 0x7f0d0000
-int mipmap ic_launcher 0x7f0e0000
-int mipmap ic_launcher_round 0x7f0e0001
+int mipmap logo 0x7f0e0002
+int mipmap logo_foreground 0x7f0e0004
+int mipmap logo_round 0x7f0e0003
 int navigation nav_graph 0x7f0f0000
 int string abc_action_bar_home_description 0x7f100000
 int string abc_action_bar_up_description 0x7f100001
@@ -1764,6 +1769,7 @@ int string label_max_results 0x7f10002d
 int string label_models 0x7f10002e
 int string menu_camera 0x7f10002f
 int string menu_gallery 0x7f100030
+int string menu_settings 0x7f10003c
 int string mtrl_chip_close_icon_content_description 0x7f100031
 int string nav_app_bar_navigate_up_description 0x7f100032
 int string nav_app_bar_open_drawer_description 0x7f100033

@@ -139,9 +139,9 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\
 	tools:ignore
 		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:37:9-35
 	android:roundIcon
-		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:35:9-54
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:35:9-47
 	android:icon
-		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:33:9-43
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:33:9-36
 	android:allowBackup
 		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:32:9-35
 	android:taskAffinity
@@ -159,7 +159,7 @@ ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit
 	tools:targetApi
 		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:47:13-32
 	android:icon
-		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:43:13-47
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:43:13-40
 	android:theme
 		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:46:13-44
 	android:name

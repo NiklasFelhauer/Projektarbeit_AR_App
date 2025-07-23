@@ -58,12 +58,12 @@
 43-->[androidx.core:core:1.8.0] C:\Users\nikla\.gradle\caches\8.9\transforms\5046810036a2841d2fd842bebf6be4d7\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 44        android:debuggable="true"
 45        android:extractNativeLibs="false"
-46        android:icon="@mipmap/ic_launcher"
-46-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:33:9-43
+46        android:icon="@mipmap/logo"
+46-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:33:9-36
 47        android:label="@string/app_name"
 47-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:34:9-41
-48        android:roundIcon="@mipmap/ic_launcher_round"
-48-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:35:9-54
+48        android:roundIcon="@mipmap/logo_round"
+48-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:35:9-47
 49        android:taskAffinity=""
 49-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:36:9-32
 50        android:testOnly="true" >
@@ -75,8 +75,8 @@
 53-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:41:13-45
 54            android:exported="true"
 54-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:42:13-36
-55            android:icon="@mipmap/ic_launcher"
-55-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:43:13-47
+55            android:icon="@mipmap/logo"
+55-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:43:13-40
 56            android:resizeableActivity="true"
 56-->C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:44:13-46
 57            android:rotationAnimation="seamless"

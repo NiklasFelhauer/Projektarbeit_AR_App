@@ -1259,6 +1259,7 @@ int drawable notification_template_icon_bg 0x7f08007b
 int drawable notification_template_icon_low_bg 0x7f08007c
 int drawable notification_tile_bg 0x7f08007d
 int drawable notify_panel_notification_icon_bg 0x7f08007e
+int drawable sensors_24px 0x7f080084
 int drawable settings_24px 0x7f080082
 int drawable tooltip_frame_dark 0x7f08007f
 int drawable tooltip_frame_light 0x7f080080
@@ -1349,6 +1350,7 @@ int id blocking 0x7f090053
 int id bottom 0x7f090054
 int id bottom_sheet_layout 0x7f090055
 int id bounce 0x7f090056
+int id buttonConnect 0x7f09016d
 int id buttonPanel 0x7f090057
 int id cache_measures 0x7f090058
 int id camera_container 0x7f090059
@@ -1406,7 +1408,6 @@ int id enterAlwaysCollapsed 0x7f09008c
 int id exitUntilCollapsed 0x7f09008d
 int id expand_activities_button 0x7f09008e
 int id expanded_menu 0x7f09008f
-int id fabGetContent 0x7f090090
 int id fill 0x7f090091
 int id fillCenter 0x7f090092
 int id fillEnd 0x7f090093
@@ -1422,7 +1423,6 @@ int id flip 0x7f09009c
 int id forever 0x7f09009d
 int id fragment_container 0x7f09009e
 int id fragment_container_view_tag 0x7f09009f
-int id gallery_fragment 0x7f0900a0
 int id ghost_view 0x7f0900a1
 int id ghost_view_holder 0x7f0900a2
 int id gone 0x7f0900a3
@@ -1440,7 +1440,6 @@ int id ifRoom 0x7f0900ae
 int id ignore 0x7f0900af
 int id ignoreRequest 0x7f0900b0
 int id image 0x7f0900b1
-int id imageResult 0x7f0900b2
 int id inference_time_label 0x7f0900b3
 int id inference_time_val 0x7f0900b4
 int id info 0x7f0900b5
@@ -1466,6 +1465,8 @@ int id message 0x7f0900c8
 int id middle 0x7f0900c9
 int id mini 0x7f0900ca
 int id motion_base 0x7f0900cb
+int id mqttRoot 0x7f09016e
+int id mqtt_fragment 0x7f090170
 int id mtrl_child_content_container 0x7f0900cc
 int id mtrl_internal_children_alpha_tag 0x7f0900cd
 int id multiply 0x7f0900ce
@@ -1500,7 +1501,6 @@ int id permissions_fragment 0x7f0900ea
 int id pin 0x7f0900eb
 int id position 0x7f0900ec
 int id postLayout 0x7f0900ed
-int id progress 0x7f0900ee
 int id progress_circular 0x7f0900ef
 int id progress_horizontal 0x7f0900f0
 int id radio 0x7f0900f1
@@ -1583,6 +1583,7 @@ int id text2 0x7f09013c
 int id textSpacerNoButtons 0x7f09013d
 int id textSpacerNoTitle 0x7f09013e
 int id textStart 0x7f09013f
+int id textTitle 0x7f09016f
 int id textWatcher 0x7f090140
 int id text_input_password_toggle 0x7f090141
 int id textinput_counter 0x7f090142
@@ -1608,13 +1609,11 @@ int id transition_position 0x7f090155
 int id transition_scene_layoutid_cache 0x7f090156
 int id transition_transform 0x7f090157
 int id triangle 0x7f090158
-int id tvPlaceholder 0x7f090159
 int id unchecked 0x7f09015a
 int id uniform 0x7f09015b
 int id unlabeled 0x7f09015c
 int id up 0x7f09015d
 int id useLogo 0x7f09015e
-int id videoView 0x7f09015f
 int id view 0x7f090160
 int id view_finder 0x7f090161
 int id view_offset_helper 0x7f090162
@@ -1700,7 +1699,7 @@ int layout design_navigation_menu 0x7f0c0029
 int layout design_navigation_menu_item 0x7f0c002a
 int layout design_text_input_password_icon 0x7f0c002b
 int layout fragment_camera 0x7f0c002c
-int layout fragment_gallery 0x7f0c002d
+int layout fragment_mqtt 0x7f0c003c
 int layout fragment_settings 0x7f0c003b
 int layout info_bottom_sheet 0x7f0c002e
 int layout mtrl_layout_snackbar 0x7f0c002f
@@ -1768,7 +1767,7 @@ int string label_inference_time 0x7f10002c
 int string label_max_results 0x7f10002d
 int string label_models 0x7f10002e
 int string menu_camera 0x7f10002f
-int string menu_gallery 0x7f100030
+int string menu_mqtt 0x7f10003d
 int string menu_settings 0x7f10003c
 int string mtrl_chip_close_icon_content_description 0x7f100031
 int string nav_app_bar_navigate_up_description 0x7f100032

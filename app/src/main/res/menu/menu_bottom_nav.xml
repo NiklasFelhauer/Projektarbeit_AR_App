@@ -22,9 +22,9 @@
         android:title="@string/menu_camera" />
 
     <item
-        android:id="@id/gallery_fragment"
-        android:icon="@drawable/ic_baseline_photo_library_24"
-        android:title="@string/menu_gallery" />
+        android:id="@id/mqtt_fragment"
+        android:icon="@drawable/sensors_24px"
+        android:title="@string/menu_mqtt" />
 
     <item
         android:id="@id/settings_fragment"

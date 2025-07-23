@@ -1260,6 +1260,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable sensors_24px
 drawable settings_24px
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1350,6 +1351,7 @@ id blocking
 id bottom
 id bottom_sheet_layout
 id bounce
+id buttonConnect
 id buttonPanel
 id cache_measures
 id camera_container
@@ -1407,7 +1409,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fabGetContent
 id fill
 id fillCenter
 id fillEnd
@@ -1423,7 +1424,6 @@ id flip
 id forever
 id fragment_container
 id fragment_container_view_tag
-id gallery_fragment
 id ghost_view
 id ghost_view_holder
 id gone
@@ -1441,7 +1441,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageResult
 id inference_time_label
 id inference_time_val
 id info
@@ -1467,6 +1466,8 @@ id message
 id middle
 id mini
 id motion_base
+id mqttRoot
+id mqtt_fragment
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
@@ -1501,7 +1502,6 @@ id permissions_fragment
 id pin
 id position
 id postLayout
-id progress
 id progress_circular
 id progress_horizontal
 id radio
@@ -1584,6 +1584,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textTitle
 id textWatcher
 id text_input_password_toggle
 id textinput_counter
@@ -1609,13 +1610,11 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tvPlaceholder
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
-id videoView
 id view
 id view_finder
 id view_offset_helper
@@ -1701,7 +1700,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_camera
-layout fragment_gallery
+layout fragment_mqtt
 layout fragment_settings
 layout info_bottom_sheet
 layout mtrl_layout_snackbar
@@ -1769,7 +1768,7 @@ string label_inference_time
 string label_max_results
 string label_models
 string menu_camera
-string menu_gallery
+string menu_mqtt
 string menu_settings
 string mtrl_chip_close_icon_content_description
 string nav_app_bar_navigate_up_description

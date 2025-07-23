@@ -21,7 +21,7 @@ public final class ObjectDetectorHelper {
     public static final int MODEL_TANKS = 0;
     public static final int MODEL_EFFICIENTDETV2 = 1;
     public static final int MAX_RESULTS_DEFAULT = 3;
-    public static final float THRESHOLD_DEFAULT = 0.5F;
+    public static final float THRESHOLD_DEFAULT = 0.8F;
     public static final int OTHER_ERROR = 0;
     public static final int GPU_ERROR = 1;
     @org.jetbrains.annotations.NotNull()

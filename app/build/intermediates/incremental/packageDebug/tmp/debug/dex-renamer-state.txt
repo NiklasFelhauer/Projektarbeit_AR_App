@@ -1,4 +1,4 @@
-#Wed Jul 23 18:32:54 CEST 2025
+#Wed Jul 23 18:35:48 CEST 2025
 base.0=C\:\\Users\\nikla\\Documents\\00_Education\\00_Hka\\Semester_5\\Projektarbeit\\Android_App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\nikla\\Documents\\00_Education\\00_Hka\\Semester_5\\Projektarbeit\\Android_App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\nikla\\Documents\\00_Education\\00_Hka\\Semester_5\\Projektarbeit\\Android_App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex

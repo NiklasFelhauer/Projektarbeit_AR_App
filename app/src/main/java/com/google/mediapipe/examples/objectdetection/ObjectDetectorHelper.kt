@@ -36,7 +36,7 @@ class ObjectDetectorHelper(
     var threshold: Float = THRESHOLD_DEFAULT,
     var maxResults: Int = MAX_RESULTS_DEFAULT,
     var currentDelegate: Int = DELEGATE_CPU,
-    var currentModel: Int = MODEL_EFFICIENTDETV0,
+    var currentModel: Int = MODEL_TANKS,
     var runningMode: RunningMode = RunningMode.IMAGE,
     val context: Context,
     // The listener is only used when running in RunningMode.LIVE_STREAM
@@ -79,10 +79,9 @@ class ObjectDetectorHelper(
         }
 
         val modelName = when (currentModel) {
-            MODEL_EFFICIENTDETV0 -> "efficientdet-lite0.tflite"
-            MODEL_EFFICIENTDETV2 -> "Tanks_V2.tflite"
-            MODEL_SELF -> "model.tflite"
-            else -> "efficientdet-lite0.tflite"
+            MODEL_TANKS -> "Tanks_V2.tflite"
+            MODEL_EFFICIENTDETV2 -> "efficientdet-lite2.tflite"
+            else -> "Tanks_V2.tflite"
         }
 
         baseOptionsBuilder.setModelAssetPath(modelName)
@@ -347,9 +346,8 @@ class ObjectDetectorHelper(
     companion object {
         const val DELEGATE_CPU = 0
         const val DELEGATE_GPU = 1
-        const val MODEL_EFFICIENTDETV0 = 0
+        const val MODEL_TANKS = 0
         const val MODEL_EFFICIENTDETV2 = 1
-        const val MODEL_SELF = 2
         const val MAX_RESULTS_DEFAULT = 3
         const val THRESHOLD_DEFAULT = 0.5F
         const val OTHER_ERROR = 0

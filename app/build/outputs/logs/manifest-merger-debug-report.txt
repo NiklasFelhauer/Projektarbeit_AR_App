@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:17:1-64:12
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:17:1-64:12
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:17:1-64:12
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:17:1-64:12
+ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:17:1-64:12
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:17:1-64:12
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:17:1-64:12
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:17:1-64:12
 MERGED from [androidx.databinding:databinding-adapters:7.3.1] C:\Users\nikla\.gradle\caches\8.9\transforms\da0e3fdad2dc77bd98e8f861f493e23d\transformed\databinding-adapters-7.3.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.databinding:databinding-ktx:7.3.1] C:\Users\nikla\.gradle\caches\8.9\transforms\228ee1ada8dc8397c95d6dd78cd54e2e\transformed\jetified-databinding-ktx-7.3.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.databinding:databinding-runtime:7.3.1] C:\Users\nikla\.gradle\caches\8.9\transforms\2815aeec9874fc4ff78ec6a60ba222b8\transformed\databinding-runtime-7.3.1\AndroidManifest.xml:2:1-9:12
@@ -75,41 +75,41 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\nikla\.gradle\caches\8.9\transforms\93de51ff931b3f40284bdf8c5855c9be\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:15:1-22:12
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\nikla\.gradle\caches\8.9\transforms\7eb857a9cb0cde900aad7bbcc9da7d94\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\bbc0cc4533498fafb4c62bab29df50b2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:17:1-64:12
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:17:1-64:12
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:17:1-64:12
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:17:1-64:12
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:17:1-64:12
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:17:1-64:12
 	package
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:20:5-60
-		INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:20:5-60
+		INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:17:1-64:12
-		INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:17:1-64:12
+		INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:19:5-51
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:19:5-51
 	xmlns:dist
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:18:5-61
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:18:5-61
 	android:versionCode
-		INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:17:1-64:12
-		INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:17:1-64:12
+		INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:17:11-69
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:17:11-69
 dist:module
-ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:23:5-40
+ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:23:5-40
 	dist:instant
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:23:18-37
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:23:18-37
 uses-feature#android.hardware.camera
-ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:26:5-60
+ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:26:5-60
 	android:name
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:26:19-57
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:26:19-57
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:29:5-65
+ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:29:5-65
 	android:name
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:29:22-62
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:29:22-62
 application
-ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:31:5-62:19
+ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:31:5-62:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\nikla\.gradle\caches\8.9\transforms\c6c4a3be46d14f01a86a004805a999e1\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\nikla\.gradle\caches\8.9\transforms\c6c4a3be46d14f01a86a004805a999e1\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\nikla\.gradle\caches\8.9\transforms\8883d60ed338264ccdd1a25245ea9b94\transformed\material-1.0.0\AndroidManifest.xml:22:5-20
@@ -135,55 +135,55 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.8.0] C:\Users\nikla\.gradle\caches\8.9\transforms\5046810036a2841d2fd842bebf6be4d7\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:34:9-41
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:34:9-41
 	tools:ignore
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:37:9-35
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:37:9-35
 	android:roundIcon
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:35:9-54
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:35:9-54
 	android:icon
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:33:9-43
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:33:9-43
 	android:allowBackup
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:32:9-35
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:32:9-35
 	android:taskAffinity
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:36:9-32
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:36:9-32
 activity#com.google.mediapipe.examples.objectdetection.MainActivity
-ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:39:9-60:20
+ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:39:9-60:20
 	android:clearTaskOnLaunch
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:41:13-45
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:41:13-45
 	android:exported
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:42:13-36
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:42:13-36
 	android:resizeableActivity
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:44:13-46
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:44:13-46
 	android:rotationAnimation
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:45:13-49
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:45:13-49
 	tools:targetApi
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:47:13-32
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:47:13-32
 	android:icon
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:43:13-47
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:43:13-47
 	android:theme
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:46:13-44
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:46:13-44
 	android:name
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:40:13-41
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:40:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:50:13-53:29
+ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:50:13-53:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:51:17-69
+ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:51:17-69
 	android:name
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:51:25-66
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:51:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:52:17-77
+ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:52:17-77
 	android:name
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:52:27-74
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:52:27-74
 meta-data#android.notch_support
-ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:56:13-58:40
+ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:56:13-58:40
 	android:value
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:58:17-37
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:58:17-37
 	android:name
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml:57:17-53
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml:57:17-53
 uses-sdk
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:7.3.1] C:\Users\nikla\.gradle\caches\8.9\transforms\da0e3fdad2dc77bd98e8f861f493e23d\transformed\databinding-adapters-7.3.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.databinding:databinding-adapters:7.3.1] C:\Users\nikla\.gradle\caches\8.9\transforms\da0e3fdad2dc77bd98e8f861f493e23d\transformed\databinding-adapters-7.3.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.databinding:databinding-ktx:7.3.1] C:\Users\nikla\.gradle\caches\8.9\transforms\228ee1ada8dc8397c95d6dd78cd54e2e\transformed\jetified-databinding-ktx-7.3.1\AndroidManifest.xml:5:5-7:41
@@ -326,16 +326,16 @@ MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\nikla\.
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\nikla\.gradle\caches\8.9\transforms\7eb857a9cb0cde900aad7bbcc9da7d94\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\bbc0cc4533498fafb4c62bab29df50b2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\bbc0cc4533498fafb4c62bab29df50b2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nikla\Downloads\mediapipe-samples-main\mediapipe-samples-main\examples\object_detection\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\nikla\Documents\00_Education\00_Hka\Semester_5\Projektarbeit\Android_App\app\src\main\AndroidManifest.xml
 service#androidx.camera.core.impl.MetadataHolderService
 ADDED from [androidx.camera:camera-camera2:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:26:9-35:19
 MERGED from [androidx.camera:camera-core:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\3524385f3c71eb7359786615dafca87d\transformed\jetified-camera-core-1.1.0\AndroidManifest.xml:31:9-35:78

@@ -4,25 +4,75 @@ package com.google.mediapipe.examples.objectdetection.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.google.mediapipe.examples.objectdetection.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentSettingsBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
-  private FragmentSettingsBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final TextView maxResultsLabel;
+
+  @NonNull
+  public final ImageButton maxResultsMinus;
+
+  @NonNull
+  public final ImageButton maxResultsPlus;
+
+  @NonNull
+  public final TextView maxResultsValue;
+
+  @NonNull
+  public final Spinner spinnerDelegate;
+
+  @NonNull
+  public final Spinner spinnerModel;
+
+  @NonNull
+  public final TextView thresholdLabel;
+
+  @NonNull
+  public final ImageButton thresholdMinus;
+
+  @NonNull
+  public final ImageButton thresholdPlus;
+
+  @NonNull
+  public final TextView thresholdValue;
+
+  private FragmentSettingsBinding(@NonNull LinearLayout rootView, @NonNull TextView maxResultsLabel,
+      @NonNull ImageButton maxResultsMinus, @NonNull ImageButton maxResultsPlus,
+      @NonNull TextView maxResultsValue, @NonNull Spinner spinnerDelegate,
+      @NonNull Spinner spinnerModel, @NonNull TextView thresholdLabel,
+      @NonNull ImageButton thresholdMinus, @NonNull ImageButton thresholdPlus,
+      @NonNull TextView thresholdValue) {
     this.rootView = rootView;
+    this.maxResultsLabel = maxResultsLabel;
+    this.maxResultsMinus = maxResultsMinus;
+    this.maxResultsPlus = maxResultsPlus;
+    this.maxResultsValue = maxResultsValue;
+    this.spinnerDelegate = spinnerDelegate;
+    this.spinnerModel = spinnerModel;
+    this.thresholdLabel = thresholdLabel;
+    this.thresholdMinus = thresholdMinus;
+    this.thresholdPlus = thresholdPlus;
+    this.thresholdValue = thresholdValue;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +93,75 @@ public final class FragmentSettingsBinding implements ViewBinding {
 
   @NonNull
   public static FragmentSettingsBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.max_results_label;
+      TextView maxResultsLabel = ViewBindings.findChildViewById(rootView, id);
+      if (maxResultsLabel == null) {
+        break missingId;
+      }
 
-    return new FragmentSettingsBinding((ConstraintLayout) rootView);
+      id = R.id.max_results_minus;
+      ImageButton maxResultsMinus = ViewBindings.findChildViewById(rootView, id);
+      if (maxResultsMinus == null) {
+        break missingId;
+      }
+
+      id = R.id.max_results_plus;
+      ImageButton maxResultsPlus = ViewBindings.findChildViewById(rootView, id);
+      if (maxResultsPlus == null) {
+        break missingId;
+      }
+
+      id = R.id.max_results_value;
+      TextView maxResultsValue = ViewBindings.findChildViewById(rootView, id);
+      if (maxResultsValue == null) {
+        break missingId;
+      }
+
+      id = R.id.spinner_delegate;
+      Spinner spinnerDelegate = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerDelegate == null) {
+        break missingId;
+      }
+
+      id = R.id.spinner_model;
+      Spinner spinnerModel = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerModel == null) {
+        break missingId;
+      }
+
+      id = R.id.threshold_label;
+      TextView thresholdLabel = ViewBindings.findChildViewById(rootView, id);
+      if (thresholdLabel == null) {
+        break missingId;
+      }
+
+      id = R.id.threshold_minus;
+      ImageButton thresholdMinus = ViewBindings.findChildViewById(rootView, id);
+      if (thresholdMinus == null) {
+        break missingId;
+      }
+
+      id = R.id.threshold_plus;
+      ImageButton thresholdPlus = ViewBindings.findChildViewById(rootView, id);
+      if (thresholdPlus == null) {
+        break missingId;
+      }
+
+      id = R.id.threshold_value;
+      TextView thresholdValue = ViewBindings.findChildViewById(rootView, id);
+      if (thresholdValue == null) {
+        break missingId;
+      }
+
+      return new FragmentSettingsBinding((LinearLayout) rootView, maxResultsLabel, maxResultsMinus,
+          maxResultsPlus, maxResultsValue, spinnerDelegate, spinnerModel, thresholdLabel,
+          thresholdMinus, thresholdPlus, thresholdValue);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

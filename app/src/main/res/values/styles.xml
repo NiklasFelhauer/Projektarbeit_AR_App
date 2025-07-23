@@ -22,7 +22,7 @@
     </style>
 
     <style name="BottomSheetSpinnerItemStyle" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
-        <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
+        <item name="android:textSize">@dimen/settings_text_size</item>
     </style>
 
     <style name="AppThemeProgressStyle">

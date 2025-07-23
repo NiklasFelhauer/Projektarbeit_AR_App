@@ -526,14 +526,6 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <dimen name="bottom_sheet_control_btn_size">48dp</dimen>
-    <dimen name="bottom_sheet_control_text_side_margin">10dp</dimen>
-    <dimen name="bottom_sheet_default_row_margin">16dp</dimen>
-    <dimen name="bottom_sheet_padding">16dp</dimen>
-    <dimen name="bottom_sheet_peek_height">50dp</dimen>
-    <dimen name="bottom_sheet_spinner_delegate_min_width">160dp</dimen>
-    <dimen name="bottom_sheet_spinner_model_min_width">240dp</dimen>
-    <dimen name="bottom_sheet_text_size">20sp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -669,6 +661,13 @@
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
     <dimen name="round_button_medium">64dp</dimen>
+    <dimen name="settings_control_button_size">48dp</dimen>
+    <dimen name="settings_control_text_side_margin">10dp</dimen>
+    <dimen name="settings_padding">16dp</dimen>
+    <dimen name="settings_row_margin">16dp</dimen>
+    <dimen name="settings_spinner_delegate_min_width">160dp</dimen>
+    <dimen name="settings_spinner_model_min_width">240dp</dimen>
+    <dimen name="settings_text_size">20sp</dimen>
     <dimen name="stroke_small">4dp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
@@ -777,7 +776,6 @@
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="app_bar_elevation_anim_duration">150</integer>
-    <integer name="bottom_sheet_control_text_min_ems">3</integer>
     <integer name="bottom_sheet_slide_duration">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="config_navAnimTime">150</integer>
@@ -789,6 +787,7 @@
     <integer name="mtrl_btn_anim_duration_ms">100</integer>
     <integer name="mtrl_chip_anim_duration">100</integer>
     <integer name="mtrl_tab_indicator_anim_duration_ms">250</integer>
+    <integer name="settings_control_text_min_ems">3</integer>
     <integer name="show_password_duration">200</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -828,7 +827,7 @@
     <string name="alt_bottom_sheet_threshold_button_plus">Increasing threshold of detected object
         results button</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
-    <string name="app_name">MediaPipe Object Detection</string>
+    <string name="app_name">AR Brau</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string name="character_counter_content_description">Character limit exceeded %1$d of %2$d</string>
@@ -855,8 +854,6 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="tv_gallery_placeholder">Click + to add an image or a video
-        to begin running the object detection.</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -2310,7 +2307,7 @@
     <item name="boxStrokeColor">?attr/colorControlActivated</item>
   </style>
     <style name="BottomSheetSpinnerItemStyle" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
-        <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
+        <item name="android:textSize">@dimen/settings_text_size</item>
     </style>
     <style name="CardView" parent="Base.CardView">
     </style>

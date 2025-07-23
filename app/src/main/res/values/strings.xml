@@ -15,7 +15,7 @@
     ~ limitations under the License.
 -->
 <resources>
-    <string name="app_name">MediaPipe Object Detection</string>
+    <string name="app_name">AR Brau</string>
 
     <string name="alt_bottom_sheet_chevron">Bottom sheet expandable indicator</string>
 
@@ -37,8 +37,6 @@
     <string name="menu_camera">Camera</string>
     <string name="menu_mqtt">MQTT</string>
     <string name="menu_settings">Settings</string>
-    <string name="tv_gallery_placeholder">Click + to add an image or a video
-        to begin running the object detection.</string>
 
     <string-array name="delegate_spinner_titles">
         <item>CPU</item>

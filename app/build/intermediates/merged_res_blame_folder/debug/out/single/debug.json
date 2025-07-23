@@ -40,16 +40,12 @@
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\drawable\\ic_plus.xml"
     },
     {
-        "merged": "com.google.mediapipe.examples.objectdetection.app-merged_res-45:/drawable_sensors_24px.xml.flat",
-        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/drawable/sensors_24px.xml"
+        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\drawable_logo_background.xml.flat",
+        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\drawable\\logo_background.xml"
     },
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\drawable_settings_24px.xml.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\drawable\\settings_24px.xml"
-    },
-    {
-        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\drawable_logo_background.xml.flat",
-        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\drawable\\logo_background.xml"
     },
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\mipmap-xxxhdpi_logo_foreground.webp.flat",
@@ -82,10 +78,6 @@
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\mipmap-xhdpi_logo_round.webp.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\mipmap-xhdpi\\logo_round.webp"
-    },
-    {
-        "merged": "com.google.mediapipe.examples.objectdetection.app-merged_res-45:/menu_menu_bottom_nav.xml.flat",
-        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/menu/menu_bottom_nav.xml"
     },
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\mipmap-xxxhdpi_logo_round.webp.flat",
@@ -152,6 +144,10 @@
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\mipmap-hdpi\\logo.png"
     },
     {
+        "merged": "com.google.mediapipe.examples.objectdetection.app-merged_res-45:/layout_fragment_settings.xml.flat",
+        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/fragment_settings.xml"
+    },
+    {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\mipmap-xxxhdpi_logo.png.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\mipmap-xxxhdpi\\logo.png"
     },
@@ -178,6 +174,10 @@
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\mipmap-xxhdpi_logo_round.webp.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\mipmap-xxhdpi\\logo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\drawable_sensors_24px.xml.flat",
+        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\drawable\\sensors_24px.xml"
     },
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\mipmap-mdpi_logo_round.png.flat",
@@ -218,10 +218,6 @@
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\layout_fragment_camera.xml.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-main-47:\\layout\\fragment_camera.xml"
-    },
-    {
-        "merged": "com.google.mediapipe.examples.objectdetection.app-merged_res-45:/navigation_nav_graph.xml.flat",
-        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/navigation/nav_graph.xml"
     },
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.objectdetection.app-merged_res-45:\\mipmap-anydpi-v26_logo_round.xml.flat",

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:/layout/info_bottom_sheet.xml",
+        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/info_bottom_sheet.xml"
+    },
+    {
+        "merged": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:/layout/fragment_camera.xml",
+        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/fragment_camera.xml"
+    },
+    {
+        "merged": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:/layout/fragment_gallery.xml",
+        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/fragment_gallery.xml"
+    },
+    {
+        "merged": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/activity_main.xml"
+    }
+]

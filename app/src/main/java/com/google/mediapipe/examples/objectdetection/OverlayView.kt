@@ -1,19 +1,3 @@
-/*
- * Copyright 2022 The TensorFlow Authors. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.google.mediapipe.examples.objectdetection
 
 import android.content.Context
@@ -26,8 +10,7 @@ import com.google.mediapipe.tasks.vision.objectdetector.ObjectDetectorResult
 import kotlin.math.max
 import kotlin.math.min
 
-class OverlayView(context: Context?, attrs: AttributeSet?) :
-    View(context, attrs) {
+class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
     private var results: ObjectDetectorResult? = null
     private var boxPaint = Paint()
@@ -39,6 +22,9 @@ class OverlayView(context: Context?, attrs: AttributeSet?) :
     private var outputHeight = 0
     private var outputRotate = 0
     private var runningMode: RunningMode = RunningMode.IMAGE
+
+    // Neue Variable für simulierte Werte
+    private var simulatedValues: Map<String, Float> = emptyMap()
 
     init {
         initPaints()
@@ -55,6 +41,11 @@ class OverlayView(context: Context?, attrs: AttributeSet?) :
 
     fun setRunningMode(runningMode: RunningMode) {
         this.runningMode = runningMode
+    }
+
+    fun setSimulatedValues(values: Map<String, Float>) {
+        simulatedValues = values
+        invalidate()
     }
 
     private fun initPaints() {
@@ -82,13 +73,8 @@ class OverlayView(context: Context?, attrs: AttributeSet?) :
             )
             val matrix = Matrix()
             matrix.postTranslate(-outputWidth / 2f, -outputHeight / 2f)
-
-            // Rotate box.
             matrix.postRotate(outputRotate.toFloat())
 
-            // If the outputRotate is 90 or 270 degrees, the translation is
-            // applied after the rotation. This is because a 90 or 270 degree rotation
-            // flips the image vertically or horizontally, respectively.
             if (outputRotate == 90 || outputRotate == 270) {
                 matrix.postTranslate(outputHeight / 2f, outputWidth / 2f)
             } else {
@@ -96,34 +82,22 @@ class OverlayView(context: Context?, attrs: AttributeSet?) :
             }
             matrix.mapRect(boxRect)
             boxRect
-        }?.forEachIndexed { index, floats ->
+        }?.forEachIndexed { index, rect ->
+            val top = rect.top * scaleFactor
+            val bottom = rect.bottom * scaleFactor
+            val left = rect.left * scaleFactor
+            val right = rect.right * scaleFactor
 
-            val top = floats.top * scaleFactor
-            val bottom = floats.bottom * scaleFactor
-            val left = floats.left * scaleFactor
-            val right = floats.right * scaleFactor
-
-            // Draw bounding box around detected objects
             val drawableRect = RectF(left, top, right, bottom)
             canvas.drawRect(drawableRect, boxPaint)
 
-            // Create text to display alongside detected objects
             val category = results?.detections()!![index].categories()[0]
-            val drawableText =
-                category.categoryName() + " " + String.format(
-                    "%.2f",
-                    category.score()
-                )
+            val labelText = category.categoryName() + " " + String.format("%.2f", category.score())
 
-            // Draw rect behind display text
-            textBackgroundPaint.getTextBounds(
-                drawableText,
-                0,
-                drawableText.length,
-                bounds
-            )
+            textBackgroundPaint.getTextBounds(labelText, 0, labelText.length, bounds)
             val textWidth = bounds.width()
             val textHeight = bounds.height()
+
             canvas.drawRect(
                 left,
                 top,
@@ -132,13 +106,20 @@ class OverlayView(context: Context?, attrs: AttributeSet?) :
                 textBackgroundPaint
             )
 
-            // Draw text for detected object
-            canvas.drawText(
-                drawableText,
-                left,
-                top + bounds.height(),
-                textPaint
-            )
+            canvas.drawText(labelText, left, top + bounds.height(), textPaint)
+
+            // Simulierte Werte anzeigen
+            val tankName = category.categoryName()
+            val simulatedValue = simulatedValues[tankName]
+            if (simulatedValue != null) {
+                val valueText = "Level: %.2f".format(simulatedValue)
+                canvas.drawText(
+                    valueText,
+                    left,
+                    top + bounds.height() + 60f,
+                    textPaint
+                )
+            }
         }
     }
 
@@ -153,23 +134,14 @@ class OverlayView(context: Context?, attrs: AttributeSet?) :
         this.outputHeight = outputHeight
         this.outputRotate = imageRotation
 
-        // Calculates the new width and height of an image after it has been rotated.
-        // If `imageRotation` is 0 or 180, the new width and height are the same
-        // as the original width and height.
-        // If `imageRotation` is 90 or 270, the new width and height are swapped.
         val rotatedWidthHeight = when (imageRotation) {
             0, 180 -> Pair(outputWidth, outputHeight)
             90, 270 -> Pair(outputHeight, outputWidth)
             else -> return
         }
 
-        // Images, videos are displayed in FIT_START mode.
-        // Camera live streams is displayed in FILL_START mode. So we need to scale
-        // up the bounding box to match with the size that the images/videos/live streams being
-        // displayed.
         scaleFactor = when (runningMode) {
-            RunningMode.IMAGE,
-            RunningMode.VIDEO -> {
+            RunningMode.IMAGE, RunningMode.VIDEO -> {
                 min(
                     width * 1f / rotatedWidthHeight.first,
                     height * 1f / rotatedWidthHeight.second

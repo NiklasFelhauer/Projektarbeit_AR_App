@@ -27,6 +27,11 @@ import com.google.mediapipe.tasks.vision.core.RunningMode
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
+import com.google.mediapipe.examples.objectdetection.OverlayView
+import kotlin.random.Random
+import android.os.Handler
+import android.os.Looper
+
 
 class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
@@ -46,6 +51,23 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
     /** Blocking ML operations are performed using this executor */
     private lateinit var backgroundExecutor: ExecutorService
+
+
+    private lateinit var overlayView: OverlayView
+    private val handler = Handler(Looper.getMainLooper())
+
+    private val simulateRunnable = object : Runnable {
+        override fun run() {
+            val simulatedData = mapOf(
+                "tank_1" to 1.0f,
+                "tank_2" to 2.0f,
+                "tank_3" to 3.0f
+            )
+            overlayView.setSimulatedValues(simulatedData)
+            handler.postDelayed(this, 1000) // alle 1 Sekunde
+        }
+    }
+
 
     override fun onResume() {
         super.onResume()
@@ -74,7 +96,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
             viewModel.setMaxResults(objectDetectorHelper.maxResults)
             backgroundExecutor.execute { objectDetectorHelper.clearObjectDetector() }
         }
-
+        handler.removeCallbacks(simulateRunnable)
     }
 
     override fun onDestroyView() {
@@ -120,6 +142,9 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
             fragmentCameraBinding.viewFinder.post {
                 setUpCamera()
             }
+            overlayView = fragmentCameraBinding.overlay
+            handler.post(simulateRunnable)
+
         }
 
         // Bottom Sheet entfernt

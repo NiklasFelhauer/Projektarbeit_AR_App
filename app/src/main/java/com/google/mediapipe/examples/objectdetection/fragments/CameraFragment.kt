@@ -28,9 +28,13 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 import com.google.mediapipe.examples.objectdetection.OverlayView
+import org.eclipse.paho.android.service.MqttAndroidClient
+import org.eclipse.paho.client.mqttv3.*
 import kotlin.random.Random
 import android.os.Handler
 import android.os.Looper
+
+
 
 
 class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
@@ -53,20 +57,11 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     private lateinit var backgroundExecutor: ExecutorService
 
 
+    private lateinit var mqttClient: MqttAndroidClient
     private lateinit var overlayView: OverlayView
-    private val handler = Handler(Looper.getMainLooper())
+    private val tankValues = mutableMapOf<String, Float>()
 
-    private val simulateRunnable = object : Runnable {
-        override fun run() {
-            val simulatedData = mapOf(
-                "tank_1" to 1.0f,
-                "tank_2" to 2.0f,
-                "tank_3" to 3.0f
-            )
-            overlayView.setSimulatedValues(simulatedData)
-            handler.postDelayed(this, 1000) // alle 1 Sekunde
-        }
-    }
+
 
 
     override fun onResume() {
@@ -96,7 +91,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
             viewModel.setMaxResults(objectDetectorHelper.maxResults)
             backgroundExecutor.execute { objectDetectorHelper.clearObjectDetector() }
         }
-        handler.removeCallbacks(simulateRunnable)
+
     }
 
     override fun onDestroyView() {
@@ -108,6 +103,9 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
             Long.MAX_VALUE,
             TimeUnit.NANOSECONDS
         )
+        mqttClient.unregisterResources()
+        mqttClient.close()
+
     }
 
     override fun onCreateView(
@@ -143,13 +141,26 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                 setUpCamera()
             }
             overlayView = fragmentCameraBinding.overlay
-            handler.post(simulateRunnable)
+
+
+            val defaultValues = mapOf(
+                "tank_1" to 42.0f,
+                "tank_2" to 73.5f,
+                "tank_3" to 15.8f
+            )
+            overlayView.setSimulatedValues(defaultValues)
+
+
 
         }
 
         // Bottom Sheet entfernt
 
         fragmentCameraBinding.overlay.setRunningMode(RunningMode.LIVE_STREAM)
+
+        overlayView = fragmentCameraBinding.overlay
+        setupMqttClient()
+
     }
 
     private fun setUpCamera() {
@@ -241,4 +252,46 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
             }
         }
     }
+
+    private fun setupMqttClient() {
+        val serverUri = "tcp://192.168.0.10:1883" // <--- HIER DEINE BROKER-IP EINTRAGEN
+        mqttClient = MqttAndroidClient(requireContext(), serverUri, MqttClient.generateClientId())
+
+        val options = MqttConnectOptions().apply {
+            isCleanSession = true
+        }
+
+        mqttClient.setCallback(object : MqttCallback {
+            override fun connectionLost(cause: Throwable?) {
+                Log.e("MQTT", "Verbindung verloren: ${cause?.message}")
+            }
+
+            override fun messageArrived(topic: String?, message: MqttMessage?) {
+                val tankId = topic?.substringAfter("tank/") ?: return
+                val value = message?.toString()?.toFloatOrNull() ?: return
+
+                tankValues["tank_$tankId"] = value
+
+                activity?.runOnUiThread {
+                    overlayView.setSimulatedValues(tankValues)
+                }
+            }
+
+            override fun deliveryComplete(token: IMqttDeliveryToken?) {}
+        })
+
+        mqttClient.connect(options, null, object : IMqttActionListener {
+            override fun onSuccess(asyncActionToken: IMqttToken?) {
+                Log.i("MQTT", "Verbunden mit Broker")
+                mqttClient.subscribe("tank/+", 0) // z. B. tank/1, tank/2, tank/3
+            }
+
+            override fun onFailure(asyncActionToken: IMqttToken?, exception: Throwable?) {
+                Log.e("MQTT", "Verbindung fehlgeschlagen: ${exception?.message}")
+            }
+        })
+    }
+
 }
+
+

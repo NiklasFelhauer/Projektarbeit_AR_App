@@ -22,163 +22,163 @@
 22
 23    <uses-sdk
 24        android:minSdkVersion="24"
-24-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml
+24-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml
 25        android:targetSdkVersion="32" />
-25-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml
+25-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml
 26
 27    <!-- Enable instant app support -->
 28    <dist:module dist:instant="true" />
-28-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:23:5-40
-28-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:23:18-37
+28-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:23:5-40
+28-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:23:18-37
 29
 30    <!-- Declare features -->
 31    <uses-feature android:name="android.hardware.camera" />
-31-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:26:5-60
-31-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:26:19-57
+31-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:26:5-60
+31-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:26:19-57
 32
 33    <!-- Declare permissions -->
 34    <uses-permission android:name="android.permission.CAMERA" />
-34-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:29:5-65
-34-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:29:22-62
-35
-36    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-37    <!-- <uses-sdk android:minSdkVersion="14"/> -->
-38    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-38-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:25:5-79
-38-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:25:22-76
-39    <uses-permission android:name="android.permission.INTERNET" />
-39-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:26:5-67
-39-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:26:22-64
-40
-41    <application
-41-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:31:5-62:19
-42        android:allowBackup="true"
-42-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:32:9-35
-43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-43-->[androidx.core:core:1.8.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\5046810036a2841d2fd842bebf6be4d7\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
-44        android:debuggable="true"
-45        android:extractNativeLibs="false"
-46        android:icon="@mipmap/logo"
-46-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:33:9-36
-47        android:label="@string/app_name"
-47-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:34:9-41
-48        android:roundIcon="@mipmap/logo_round"
-48-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:35:9-47
-49        android:taskAffinity=""
-49-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:36:9-32
-50        android:testOnly="true" >
-51        <activity
-51-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:39:9-60:20
-52            android:name="com.google.mediapipe.examples.objectdetection.MainActivity"
-52-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:40:13-41
-53            android:clearTaskOnLaunch="true"
-53-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:41:13-45
-54            android:exported="true"
-54-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:42:13-36
-55            android:icon="@mipmap/logo"
-55-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:43:13-40
-56            android:resizeableActivity="true"
-56-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:44:13-46
-57            android:rotationAnimation="seamless"
-57-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:45:13-49
-58            android:theme="@style/AppTheme" >
-58-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:46:13-44
-59
-60            <!-- Main app intent filter -->
-61            <intent-filter>
-61-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:50:13-53:29
-62                <action android:name="android.intent.action.MAIN" />
-62-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:51:17-69
-62-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:51:25-66
-63
-64                <category android:name="android.intent.category.LAUNCHER" />
-64-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:52:17-77
-64-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:52:27-74
-65            </intent-filter>
-66
-67            <!-- Declare notch support -->
-68            <meta-data
-68-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:56:13-58:40
-69                android:name="android.notch_support"
-69-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:57:17-53
-70                android:value="true" />
-70-->C:\Users\z004bzau\Documents\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:58:17-37
-71        </activity>
-72
-73        <service
-73-->[androidx.camera:camera-camera2:1.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:26:9-35:19
-74            android:name="androidx.camera.core.impl.MetadataHolderService"
-74-->[androidx.camera:camera-camera2:1.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:27:13-75
-75            android:enabled="false"
-75-->[androidx.camera:camera-camera2:1.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:28:13-36
-76            android:exported="false" >
-76-->[androidx.camera:camera-camera2:1.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:29:13-37
-77            <meta-data
-77-->[androidx.camera:camera-camera2:1.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:32:13-34:89
-78                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-78-->[androidx.camera:camera-camera2:1.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:33:17-103
-79                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-79-->[androidx.camera:camera-camera2:1.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:34:17-86
-80        </service>
-81
-82        <uses-library
-82-->[androidx.window:window:1.0.0-alpha09] C:\Users\z004bzau\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:25:9-27:40
-83            android:name="androidx.window.extensions"
-83-->[androidx.window:window:1.0.0-alpha09] C:\Users\z004bzau\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:26:13-54
-84            android:required="false" />
-84-->[androidx.window:window:1.0.0-alpha09] C:\Users\z004bzau\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:27:13-37
-85        <uses-library
-85-->[androidx.window:window:1.0.0-alpha09] C:\Users\z004bzau\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:28:9-30:40
-86            android:name="androidx.window.sidecar"
-86-->[androidx.window:window:1.0.0-alpha09] C:\Users\z004bzau\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:29:13-51
-87            android:required="false" />
-87-->[androidx.window:window:1.0.0-alpha09] C:\Users\z004bzau\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:30:13-37
-88
-89        <provider
-89-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
-90            android:name="androidx.startup.InitializationProvider"
-90-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:27:13-67
-91            android:authorities="com.google.mediapipe.examples.objectdetection.androidx-startup"
-91-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:28:13-68
-92            android:exported="false" >
-92-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:29:13-37
-93            <meta-data
-93-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-94                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-94-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-95                android:value="androidx.startup" />
-95-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-96        </provider>
-97
-98        <service
-98-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:29:9-35:19
-99            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-99-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:30:13-103
-100            android:exported="false" >
-100-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:31:13-37
-101            <meta-data
-101-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:32:13-34:39
-102                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-102-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:33:17-94
-103                android:value="cct" />
-103-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:34:17-36
-104        </service>
-105        <service
-105-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:26:9-30:19
-106            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-106-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:27:13-117
-107            android:exported="false"
-107-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:28:13-37
-108            android:permission="android.permission.BIND_JOB_SERVICE" >
-108-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:29:13-69
-109        </service>
-110
-111        <receiver
-111-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:32:9-34:40
-112            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-112-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:33:13-132
-113            android:exported="false" />
-113-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\z004bzau\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:34:13-37
-114    </application>
-115
-116</manifest>
+34-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:29:5-65
+34-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:29:22-62
+35    <uses-permission android:name="android.permission.INTERNET" />
+35-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:30:5-67
+35-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:30:22-64
+36    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+36-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:31:5-79
+36-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:31:22-76
+37    <uses-permission android:name="android.permission.WAKE_LOCK" />
+37-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:32:5-68
+37-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:32:22-65
+38
+39    <application
+39-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:35:5-66:19
+40        android:allowBackup="true"
+40-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:36:9-35
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.8.0] C:\Users\nikla\.gradle\caches\8.9\transforms\5046810036a2841d2fd842bebf6be4d7\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+42        android:debuggable="true"
+43        android:extractNativeLibs="false"
+44        android:icon="@mipmap/logo"
+44-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:37:9-36
+45        android:label="@string/app_name"
+45-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:38:9-41
+46        android:roundIcon="@mipmap/logo_round"
+46-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:39:9-47
+47        android:taskAffinity=""
+47-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:40:9-32
+48        android:testOnly="true" >
+49        <activity
+49-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:43:9-64:20
+50            android:name="com.google.mediapipe.examples.objectdetection.MainActivity"
+50-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:44:13-41
+51            android:clearTaskOnLaunch="true"
+51-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:45:13-45
+52            android:exported="true"
+52-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:46:13-36
+53            android:icon="@mipmap/logo"
+53-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:47:13-40
+54            android:resizeableActivity="true"
+54-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:48:13-46
+55            android:rotationAnimation="seamless"
+55-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:49:13-49
+56            android:theme="@style/AppTheme" >
+56-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:50:13-44
+57
+58            <!-- Main app intent filter -->
+59            <intent-filter>
+59-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:54:13-57:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:55:17-69
+60-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:55:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:56:17-77
+62-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:56:27-74
+63            </intent-filter>
+64
+65            <!-- Declare notch support -->
+66            <meta-data
+66-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:60:13-62:40
+67                android:name="android.notch_support"
+67-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:61:17-53
+68                android:value="true" />
+68-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:62:17-37
+69        </activity>
+70
+71        <service
+71-->[androidx.camera:camera-camera2:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:26:9-35:19
+72            android:name="androidx.camera.core.impl.MetadataHolderService"
+72-->[androidx.camera:camera-camera2:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:27:13-75
+73            android:enabled="false"
+73-->[androidx.camera:camera-camera2:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:28:13-36
+74            android:exported="false" >
+74-->[androidx.camera:camera-camera2:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:29:13-37
+75            <meta-data
+75-->[androidx.camera:camera-camera2:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:32:13-34:89
+76                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+76-->[androidx.camera:camera-camera2:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:33:17-103
+77                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+77-->[androidx.camera:camera-camera2:1.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\e973dec3d669cfdb0cb8bbbd4a0e6b71\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:34:17-86
+78        </service>
+79
+80        <uses-library
+80-->[androidx.window:window:1.0.0-alpha09] C:\Users\nikla\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:25:9-27:40
+81            android:name="androidx.window.extensions"
+81-->[androidx.window:window:1.0.0-alpha09] C:\Users\nikla\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:26:13-54
+82            android:required="false" />
+82-->[androidx.window:window:1.0.0-alpha09] C:\Users\nikla\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:27:13-37
+83        <uses-library
+83-->[androidx.window:window:1.0.0-alpha09] C:\Users\nikla\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:28:9-30:40
+84            android:name="androidx.window.sidecar"
+84-->[androidx.window:window:1.0.0-alpha09] C:\Users\nikla\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:29:13-51
+85            android:required="false" />
+85-->[androidx.window:window:1.0.0-alpha09] C:\Users\nikla\.gradle\caches\8.9\transforms\f736b7e4e12eb23c255227fced22cac7\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:30:13-37
+86
+87        <provider
+87-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
+88            android:name="androidx.startup.InitializationProvider"
+88-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:27:13-67
+89            android:authorities="com.google.mediapipe.examples.objectdetection.androidx-startup"
+89-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:28:13-68
+90            android:exported="false" >
+90-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:29:13-37
+91            <meta-data
+91-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+92                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+92-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+93                android:value="androidx.startup" />
+93-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+94        </provider>
+95
+96        <service
+96-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:29:9-35:19
+97            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+97-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:30:13-103
+98            android:exported="false" >
+98-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:31:13-37
+99            <meta-data
+99-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:32:13-34:39
+100                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+100-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:33:17-94
+101                android:value="cct" />
+101-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\7d08dadead12f5695c27c12168245001\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:34:17-36
+102        </service>
+103        <service
+103-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:26:9-30:19
+104            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+104-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:27:13-117
+105            android:exported="false"
+105-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:28:13-37
+106            android:permission="android.permission.BIND_JOB_SERVICE" >
+106-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:29:13-69
+107        </service>
+108
+109        <receiver
+109-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:32:9-34:40
+110            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+110-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:33:13-132
+111            android:exported="false" />
+111-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\nikla\.gradle\caches\8.9\transforms\463b73579b287e0b11ddb2f67f1ad455\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:34:13-37
+112    </application>
+113
+114</manifest>

@@ -27,13 +27,17 @@ public final class FragmentMqttBinding implements ViewBinding {
   public final LinearLayout mqttRoot;
 
   @NonNull
+  public final TextView textMessages;
+
+  @NonNull
   public final TextView textTitle;
 
   private FragmentMqttBinding(@NonNull LinearLayout rootView, @NonNull Button buttonConnect,
-      @NonNull LinearLayout mqttRoot, @NonNull TextView textTitle) {
+      @NonNull LinearLayout mqttRoot, @NonNull TextView textMessages, @NonNull TextView textTitle) {
     this.rootView = rootView;
     this.buttonConnect = buttonConnect;
     this.mqttRoot = mqttRoot;
+    this.textMessages = textMessages;
     this.textTitle = textTitle;
   }
 
@@ -72,13 +76,20 @@ public final class FragmentMqttBinding implements ViewBinding {
 
       LinearLayout mqttRoot = (LinearLayout) rootView;
 
+      id = R.id.textMessages;
+      TextView textMessages = ViewBindings.findChildViewById(rootView, id);
+      if (textMessages == null) {
+        break missingId;
+      }
+
       id = R.id.textTitle;
       TextView textTitle = ViewBindings.findChildViewById(rootView, id);
       if (textTitle == null) {
         break missingId;
       }
 
-      return new FragmentMqttBinding((LinearLayout) rootView, buttonConnect, mqttRoot, textTitle);
+      return new FragmentMqttBinding((LinearLayout) rootView, buttonConnect, mqttRoot, textMessages,
+          textTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

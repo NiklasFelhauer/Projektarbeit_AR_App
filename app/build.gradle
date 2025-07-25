@@ -99,8 +99,11 @@ dependencies {
     // CameraX View class
     implementation "androidx.camera:camera-view:$camerax_version"
 
-    //WindowManager
+    // WindowManager
     implementation 'androidx.window:window:1.0.0-alpha09'
+
+    // MQTT
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5'
 
     // Unit testing
     testImplementation 'androidx.test.ext:junit:1.1.3'

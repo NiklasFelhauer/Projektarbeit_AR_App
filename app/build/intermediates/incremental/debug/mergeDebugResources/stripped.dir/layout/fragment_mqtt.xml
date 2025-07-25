@@ -20,4 +20,12 @@
         android:layout_height="wrap_content"
         android:text="Verbinden" />
 
+    <TextView
+        android:id="@+id/textMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Noch keine Nachrichten"
+        android:paddingTop="16dp"
+        android:textSize="16sp" />
+
 </LinearLayout>

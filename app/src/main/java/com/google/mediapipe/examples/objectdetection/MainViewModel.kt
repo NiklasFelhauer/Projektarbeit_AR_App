@@ -1,5 +1,6 @@
 package com.google.mediapipe.examples.objectdetection
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -31,7 +32,7 @@ class MainViewModel : ViewModel() {
     private val _mqttMessages = MutableLiveData<List<String>>(emptyList())
     val mqttMessages: LiveData<List<String>> get() = _mqttMessages
 
-    private val _tankTemperatures = MutableLiveData<Map<String, Float>>(emptyMap())
+    private val _tankTemperatures = MutableLiveData<Map<String, Float>>()
     val tankTemperatures: LiveData<Map<String, Float>> get() = _tankTemperatures
 
     // 🔹 MQTT Client
@@ -60,18 +61,36 @@ class MainViewModel : ViewModel() {
                     }
 
                     override fun messageArrived(topic: String?, message: MqttMessage?) {
-                        val json = message?.toString() ?: return
-                        addMessage("📩 $json")
+                        val raw = message?.toString() ?: return
+                        Log.d("MQTT", "Raw message: $raw")
 
                         try {
+                            var cleaned = raw.trim()
+
+                            // 🔹 Äußere Quotes entfernen
+                            if ((cleaned.startsWith("\"") && cleaned.endsWith("\"")) ||
+                                (cleaned.startsWith("'") && cleaned.endsWith("'"))) {
+                                cleaned = cleaned.substring(1, cleaned.length - 1)
+                            }
+
+                            // 🔹 Escapes von \" entfernen
+                            cleaned = cleaned.replace("\\\"", "\"")
+
                             val parsed = mutableMapOf<String, Float>()
-                            val obj = JSONObject(json)
+                            val obj = JSONObject(cleaned)
                             obj.keys().forEach { key ->
                                 parsed[key] = obj.getDouble(key).toFloat()
                             }
+                            Log.d("MQTT", "Parsed temperatures: $parsed")
                             _tankTemperatures.postValue(parsed)
-                        } catch (_: Exception) { }
+
+                        } catch (e: Exception) {
+                            Log.e("MQTT", "JSON parse error", e)
+                        }
                     }
+
+
+
 
                     override fun deliveryComplete(token: IMqttDeliveryToken?) {}
                 })

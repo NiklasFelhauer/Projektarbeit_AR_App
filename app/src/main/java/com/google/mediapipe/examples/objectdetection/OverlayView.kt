@@ -9,6 +9,7 @@ import com.google.mediapipe.tasks.vision.core.RunningMode
 import com.google.mediapipe.tasks.vision.objectdetector.ObjectDetectorResult
 import kotlin.math.max
 import kotlin.math.min
+import android.util.Log
 
 class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
@@ -23,12 +24,12 @@ class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs
     private var outputRotate = 0
     private var runningMode: RunningMode = RunningMode.IMAGE
 
-    // 🔥 Temperaturdaten
     private var tankTemperatures: Map<String, Float> = emptyMap()
 
     fun setTemperatures(temps: Map<String, Float>) {
+        Log.d("Overlay", "Temperatures updated: $temps")
         tankTemperatures = temps
-        invalidate()
+        invalidate()  // Overlay neu zeichnen
     }
 
     init {
@@ -95,11 +96,13 @@ class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs
             val tankName = category.categoryName()
             val score = String.format("%.2f", category.score())
 
-            // Temperatur anhängen, falls vorhanden
             val temp = tankTemperatures[tankName]
-            val tempText = if (temp != null) " | ${String.format("%.1f°C", temp)}" else ""
+            val tempText = if (temp != null) " | ${String.format("%.1f°C", temp)}" else " | -- °C"
+
+            Log.d("Overlay", "Detected: $tankName | Temp: $temp")
 
             val drawableText = "$tankName $score$tempText"
+
 
             textBackgroundPaint.getTextBounds(drawableText, 0, drawableText.length, bounds)
             val textWidth = bounds.width()

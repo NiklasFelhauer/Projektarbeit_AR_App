@@ -117,8 +117,10 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
         // 🔥 Temperaturdaten aus ViewModel beobachten und ins Overlay geben
         viewModel.tankTemperatures.observe(viewLifecycleOwner) { temps ->
+            Log.d("CameraFragment", "Observer got temps: $temps")
             fragmentCameraBinding.overlay.setTemperatures(temps)
         }
+
     }
 
     private fun setUpCamera() {
@@ -188,6 +190,8 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                         resultBundle.inputImageRotation
                     )
                 }
+                Log.d("Overlay", "Detected objects: ${resultBundle.results[0].detections().size}")
+
                 fragmentCameraBinding.overlay.invalidate()
             }
         }

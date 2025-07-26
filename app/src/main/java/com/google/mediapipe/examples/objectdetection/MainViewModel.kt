@@ -64,6 +64,8 @@ class MainViewModel : ViewModel() {
                         val raw = message?.toString() ?: return
                         Log.d("MQTT", "Raw message: $raw")
 
+                        addMessage("📩 $raw") // zum MQTT Tab
+                        
                         try {
                             var cleaned = raw.trim()
 

@@ -1,31 +1,20 @@
-/*
- * Copyright 2022 The TensorFlow Authors. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *             http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.google.mediapipe.examples.objectdetection
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import org.eclipse.paho.client.mqttv3.*
+import org.json.JSONObject
 
-/**
- *  This ViewModel is used to store object detector helper settings
- */
 class MainViewModel : ViewModel() {
+
+    // 🔹 Object Detection Einstellungen
     private var _delegate: Int = ObjectDetectorHelper.DELEGATE_CPU
-    private var _threshold: Float =
-        ObjectDetectorHelper.THRESHOLD_DEFAULT
-    private var _maxResults: Int =
-        ObjectDetectorHelper.MAX_RESULTS_DEFAULT
+    private var _threshold: Float = ObjectDetectorHelper.THRESHOLD_DEFAULT
+    private var _maxResults: Int = ObjectDetectorHelper.MAX_RESULTS_DEFAULT
     private var _model: Int = ObjectDetectorHelper.MODEL_TANKS
 
     val currentDelegate: Int get() = _delegate
@@ -33,19 +22,82 @@ class MainViewModel : ViewModel() {
     val currentMaxResults: Int get() = _maxResults
     val currentModel: Int get() = _model
 
-    fun setDelegate(delegate: Int) {
-        _delegate = delegate
+    fun setDelegate(delegate: Int) { _delegate = delegate }
+    fun setThreshold(threshold: Float) { _threshold = threshold }
+    fun setMaxResults(maxResults: Int) { _maxResults = maxResults }
+    fun setModel(model: Int) { _model = model }
+
+    // 🔹 MQTT LiveData
+    private val _mqttMessages = MutableLiveData<List<String>>(emptyList())
+    val mqttMessages: LiveData<List<String>> get() = _mqttMessages
+
+    private val _tankTemperatures = MutableLiveData<Map<String, Float>>(emptyMap())
+    val tankTemperatures: LiveData<Map<String, Float>> get() = _tankTemperatures
+
+    // 🔹 MQTT Client
+    private var mqttClient: MqttClient? = null
+    private val brokerUri = "tcp://192.168.1.12:1883"   // deine Broker-IP
+    private val topic = "mein/test/topic"
+
+    private var connected = false
+
+    fun startMqtt() {
+        if (connected) return  // ✅ nur einmal verbinden
+
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                mqttClient = MqttClient(brokerUri, MqttClient.generateClientId(), null)
+
+                val options = MqttConnectOptions().apply {
+                    isCleanSession = false        // Session behalten
+                    keepAliveInterval = 60
+                }
+
+                mqttClient!!.setCallback(object : MqttCallback {
+                    override fun connectionLost(cause: Throwable?) {
+                        addMessage("⚠️ Verbindung verloren")
+                        connected = false
+                    }
+
+                    override fun messageArrived(topic: String?, message: MqttMessage?) {
+                        val json = message?.toString() ?: return
+                        addMessage("📩 $json")
+
+                        try {
+                            val parsed = mutableMapOf<String, Float>()
+                            val obj = JSONObject(json)
+                            obj.keys().forEach { key ->
+                                parsed[key] = obj.getDouble(key).toFloat()
+                            }
+                            _tankTemperatures.postValue(parsed)
+                        } catch (_: Exception) { }
+                    }
+
+                    override fun deliveryComplete(token: IMqttDeliveryToken?) {}
+                })
+
+                mqttClient!!.connect(options)
+                mqttClient!!.subscribe(topic, 1)  // QoS 1
+
+                connected = true
+                addMessage("✅ Verbunden mit Broker\n📡 Subscribed to $topic")
+
+            } catch (e: Exception) {
+                addMessage("❌ Fehler: ${e.message}")
+            }
+        }
     }
 
-    fun setThreshold(threshold: Float) {
-        _threshold = threshold
+    private fun addMessage(msg: String) {
+        val list = _mqttMessages.value?.toMutableList() ?: mutableListOf()
+        list.add(msg)
+        _mqttMessages.postValue(list)
     }
 
-    fun setMaxResults(maxResults: Int) {
-        _maxResults = maxResults
-    }
-
-    fun setModel(model: Int) {
-        _model = model
+    override fun onCleared() {
+        super.onCleared()
+        try {
+            mqttClient?.disconnect()
+        } catch (_: Exception) {}
     }
 }

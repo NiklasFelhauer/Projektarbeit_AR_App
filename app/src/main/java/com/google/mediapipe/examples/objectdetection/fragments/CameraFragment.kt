@@ -33,9 +33,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     private val TAG = "ObjectDetection"
 
     private var _fragmentCameraBinding: FragmentCameraBinding? = null
-
-    private val fragmentCameraBinding
-        get() = _fragmentCameraBinding!!
+    private val fragmentCameraBinding get() = _fragmentCameraBinding!!
 
     private lateinit var objectDetectorHelper: ObjectDetectorHelper
     private val viewModel: MainViewModel by activityViewModels()
@@ -44,7 +42,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     private var camera: Camera? = null
     private var cameraProvider: ProcessCameraProvider? = null
 
-    /** Blocking ML operations are performed using this executor */
+    /** ML-Operationen laufen auf diesem Executor */
     private lateinit var backgroundExecutor: ExecutorService
 
     override fun onResume() {
@@ -53,8 +51,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
             Navigation.findNavController(
                 requireActivity(),
                 R.id.fragment_container
-            )
-                .navigate(CameraFragmentDirections.actionCameraToPermissions())
+            ).navigate(CameraFragmentDirections.actionCameraToPermissions())
         }
 
         backgroundExecutor.execute {
@@ -68,13 +65,13 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         super.onPause()
 
         if (this::objectDetectorHelper.isInitialized) {
+            // Speichert aktuelle Einstellungen im ViewModel
             viewModel.setModel(objectDetectorHelper.currentModel)
             viewModel.setDelegate(objectDetectorHelper.currentDelegate)
             viewModel.setThreshold(objectDetectorHelper.threshold)
             viewModel.setMaxResults(objectDetectorHelper.maxResults)
             backgroundExecutor.execute { objectDetectorHelper.clearObjectDetector() }
         }
-
     }
 
     override fun onDestroyView() {
@@ -82,10 +79,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         super.onDestroyView()
 
         backgroundExecutor.shutdown()
-        backgroundExecutor.awaitTermination(
-            Long.MAX_VALUE,
-            TimeUnit.NANOSECONDS
-        )
+        backgroundExecutor.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS)
     }
 
     override fun onCreateView(
@@ -93,9 +87,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _fragmentCameraBinding =
-            FragmentCameraBinding.inflate(inflater, container, false)
-
+        _fragmentCameraBinding = FragmentCameraBinding.inflate(inflater, container, false)
         return fragmentCameraBinding.root
     }
 
@@ -106,30 +98,31 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         backgroundExecutor = Executors.newSingleThreadExecutor()
 
         backgroundExecutor.execute {
-            objectDetectorHelper =
-                ObjectDetectorHelper(
-                    context = requireContext(),
-                    threshold = viewModel.currentThreshold,
-                    currentDelegate = viewModel.currentDelegate,
-                    currentModel = viewModel.currentModel,
-                    maxResults = viewModel.currentMaxResults,
-                    objectDetectorListener = this,
-                    runningMode = RunningMode.LIVE_STREAM
-                )
+            objectDetectorHelper = ObjectDetectorHelper(
+                context = requireContext(),
+                threshold = viewModel.currentThreshold,
+                currentDelegate = viewModel.currentDelegate,
+                currentModel = viewModel.currentModel,
+                maxResults = viewModel.currentMaxResults,
+                objectDetectorListener = this,
+                runningMode = RunningMode.LIVE_STREAM
+            )
 
             fragmentCameraBinding.viewFinder.post {
                 setUpCamera()
             }
         }
 
-        // Bottom Sheet entfernt
-
         fragmentCameraBinding.overlay.setRunningMode(RunningMode.LIVE_STREAM)
+
+        // 🔥 Temperaturdaten aus ViewModel beobachten und ins Overlay geben
+        viewModel.tankTemperatures.observe(viewLifecycleOwner) { temps ->
+            fragmentCameraBinding.overlay.setTemperatures(temps)
+        }
     }
 
     private fun setUpCamera() {
-        val cameraProviderFuture =
-            ProcessCameraProvider.getInstance(requireContext())
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())
         cameraProviderFuture.addListener(
             {
                 cameraProvider = cameraProviderFuture.get()
@@ -141,14 +134,10 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
     @SuppressLint("UnsafeOptInUsageError")
     private fun bindCameraUseCases() {
-
-        val cameraProvider =
-            cameraProvider
-                ?: throw IllegalStateException("Camera initialization failed.")
+        val cameraProvider = cameraProvider ?: throw IllegalStateException("Camera init failed.")
 
         val cameraSelector =
-            CameraSelector.Builder()
-                .requireLensFacing(CameraSelector.LENS_FACING_BACK).build()
+            CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK).build()
 
         preview =
             Preview.Builder()
@@ -164,10 +153,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                 .setOutputImageFormat(OUTPUT_IMAGE_FORMAT_RGBA_8888)
                 .build()
                 .also {
-                    it.setAnalyzer(
-                        backgroundExecutor,
-                        objectDetectorHelper::detectLivestreamFrame
-                    )
+                    it.setAnalyzer(backgroundExecutor, objectDetectorHelper::detectLivestreamFrame)
                 }
 
         cameraProvider.unbindAll()
@@ -187,8 +173,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        imageAnalyzer?.targetRotation =
-            fragmentCameraBinding.viewFinder.display.rotation
+        imageAnalyzer?.targetRotation = fragmentCameraBinding.viewFinder.display.rotation
     }
 
     override fun onResults(resultBundle: ObjectDetectorHelper.ResultBundle) {
@@ -211,9 +196,6 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     override fun onError(error: String, errorCode: Int) {
         activity?.runOnUiThread {
             Toast.makeText(requireContext(), error, Toast.LENGTH_SHORT).show()
-            if (errorCode == ObjectDetectorHelper.GPU_ERROR) {
-                // Spinner-Zugriff entfernt, da nicht vorhanden
-            }
         }
     }
 }

@@ -19,7 +19,7 @@ public final class CameraFragment extends androidx.fragment.app.Fragment impleme
     private androidx.camera.lifecycle.ProcessCameraProvider cameraProvider;
     
     /**
-     * Blocking ML operations are performed using this executor
+     * ML-Operationen laufen auf diesem Executor
      */
     private java.util.concurrent.ExecutorService backgroundExecutor;
     

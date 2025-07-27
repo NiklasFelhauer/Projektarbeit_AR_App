@@ -26,9 +26,6 @@ class MQTTFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // MQTT-Verbindung starten (nur einmal)
-        viewModel.startMqtt()
-
         // Nachrichten-Log anzeigen
         viewModel.mqttMessages.observe(viewLifecycleOwner) { list ->
             binding.textMessages.text = list.joinToString("\n")

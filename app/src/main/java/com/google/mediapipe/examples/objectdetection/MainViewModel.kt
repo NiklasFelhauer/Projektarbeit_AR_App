@@ -12,6 +12,12 @@ import org.json.JSONObject
 
 class MainViewModel : ViewModel() {
 
+    init {
+        Log.d("MQTT", "MQTT Verbindung im MainViewModel aufbauen")
+        startMqtt()
+        Log.d("MQTT", "MQTT Verbindung im MainViewModel aufgebaut")
+    }
+
     // 🔹 Object Detection Einstellungen
     private var _delegate: Int = ObjectDetectorHelper.DELEGATE_CPU
     private var _threshold: Float = ObjectDetectorHelper.THRESHOLD_DEFAULT

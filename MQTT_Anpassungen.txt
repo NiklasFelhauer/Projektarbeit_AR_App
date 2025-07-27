@@ -1,0 +1,17 @@
+Pi:
+
+{
+  "tank_1": 23.4,
+  "tank_2": 25.1,
+  "tank_3": 21.7,
+  "ventil_A": 1,
+  "ventil_B": 0
+}
+
+
+Daten verfügbar in:
+
+viewModel.allValues.observe(viewLifecycleOwner) { values ->
+    val ventilA = values["ventil_A"]
+    val ventilB = values["ventil_B"]
+}

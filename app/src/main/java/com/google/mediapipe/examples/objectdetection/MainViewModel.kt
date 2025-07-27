@@ -12,12 +12,6 @@ import org.json.JSONObject
 
 class MainViewModel : ViewModel() {
 
-    init {
-        Log.d("MQTT", "MQTT Verbindung im MainViewModel aufbauen")
-        startMqtt()
-        Log.d("MQTT", "MQTT Verbindung im MainViewModel aufgebaut")
-    }
-
     // 🔹 Object Detection Einstellungen
     private var _delegate: Int = ObjectDetectorHelper.DELEGATE_CPU
     private var _threshold: Float = ObjectDetectorHelper.THRESHOLD_DEFAULT
@@ -34,12 +28,17 @@ class MainViewModel : ViewModel() {
     fun setMaxResults(maxResults: Int) { _maxResults = maxResults }
     fun setModel(model: Int) { _model = model }
 
-    // 🔹 MQTT LiveData
+    // 🔹 MQTT LiveData für Nachrichten
     private val _mqttMessages = MutableLiveData<List<String>>(emptyList())
     val mqttMessages: LiveData<List<String>> get() = _mqttMessages
 
-    private val _tankTemperatures = MutableLiveData<Map<String, Float>>()
+    // 🔹 LiveData für Tanks (Overlay)
+    private val _tankTemperatures = MutableLiveData<Map<String, Float>>(emptyMap())
     val tankTemperatures: LiveData<Map<String, Float>> get() = _tankTemperatures
+
+    // 🔹 LiveData für alle Werte (inkl. Ventile)
+    private val _allValues = MutableLiveData<Map<String, Float>>(emptyMap())
+    val allValues: LiveData<Map<String, Float>> get() = _allValues
 
     // 🔹 MQTT Client
     private var mqttClient: MqttClient? = null
@@ -48,15 +47,19 @@ class MainViewModel : ViewModel() {
 
     private var connected = false
 
+    init {
+        startMqtt()   // ✅ MQTT automatisch starten, egal welcher Tab zuerst
+    }
+
     fun startMqtt() {
-        if (connected) return  // ✅ nur einmal verbinden
+        if (connected) return
 
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 mqttClient = MqttClient(brokerUri, MqttClient.generateClientId(), null)
 
                 val options = MqttConnectOptions().apply {
-                    isCleanSession = false        // Session behalten
+                    isCleanSession = false
                     keepAliveInterval = 60
                 }
 
@@ -68,43 +71,41 @@ class MainViewModel : ViewModel() {
 
                     override fun messageArrived(topic: String?, message: MqttMessage?) {
                         val raw = message?.toString() ?: return
-                        Log.d("MQTT", "Raw message: $raw")
+                        addMessage("📩 $raw")
 
-                        addMessage("📩 $raw") // zum MQTT Tab
-                        
                         try {
-                            var cleaned = raw.trim()
-
-                            // 🔹 Äußere Quotes entfernen
-                            if ((cleaned.startsWith("\"") && cleaned.endsWith("\"")) ||
-                                (cleaned.startsWith("'") && cleaned.endsWith("'"))) {
-                                cleaned = cleaned.substring(1, cleaned.length - 1)
-                            }
-
-                            // 🔹 Escapes von \" entfernen
-                            cleaned = cleaned.replace("\\\"", "\"")
-
+                            // 🔹 Parsing aller Werte aus der Nachricht
                             val parsed = mutableMapOf<String, Float>()
-                            val obj = JSONObject(cleaned)
+                            val tankMap = mutableMapOf<String, Float>()
+                            val obj = JSONObject(raw)
+
                             obj.keys().forEach { key ->
-                                parsed[key] = obj.getDouble(key).toFloat()
+                                val value = obj.getDouble(key).toFloat()
+                                parsed[key] = value
+
+                                // ✅ Tanks ins Overlay
+                                if (key == "tank_1" || key == "tank_2" || key == "tank_3") {
+                                    tankMap[key] = value
+                                }
                             }
-                            Log.d("MQTT", "Parsed temperatures: $parsed")
-                            _tankTemperatures.postValue(parsed)
+
+                            // 🔹 LiveData aktualisieren
+                            _allValues.postValue(parsed)         // alle Werte inkl. Ventile
+                            _tankTemperatures.postValue(tankMap) // nur Tanks fürs Overlay
+
+                            Log.d("MQTT", "Parsed tanks: $tankMap")
+                            Log.d("MQTT", "Parsed all: $parsed")
 
                         } catch (e: Exception) {
                             Log.e("MQTT", "JSON parse error", e)
                         }
                     }
 
-
-
-
                     override fun deliveryComplete(token: IMqttDeliveryToken?) {}
                 })
 
                 mqttClient!!.connect(options)
-                mqttClient!!.subscribe(topic, 1)  // QoS 1
+                mqttClient!!.subscribe(topic, 1)
 
                 connected = true
                 addMessage("✅ Verbunden mit Broker\n📡 Subscribed to $topic")

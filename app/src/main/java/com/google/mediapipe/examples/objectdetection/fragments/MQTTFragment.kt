@@ -26,11 +26,17 @@ class MQTTFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 🔥 Manuell verbinden, wenn Button geklickt wird
+        binding.buttonConnect.setOnClickListener {
+            viewModel.startMqtt()
+        }
+
         // Nachrichten-Log anzeigen
         viewModel.mqttMessages.observe(viewLifecycleOwner) { list ->
             binding.textMessages.text = list.joinToString("\n")
         }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

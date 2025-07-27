@@ -116,7 +116,7 @@ class MainViewModel : ViewModel() {
 
                 _mqttConnected.postValue(true)
 
-                addMessage("✅ Verbunden mit Broker\n📡 Subscribed to $topic")
+                addMessage("✅ Mit dem Broker verbunden\nℹ️ Subscribed to $topic")
 
             } catch (e: Exception) {
                 addMessage("❌ Fehler: ${e.message}")

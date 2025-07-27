@@ -64,10 +64,6 @@
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\layout\\fragment_mqtt.xml"
     },
     {
-        "merged": "com.hka.objectdetection.app-merged_res-45:/layout_fragment_camera.xml.flat",
-        "source": "com.hka.objectdetection.app-main-47:/layout/fragment_camera.xml"
-    },
-    {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\menu_menu_bottom_nav.xml.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\menu\\menu_bottom_nav.xml"
     },
@@ -110,6 +106,10 @@
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\mipmap-mdpi_logo_round.webp.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\mipmap-mdpi\\logo_round.webp"
+    },
+    {
+        "merged": "com.hka.objectdetection.app-merged_res-45:/drawable_vertical_progress_bar.xml.flat",
+        "source": "com.hka.objectdetection.app-main-47:/drawable/vertical_progress_bar.xml"
     },
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\drawable_pump_orange.png.flat",
@@ -202,6 +202,10 @@
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\mipmap-anydpi-v26_logo.xml.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\mipmap-anydpi-v26\\logo.xml"
+    },
+    {
+        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\drawable_vertical_progress_bar.xml.flat",
+        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\drawable\\vertical_progress_bar.xml"
     },
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\mipmap-xxhdpi_logo.webp.flat",

@@ -1,13 +1,18 @@
 package com.hka.objectdetection.fragments
+import android.annotation.SuppressLint
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.hka.objectdetection.MainViewModel
 import com.hka.objectdetection.databinding.FragmentOverviewBinding
 import com.hka.objectdetection.R
+
 
 class OverviewFragment : Fragment() {
 
@@ -21,6 +26,7 @@ class OverviewFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -96,12 +102,38 @@ class OverviewFragment : Fragment() {
             }
 
             // 🔹 Beispiel für eine AValve
-            val aventilState = values["aventil"] ?: 3f
-            when (aventilState){
-                0f -> binding.aventil.setImageResource(R.drawable.avlv_red)
-                1f -> binding.aventil.setImageResource(R.drawable.avlv_green)
-                else -> binding.aventil.setImageResource(R.drawable.avlv_gray)
+            val percent = (values["aventil"] ?: 0f).toInt()
+            binding.aventilPercent.text = "$percent %"
+            binding.aventilProgress.progress = percent
+
+// ✅ Farbe aus colors.xml holen – sicher mit binding.root.context
+            val red = ContextCompat.getColor(binding.root.context, R.color.Red)
+            val orange = ContextCompat.getColor(binding.root.context, R.color.Orange)
+            val green = ContextCompat.getColor(binding.root.context, R.color.Green)
+
+            when {
+                percent <= 10 -> {
+                    binding.aventilPercent.setTextColor(red)
+                    binding.aventil.setImageResource(R.drawable.avlv_red)
+                }
+                percent in 11..80 -> {
+                    binding.aventilPercent.setTextColor(orange)
+                    binding.aventil.setImageResource(R.drawable.avlv_orange)
+                }
+                else -> {
+                    binding.aventilPercent.setTextColor(green)
+                    binding.aventil.setImageResource(R.drawable.avlv_green)
+                }
             }
+
+
+
+
+
+
+
+
+
 
             // 🔹 Beispiel für eine Pumpe 1
             val pump1State = values["pumpe_1"] ?: 3f

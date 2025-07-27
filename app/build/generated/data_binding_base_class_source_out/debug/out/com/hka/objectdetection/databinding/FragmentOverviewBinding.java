@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,6 +23,12 @@ public final class FragmentOverviewBinding implements ViewBinding {
 
   @NonNull
   public final ImageView aventil;
+
+  @NonNull
+  public final TextView aventilPercent;
+
+  @NonNull
+  public final ProgressBar aventilProgress;
 
   @NonNull
   public final ImageView backgroundImage;
@@ -75,6 +82,7 @@ public final class FragmentOverviewBinding implements ViewBinding {
   public final ImageView ventil9;
 
   private FragmentOverviewBinding(@NonNull FrameLayout rootView, @NonNull ImageView aventil,
+      @NonNull TextView aventilPercent, @NonNull ProgressBar aventilProgress,
       @NonNull ImageView backgroundImage, @NonNull ImageView heater1, @NonNull ImageView heater2,
       @NonNull ImageView pump1, @NonNull ImageView pump2, @NonNull TextView tempBoil,
       @NonNull TextView tempHlt, @NonNull TextView tempMlt, @NonNull ImageView ventil1,
@@ -83,6 +91,8 @@ public final class FragmentOverviewBinding implements ViewBinding {
       @NonNull ImageView ventil8, @NonNull ImageView ventil9) {
     this.rootView = rootView;
     this.aventil = aventil;
+    this.aventilPercent = aventilPercent;
+    this.aventilProgress = aventilProgress;
     this.backgroundImage = backgroundImage;
     this.heater1 = heater1;
     this.heater2 = heater2;
@@ -132,6 +142,18 @@ public final class FragmentOverviewBinding implements ViewBinding {
       id = R.id.aventil;
       ImageView aventil = ViewBindings.findChildViewById(rootView, id);
       if (aventil == null) {
+        break missingId;
+      }
+
+      id = R.id.aventilPercent;
+      TextView aventilPercent = ViewBindings.findChildViewById(rootView, id);
+      if (aventilPercent == null) {
+        break missingId;
+      }
+
+      id = R.id.aventilProgress;
+      ProgressBar aventilProgress = ViewBindings.findChildViewById(rootView, id);
+      if (aventilProgress == null) {
         break missingId;
       }
 
@@ -237,9 +259,9 @@ public final class FragmentOverviewBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentOverviewBinding((FrameLayout) rootView, aventil, backgroundImage, heater1,
-          heater2, pump1, pump2, tempBoil, tempHlt, tempMlt, ventil1, ventil2, ventil3, ventil4,
-          ventil5, ventil6, ventil7, ventil8, ventil9);
+      return new FragmentOverviewBinding((FrameLayout) rootView, aventil, aventilPercent,
+          aventilProgress, backgroundImage, heater1, heater2, pump1, pump2, tempBoil, tempHlt,
+          tempMlt, ventil1, ventil2, ventil3, ventil4, ventil5, ventil6, ventil7, ventil8, ventil9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

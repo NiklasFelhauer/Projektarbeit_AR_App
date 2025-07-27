@@ -153,6 +153,32 @@
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"/>
 
+
+    <TextView
+        android:id="@+id/aventilPercent"
+        android:text="0 %"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="400dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/aventilProgress"
+        style="@style/Widget.ProgressBar.Vertical"
+        android:layout_width="6dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="420dp"
+        android:max="100"
+        android:progress="0"/>
+
+
+
+
+
+
     <!-- Pumpe 1 -->
     <ImageView
         android:id="@+id/pump1"

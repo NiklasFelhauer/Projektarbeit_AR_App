@@ -20,8 +20,8 @@
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\layout\\fragment_settings.xml"
     },
     {
-        "merged": "com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_camera.xml",
-        "source": "com.hka.objectdetection.app-main-47:/layout/fragment_camera.xml"
+        "merged": "com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_overview.xml",
+        "source": "com.hka.objectdetection.app-main-47:/layout/fragment_overview.xml"
     },
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-mergeDebugResources-44:\\layout\\fragment_promille.xml",

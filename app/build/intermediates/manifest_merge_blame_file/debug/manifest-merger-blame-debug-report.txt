@@ -22,87 +22,87 @@
 22
 23    <uses-sdk
 24        android:minSdkVersion="24"
-24-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml
+24-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml
 25        android:targetSdkVersion="32" />
-25-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml
+25-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml
 26
 27    <!-- Enable instant app support -->
 28    <dist:module dist:instant="true" />
-28-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:23:5-40
-28-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:23:18-37
+28-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:23:5-40
+28-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:23:18-37
 29
 30    <!-- Declare features -->
 31    <uses-feature android:name="android.hardware.camera" />
-31-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:26:5-60
-31-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:26:19-57
+31-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:26:5-60
+31-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:26:19-57
 32
 33    <!-- Declare permissions -->
 34    <uses-permission android:name="android.permission.CAMERA" />
-34-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:29:5-65
-34-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:29:22-62
+34-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:29:5-65
+34-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:29:22-62
 35    <uses-permission android:name="android.permission.INTERNET" />
-35-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:30:5-67
-35-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:30:22-64
+35-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:30:5-67
+35-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:30:22-64
 36    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-36-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:31:5-79
-36-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:31:22-76
+36-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:31:5-79
+36-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:31:22-76
 37    <uses-permission android:name="android.permission.WAKE_LOCK" />
-37-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:32:5-68
-37-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:32:22-65
+37-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:32:5-68
+37-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:32:22-65
 38
 39    <application
-39-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:35:5-66:19
+39-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:35:5-66:19
 40        android:allowBackup="true"
-40-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:36:9-35
+40-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:36:9-35
 41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 41-->[androidx.core:core:1.8.0] C:\Users\nikla\.gradle\caches\8.9\transforms\5046810036a2841d2fd842bebf6be4d7\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 42        android:debuggable="true"
 43        android:extractNativeLibs="false"
 44        android:icon="@mipmap/logo"
-44-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:37:9-36
+44-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:37:9-36
 45        android:label="@string/app_name"
-45-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:38:9-41
+45-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:38:9-41
 46        android:roundIcon="@mipmap/logo_round"
-46-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:39:9-47
+46-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:39:9-47
 47        android:taskAffinity=""
-47-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:40:9-32
+47-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:40:9-32
 48        android:testOnly="true" >
 49        <activity
-49-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:43:9-64:20
+49-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:43:9-64:20
 50            android:name="com.hka.objectdetection.MainActivity"
-50-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:44:13-41
+50-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:44:13-41
 51            android:clearTaskOnLaunch="true"
-51-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:45:13-45
+51-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:45:13-45
 52            android:exported="true"
-52-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:46:13-36
+52-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:46:13-36
 53            android:icon="@mipmap/logo"
-53-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:47:13-40
+53-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:47:13-40
 54            android:resizeableActivity="true"
-54-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:48:13-46
+54-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:48:13-46
 55            android:rotationAnimation="seamless"
-55-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:49:13-49
+55-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:49:13-49
 56            android:theme="@style/AppTheme" >
-56-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:50:13-44
+56-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:50:13-44
 57
 58            <!-- Main app intent filter -->
 59            <intent-filter>
-59-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:54:13-57:29
+59-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:54:13-57:29
 60                <action android:name="android.intent.action.MAIN" />
-60-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:55:17-69
-60-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:55:25-66
+60-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:55:17-69
+60-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:55:25-66
 61
 62                <category android:name="android.intent.category.LAUNCHER" />
-62-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:56:17-77
-62-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:56:27-74
+62-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:56:17-77
+62-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:56:27-74
 63            </intent-filter>
 64
 65            <!-- Declare notch support -->
 66            <meta-data
-66-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:60:13-62:40
+66-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:60:13-62:40
 67                android:name="android.notch_support"
-67-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:61:17-53
+67-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:61:17-53
 68                android:value="true" />
-68-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:62:17-37
+68-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\00_Android_App\app\src\main\AndroidManifest.xml:62:17-37
 69        </activity>
 70
 71        <service

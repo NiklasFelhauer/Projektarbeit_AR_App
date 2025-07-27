@@ -30,4 +30,9 @@
         android:id="@id/settings_fragment"
         android:icon="@drawable/settings_24px"
         android:title="@string/menu_settings" />
+
+    <item
+        android:id="@+id/overview_fragment"
+        android:icon="@drawable/settings_24px"
+        android:title="@string/menu_overview" />
 </menu>

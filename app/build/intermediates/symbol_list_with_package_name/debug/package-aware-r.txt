@@ -1217,6 +1217,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable anlagen_hintergrund
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -1259,10 +1260,14 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pump_off
+drawable pump_on
 drawable sensors_24px
 drawable settings_24px
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable valve_closed
+drawable valve_open
 id ALT
 id CTRL
 id FUNCTION
@@ -1485,6 +1490,7 @@ id onAttachStateChangeListener
 id onDateChanged
 id outline
 id overlay
+id overview_fragment
 id packed
 id parallax
 id parent
@@ -1501,6 +1507,7 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id pump
 id radio
 id ratio
 id rectangles
@@ -1576,6 +1583,9 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id tempBoil
+id tempHlt
+id tempMlt
 id text
 id text2
 id textMessages
@@ -1614,6 +1624,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id ventilA
 id view
 id view_finder
 id view_offset_helper
@@ -1700,6 +1711,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_camera
 layout fragment_mqtt
+layout fragment_overview
 layout fragment_settings
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1767,6 +1779,7 @@ string label_max_results
 string label_models
 string menu_camera
 string menu_mqtt
+string menu_overview
 string menu_settings
 string mtrl_chip_close_icon_content_description
 string nav_app_bar_navigate_up_description

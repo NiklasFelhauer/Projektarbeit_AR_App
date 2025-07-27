@@ -36,6 +36,7 @@
     <string name="label_models">ML Model</string>
     <string name="menu_camera">Camera</string>
     <string name="menu_mqtt">MQTT</string>
+    <string name="menu_overview">Overview</string>
     <string name="menu_settings">Settings</string>
 
     <string-array name="delegate_spinner_titles">

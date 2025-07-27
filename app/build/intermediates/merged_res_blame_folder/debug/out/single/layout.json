@@ -12,6 +12,10 @@
         "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/activity_main.xml"
     },
     {
+        "merged": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:/layout/fragment_overview.xml",
+        "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/fragment_overview.xml"
+    },
+    {
         "merged": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-44:/layout/fragment_settings.xml",
         "source": "com.google.mediapipe.examples.objectdetection.app-main-47:/layout/fragment_settings.xml"
     }

@@ -29,13 +29,25 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="gallery_fragment">
+                  <entry key="mqtt_fragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
                             <option name="x" value="12" />
                             <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="overviewFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-216" />
+                            <option name="y" value="8" />
                           </Point>
                         </option>
                       </LayoutPositions>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/anlagen_hintergrund">
+
+    <!-- Tanks mit Temperatur -->
+    <TextView
+        android:id="@+id/tempBoil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-- °C"
+        android:textSize="16sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tempMlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-- °C"
+        android:textSize="16sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="200dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tempHlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-- °C"
+        android:textSize="16sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="350dp"
+        android:textStyle="bold"/>
+
+    <!-- Ventil A -->
+    <ImageView
+        android:id="@+id/ventilA"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/valve_closed"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="100dp"/>
+
+    <!-- Pumpe -->
+    <ImageView
+        android:id="@+id/pump"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/pump_off"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="150dp"/>
+
+</RelativeLayout>

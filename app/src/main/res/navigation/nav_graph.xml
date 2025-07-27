@@ -54,4 +54,8 @@
         android:id="@+id/settings_fragment"
         android:name="com.google.mediapipe.examples.objectdetection.fragments.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/overview_fragment"
+        android:name="com.google.mediapipe.examples.objectdetection.fragments.OverviewFragment"
+        android:label="overview_fragment" />
 </navigation>

@@ -111,60 +111,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aebe5765-d4b7-4875-a235-54299277a322" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/AndroidProjectSystem.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/deviceManager.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/migrations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/androidTest/java/com/njl/brauanlage_app/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/java/com/njl/brauanlage_app/CameraScreen.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/java/com/njl/brauanlage_app/HomeScreen.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/java/com/njl/brauanlage_app/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/java/com/njl/brauanlage_app/ui/theme/Color.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/java/com/njl/brauanlage_app/ui/theme/Theme.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/java/com/njl/brauanlage_app/ui/theme/Type.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/app/src/test/java/com/njl/brauanlage_app/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/gradle/libs.versions.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brauanlage_App/settings.gradle.kts" beforeDir="false" />
-    </list>
+    <list default="true" id="aebe5765-d4b7-4875-a235-54299277a322" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +120,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=41091JEHN22594)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -189,7 +136,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3

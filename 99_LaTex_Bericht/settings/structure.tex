@@ -1,0 +1,93 @@
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel} % Deutsche Sprache 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}   % Kopf- / Fußzeile
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{siunitx}    % SI-Einheiten 
+\usepackage{multirow}   % Tabellen
+\usepackage{booktabs}   % Tabellen
+\usepackage{hyperref}
+\usepackage{listings}   % Code
+\usepackage[framemethod=default]{mdframed} % Custom boxen
+\usepackage{xcolor}
+\usepackage{subcaption} % Mehrere Bilder nebeneinander
+\usepackage[backend=biber,style=numeric, sorting=none]{biblatex} % Literaturverzeichnis
+\addbibresource{quellen.bib}
+
+
+
+\lstset{language=Python,
+        frame=single,
+        basicstyle=\ttfamily\footnotesize, % Noch kleinere Schrift
+        keywordstyle=\color{blue},
+        commentstyle=\color[rgb]{0,0.5,0},
+        stringstyle=\color{orange},
+        numbers=left,
+        numberstyle=\tiny\color{gray},
+        stepnumber=1,
+        numbersep=10pt,
+        tabsize=4,
+        showspaces=false,
+        showstringspaces=false,
+        breaklines=true,
+        morekeywords={self, None, sudo, apt, install}
+        }
+
+
+
+\definecolor{codegray}{gray}{0.9}
+\newcommand{\code}[1]{\colorbox{codegray}{\texttt{#1}}}
+
+
+\geometry{  
+            a4paper, 
+            left=25mm, 
+            right=25mm, 
+            top=20mm, 
+            bottom=20mm, 
+            headsep=5mm % Abstand Headerlinie <-> Sektion
+            }
+\usepackage{mathptmx} % Use Times New Roman font
+
+\hypersetup{pdftitle={Bericht Niklas Felhauer},pdfauthor={Niklas Felhauer}}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\thepage}
+
+% Schriftart
+\usepackage{avant} 
+\newcommand*{\avantstyle}{\fontfamily{pag}\selectfont}
+\DeclareTextFontCommand{\avantfont}{\avantstyle}
+\usepackage{plex-sans}
+\renewcommand*\familydefault{\sfdefault}
+
+% Exercise Box
+% Custom Box (Exercise)
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+backgroundcolor=white,
+linecolor=ThemeColor,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+innerbottommargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt]{eBox}
+
+% Define a custom environment to include title
+\newenvironment{exercise}[1]{%
+  \begin{eBox}%
+  \textbf{\textcolor{ThemeColor}{\large #1}}\\
+}{%
+  \end{eBox}%
+}

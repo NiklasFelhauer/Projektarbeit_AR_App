@@ -1,0 +1,173 @@
+\clearpage
+\section{Datenübertragung}
+% ====================================
+Die Datenübertragung erfolgt über zwei Wege, zunächst müssen die gemessenen Daten von der SPS zum Raspberry Pi gelangen. Anschließend wird der Raspberry Pi über ein LAN-Kabel mit einem WLAN-Router verbunden. Der Router spannt ein lokales Netzwerk auf, über welches die Daten zum Smartphone weitergeleitet werden, insofern das Smartphone mit dem Roter verbunden ist.
+
+
+
+\subsection{SPS zum Raspberry Pi}
+Die gemessenen Daten werden über ein Ethernet-Kabel mit dem Protokoll OPC UA von der SPS auf den Raspberry Pi übertragen. Diese werden danach mit einem Python Skript empfangen und aufbereitet.
+
+\subsection{Raspberry Pi zum Smartphone}
+Die Datenübertragung vom Raspberry Pi zum Smartphone läuft über einen Router, der als Acces Point fungiert. Dabei wird das Protokoll MQTT (Message Queuing Telemetry Transport) genutzt. 
+\newline 
+Zur Übertragung der Daten vom Raspberry Pi zum Smartphone wird eine Python-Skript erstellt:
+\begin{lstlisting}
+    import time
+from opcua import Client
+import paho.mqtt.client as mqtt
+import json
+
+# OPC UA-Einstellungen
+OPC_UA_SERVER = "opc.tcp://172.16.54.1:4840"
+
+TEMPERATURE_HLT = 'ns=3;s="I_Temp_3";datatype=Double'
+TEMPERATURE_MLT_OUTSIDE = 'ns=3;s="I_Temp_2";datatype=Double'
+TEMPERATURE_MLT_INSIDE = 'ns=3;s="Temp_MLT_FloWave";datatype=Double'
+TEMPERATURE_BOIL = 'ns=3;s="I_Temp_1";datatype=Double'
+TEMPERATURE_PV1 = 'ns=3;s="Daten_Bauteile_DB"."BauteileDaten"."FLOWave"."Temperature";datatype=Double'
+FLOW_PV1 = 'ns=3;s="Daten_Bauteile_DB"."BauteileDaten"."FLOWave"."VolumeFlow";datatype=Double'
+
+
+# MQTT-Einstellungen
+MQTT_BROKER = "192.168.188.26"  # IP-Adresse des Raspberry Pi 
+MQTT_PORT = 1883
+MQTT_TOPIC = "brauanlage/data"
+
+def read_opcua_data(opc_client):
+    """
+    Liest Daten von der SPS ueber OPC UA.
+    
+    """
+    try:
+        # Knoten abrufen und Werte auslesen
+        temp_hlt = opc_client.get_node(TEMPERATURE_HLT).get_value()
+        temp_mlt_outside = opc_client.get_node(TEMPERATURE_MLT_OUTSIDE).get_value()
+        temp_mlt_inside = opc_client.get_node(TEMPERATURE_MLT_INSIDE).get_value()
+        temp_boil = opc_client.get_node(TEMPERATURE_BOIL).get_value()
+        temp_pv1 = opc_client.get_node(TEMPERATURE_PV1).get_value()
+        fl_pv1 = opc_client.get_node(FLOW_PV1).get_value()
+        return {"temp_hlt": temp_hlt, "temp_mlt_outside": temp_mlt_outside,"temp_mlt_inside": temp_mlt_inside,"temp_boil": temp_boil,"temp_pv1": temp_pv1,"fl_pv1": fl_pv1}
+    except Exception as e:
+        print(f"Fehler beim Abrufen der OPC UA-Daten: {e}")
+        return None
+
+def main():
+    # Verbindung mit OPC UA-Server herstellen
+    opc_client = Client(OPC_UA_SERVER)
+    try:
+        opc_client.connect()
+        print("Mit OPC UA-Server verbunden.")
+    except Exception as e:
+        print(f"Fehler bei der Verbindung mit OPC UA-Server: {e}")
+        return
+
+    # Verbindung mit MQTT-Broker herstellen
+    mqtt_client = mqtt.Client()
+    
+    try:
+        mqtt_client.connect(MQTT_BROKER, MQTT_PORT, keepalive=60)
+        mqtt_client.loop_start() # Startet die MQTT Schleife
+        print("Mit MQTT-Broker verbunden.")
+    except Exception as e:
+        print(f"Fehler bei der Verbindung mit dem MQTT-Broker: {e}")
+        opc_client.disconnect()
+        return
+
+    # Endlos-Schleife: Daten abrufen und per MQTT senden
+    try:
+        while True:
+            data = read_opcua_data(opc_client)
+            if data:
+                # Daten als JSON an MQTT senden
+                mqtt_payload = json.dumps(data)
+                mqtt_client.publish(MQTT_TOPIC, mqtt_payload)
+                print(f"MQTT gesendet: {mqtt_payload}")
+            else:
+                print("Keine Daten empfangen.")
+
+            time.sleep(2)  # Warte 2 Sekunden, bevor die naechsten Daten abgerufen werden
+    except KeyboardInterrupt:
+        print("Beende Skript...")
+    finally:
+        # Verbindung schliessen
+        opc_client.disconnect()
+        mqtt_client.loop_stop()
+        mqtt_client.disconnect()
+        print("Verbindungen geschlossen.")
+
+if __name__ == "__main__":
+    while True:
+        try:
+            main()
+        except:
+            main()
+        finally:
+            pass 
+\end{lstlisting}
+
+
+\subsubsection*{Testcode auf dem Laptop}
+Zuerst muss in der Konsole die MQTT Bibliothek installiert werden mit:
+\begin{lstlisting}
+    pip install paho-mqtt
+\end{lstlisting}
+Anschließend kann auf dem Laptop (Windows 11, 64-Bit-System) das folgende Testprogramm ausgeführt werden. In der Konsolen-Ausgabe werden die empfangenen Datenpakete angezeigt.
+\begin{lstlisting}
+import paho.mqtt.client as mqtt
+
+def on_connect(client, userdata, flags, rc):
+    print(f"Verbunden mit Code: {rc}")
+    client.subscribe("brauanlage/data")
+
+def on_message(client, userdata, msg):
+    print(f"Nachricht empfangen: {msg.topic} {msg.payload.decode()}")
+
+broker_address = "192.168.188.26"  # IP-Adresse des Brokers
+
+client = mqtt.Client()
+client.on_connect = on_connect
+client.on_message = on_message
+client.connect(broker_address, 1883, 60)  # Port 1883 ist Standard (MQTT)
+
+client.loop_forever()
+\end{lstlisting}
+
+\subsubsection*{Acces Point}
+Zur Einreichtung des Acces Points ist der Router zunächst auf Werkseinstellung zurückgesetzt und es wird ein WLAN-Name und Passwort festgelegt. Anschließend wird überprüft, ob der DHCP Server aktiviert ist. Dies ermöglicht es Geräten, automatisch eine IP-Adresse vom Router zu erhalten.\\
+Der Raspberry Pi wird über ein Ethernet-Kabel direkt mit dem Router verbunden und erhält eine statische IP-Adresse. Diese Einstellung wird in den Netzwerkeinstellungen des Router vorgenommen, die allgemein unter \url{http://192.168.178.1} bzw. in unserem Fall unter \url{http://fritz.box} zu finden ist.
+
+\subsubsection*{MQTT auf dem Raspberry Pi einrichten}
+Zunächst muss der Mosquitto MQTT Broker auf dem Raspberry Pi installiert werden:
+\begin{lstlisting}
+    sudo apt install -y mosquitto mosquitto-clients
+\end{lstlisting}
+Mosquitto als Dienst starten und aktivieren:
+\begin{lstlisting}
+   sudo systemctl enable mosquitto
+   sudo systemctl start mosquitto 
+\end{lstlisting}
+Status überprüfen:
+\begin{lstlisting}
+    sudo systemctl status mosquitto
+\end{lstlisting}
+
+\subsubsection*{Passwort für den Datenzugriff}
+Für die Sicherstellung, dass nicht jeder Zugriff auf die Daten der SPS erhält, wird ein Passowort erstellt.
+\newline 
+Erstelle ein Passwort für den Benutzer braumeister:
+\begin{lstlisting}
+    sudo mosquitto_passwd -c /etc/mosquitto/passwordfile braumeister
+\end{lstlisting}
+Man wird aufgefordert ein Passwort zu vergeben
+\newline 
+Passwort: Lga234Vm-7fg
+\newline 
+Starte Mosquitto neu:
+\begin{lstlisting}
+    sudo systemctl restart mosquitto
+\end{lstlisting}
+Im Python-Client kann man sich wiefolgt authentifizieren:
+\begin{lstlisting}
+client.username_pw_set("braumeister", "Lga234Vm-7fg")
+\end{lstlisting}

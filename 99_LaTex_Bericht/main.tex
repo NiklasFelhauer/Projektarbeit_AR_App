@@ -1,0 +1,31 @@
+% ============================= %     
+%   AUTOR - NIKLAS FELHAUER     %
+% ============================= %
+\documentclass[a4paper,11pt]{article}
+\input{settings/structure}
+
+\begin{document}
+% ================================================================ %
+\include{content/@_title_page}     % Titelseite
+
+\pagenumbering{Roman}               % Römische Seitennummerierung
+\tableofcontents                    % Inhaltsverzeichnis
+\newpage                            
+
+\listoffigures                      % Abbildungsverzeichnis
+\newpage
+
+%\listoftables                       % Tabellenverzeichnis
+\cleardoublepage
+\pagenumbering{arabic}              % Arabische Seitennummerierung
+% ================================================================ %
+% Inhalt 
+\include{content/00_Zielsetzung}
+\include{content/01_Grundlagen}
+\include{content/02_Datenübertragung}
+\include{content/03_AndroidApp}
+\include{content/99_Schluss}
+\clearpage
+\printbibliography
+
+\end{document}

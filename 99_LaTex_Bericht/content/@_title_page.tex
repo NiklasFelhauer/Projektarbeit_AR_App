@@ -1,0 +1,80 @@
+% PARAMETER ÜBERGEBEN =================================================================
+\newcommand{\Autor}{Niklas Felhauer\\\vspace{-1mm}Jona Wilhelmi\\Leon Bunkus}
+\newcommand{\Studiengang}{Elektro- und Informationstechnik (Bachelor) -\\Vertiefung                                 Automatisierungstechnik}
+\newcommand{\Titel}{Projektarbeit}
+\newcommand{\ThesisTitel}{AR-Datenvisualisierung für Brauanlagen}
+\newcommand{\Matrikelnummer}{83670\\84820\\85592}
+\newcommand{\Betreuer}{Prof. Dr. Phillip Nenninger\\Simon Holzhauer}
+\newcommand{\Vorlesungsfach}{Automatisierungstechnik}
+% =====================================================================================
+
+\definecolor{ThemeColor}{RGB}{ 40,135, 50} % Elektro- und Informationstechnik
+\usetikzlibrary{calc}
+
+\begingroup
+\thispagestyle{empty} % Suppress headers and footers on the Titel page
+\begin{tikzpicture}[remember picture,overlay]
+
+%%% node coordinates A4 %%%
+    % specify absolute placement on page, figures will be drawn relative to those
+    \coordinate (UoAS) at ($ (current page.north west) + (2,-2) $);
+    \coordinate (Faculty) at ($ (UoAS) + (0,-2) $);
+    
+    \coordinate (Autor) at ($ (current page.south west) + (2,1.5) $);
+        \coordinate (Studiengang) at ($ (current page.north west) + (2, -9) $);
+        \coordinate (Titel) at ($ (current page.north west) + (2, -13) $);
+        \coordinate (Thesis_Titel) at ($ (Titel) + (0, -1) $);
+        \coordinate (von) at ($ (Thesis_Titel) + (0, -5) $);
+        \coordinate (Matrikelnummer) at ($ (von) + (5, 0) $);
+        \coordinate (Betreuer) at ($ (von) + (0, -3) $);
+        \coordinate (Vorlesungsfach) at ($ (Betreuer) + (0, -1) $);
+        \coordinate (Vorlesungsfachname) at ($ (Vorlesungsfach) + (2.5, 0) $);
+        \coordinate (Namen) at ($ (von) + (0, -1) $);
+        \coordinate (Nummer) at ($ (Namen) + (5, 0) $);
+        \coordinate (Betreuernamen) at ($ (Betreuer) + (2.5, 0) $);
+    %\coordinate (BackgroundPic) at ($ (current page.south) + (0,3) $);
+    \coordinate (ColorBlock) at (0,-16);
+    \coordinate (H) at ($ (current page.north east) + (18,0) $);
+    \coordinate (K) at ($ (H) + (0,-8.6) $);
+    \coordinate (A) at ($ (K) + (0,-8.6) $);
+
+    
+%%% Colored, 3cm high, Box under Picture %%%
+    \path[fill=ThemeColor] (current page.south west) rectangle ($ (current page.south east) + (0,3) $);
+    
+    %%% Text Blocks %%%
+    % HKA, University of Applied Science
+    \node[text width = 10cm, ThemeColor, below right] at (UoAS) {\avantfont{\textbf{Hochschule Karlsruhe}}\\ \avantfont{University of}\\ \avantfont{Applied Sciences}};
+    % Faculty
+    \node[text width = 10cm, ThemeColor, below right] at (Faculty) {\avantfont{Fakultät für}\\ \avantfont{\textbf{Elektro- und\\Informationstechnik}}};
+    % Titel and SubTitel 
+    \node[text width = 10cm, ThemeColor, above right] at (Titel) {\textbf{{\fontsize{50}{60}\selectfont {\Titel}}}};
+    % Autor
+    \node[text width = 10cm, white, right] at (Autor) {{\large}}; % Leer gelassen
+    % Studiengang
+    \node[text width = 14cm, black, right] at (Studiengang) {\Large{Studiengang {\Studiengang}}};
+    % Thesis-Titel
+    \node[text width = 12cm, black, right] at (Thesis_Titel) {\textbf{\Huge{\ThesisTitel}}};
+    % von
+    \node[text width = 12cm, black, right] at (von) {\large{von}};
+    % Namen
+    \node[text width = 12cm, ThemeColor, right] at (Namen) {\textbf{\Large{{\Autor}}}} ;
+    \node[text width = 12cm, black, right] at (Matrikelnummer) {\large{Matrikelnummer}};
+    \node[text width = 12cm, black, right] at (Nummer) {\large{\Matrikelnummer}} ;
+    % Betreuer
+    \node[text width = 12cm, black, right] at (Betreuer) {\large{Betreuer:}};
+    \node[text width = 12cm, black, right] at (Betreuernamen) {\large{\Betreuer}};
+    % Vorlesungsfach
+    \node[text width = 12cm, black, right] at (Vorlesungsfach) {\large{Vorlesung:}};
+    \node[text width = 12cm, black, right] at (Vorlesungsfachname) {\large{\Vorlesungsfach}};
+
+
+        
+    \path (H) [fill=ThemeColor, scale = 0.35, rounded corners = 1] +(0,-2.95)  -- +(3,-2.95) -- +(3,0) -- +(4.2,0)  -- +(4.2,-2.95) -- +(7.2,-2.95) -- +(7.2,-3.95) -- +(4.2,-3.95) -- +(4.2,-6.9) -- +(3,-6.9) -- +(3,-3.95) -- +(0,-3.95) -- cycle;
+    \path (H) [fill=ThemeColor, scale = 0.35, rounded corners = 1] +(7.8,0)  -- +(9,0) -- +(9,-6.9) -- +(7.8,-6.9) -- cycle;
+    \path (K) [fill=ThemeColor, scale = 0.35, rounded corners = 1] +(3, 0) -- +(4.2,0) -- +(4.2,-2.8) -- +(9,0) -- +(9,-1.3) -- +(5.2,-3.45) -- +(9,-5.6) -- +(9,-6.9) -- +(4.2,-4.1) -- +(4.2,-6.9) -- +(3,-6.9) -- cycle;
+    \path (A) [fill=ThemeColor, scale = 0.35, rounded corners = 1] +(6, 0) -- +(6.65,0) -- +(10.05,-6.9) -- +(8.75,-6.9) -- +(6,-1.3) -- +(4.8,-3.7) -- +(7.52,-3.7) -- +(8.85,-4.8) -- +(4.3,-4.8) -- +(3.25,-6.9) -- +(1.95,-6.9) -- +(5.35,0) -- cycle;
+    
+\end{tikzpicture}
+\vfill
+\endgroup

@@ -1,0 +1,23 @@
+\clearpage
+% ==========================
+\section{Schluss}
+% ==========================
+Abschließend lässt sich zusammenfassen, dass das Projekt fast vollständig umgesetzt ist. Die Kommunikation der Prozesswerte erfolgt zuerst mit OPC UA von der SPS zum Raspberry Pi. Anschließend werden über den Acces Point (FritzBox) die Prozesswerte über den MQTT-Broker (Raspberry Pi) für Geräte im Umfeld des WLAN-Netztes bereitgestellt.
+Ein Smartphone, das die Android App installiert hat, muss mit dem WLAN-Netzwerk des Acces Points verbunden sein und kann dadruch die Prozesswerte empfangen. Diese Werte werden in der App verarbeitet und aufbereitet, sodass sie in der App angezeigt werden können.
+Außerdem verfügt die App über eine Objekterkennung, die momentan noch auf einem vortrainierten Modell basiert. In der Kamera-Ansicht werden in Echtzeit die Objekte erkannt und mit Bounding-Boxen bzw. Labels entsprechend gekennzeichnet. Zusätzlich werden die aktuellen Temperaturwerte als Overlay angezeigt. \\
+Zum vollständig abgeschlossenen Projekt fehlt nur noch, dass das vortrainierte Modell durch ein benutzerdefiniertes Modell ersetzt wird. Dieses Modell muss die Tanks in der Brauanlage erkennen können. Wie im Bericht beschrieben, kommt es hier momentan temporär zu Fehlern. Jedoch gehen wir davon aus, dass in Zukunft dieser Fehler von \texttt{Tensorflow} gelöst wird und das \texttt{.tflite}-Modell entsprechend trainiert werden kann.
+\parencite{jetpackcomposegfg}
+
+
+
+\clearpage
+\begin{lstlisting}
+    
+https://pro.arcgis.com/de/pro-app/latest/tool-reference/image-analyst/how-compute-accuracy-for-object-detection-works.htm#:~:text=Mean%20Average%20Precision%3A%20Die%20Mean,05%2C%20gemittelt%20%C3%BCber%20alle%20Klassen.
+
+
+https://developer.android.com/guide/components/activities/activity-lifecycle?hl=de
+
+
+https://www.geeksforgeeks.org/android/android-jetpack-compose-tutorial/
+\end{lstlisting}

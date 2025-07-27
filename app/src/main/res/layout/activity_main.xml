@@ -66,5 +66,37 @@
             android:layout_below="@id/navigation"
             android:background="@android:color/darker_gray" />
 
+        <LinearLayout
+            android:id="@+id/mqttStatusOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:background="#AA000000"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="12dp"
+            android:elevation="12dp"
+            android:visibility="gone"
+            android:clickable="false"
+            android:focusable="false">
+
+            <ImageView
+                android:id="@+id/mqttStatusIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_cloud_off" />
+
+            <TextView
+                android:id="@+id/mqttStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verbinden..."
+                android:textSize="12sp"
+                android:layout_marginStart="6dp"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

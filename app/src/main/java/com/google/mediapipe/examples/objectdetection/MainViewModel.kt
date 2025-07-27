@@ -45,7 +45,9 @@ class MainViewModel : ViewModel() {
     private val brokerUri = "tcp://192.168.1.12:1883"
     private val topic = "mein/test/topic"
 
-    private var connected = false
+    private val _mqttConnected = MutableLiveData<Boolean>(false)
+    val mqttConnected: LiveData<Boolean> get() = _mqttConnected
+
 
     init {
         startMqtt()
@@ -59,7 +61,8 @@ class MainViewModel : ViewModel() {
                     mqttClient?.disconnect()
                 } catch (_: Exception) {}
 
-                connected = false
+                _mqttConnected.postValue(false)
+
 
                 mqttClient = MqttClient(brokerUri, MqttClient.generateClientId(), null)
 
@@ -71,7 +74,8 @@ class MainViewModel : ViewModel() {
                 mqttClient!!.setCallback(object : MqttCallback {
                     override fun connectionLost(cause: Throwable?) {
                         addMessage("⚠️ Verbindung verloren")
-                        connected = false
+                        _mqttConnected.postValue(false)
+
                     }
 
                     override fun messageArrived(topic: String?, message: MqttMessage?) {
@@ -110,7 +114,8 @@ class MainViewModel : ViewModel() {
                 mqttClient!!.connect(options)
                 mqttClient!!.subscribe(topic, 1)
 
-                connected = true
+                _mqttConnected.postValue(true)
+
                 addMessage("✅ Verbunden mit Broker\n📡 Subscribed to $topic")
 
             } catch (e: Exception) {

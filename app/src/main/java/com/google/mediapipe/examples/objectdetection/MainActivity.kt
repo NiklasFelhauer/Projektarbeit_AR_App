@@ -17,6 +17,10 @@
 package com.google.mediapipe.examples.objectdetection
 
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
@@ -44,6 +48,21 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding.navigation.setOnNavigationItemReselectedListener {
             // ignore the reselection
         }
+        val overlay = findViewById<LinearLayout>(R.id.mqttStatusOverlay)
+        val icon = findViewById<ImageView>(R.id.mqttStatusIcon)
+        val text = findViewById<TextView>(R.id.mqttStatusText)
+
+        viewModel.mqttConnected.observe(this) { connected ->
+            overlay.visibility = View.VISIBLE
+            if (connected) {
+                icon.setImageResource(R.drawable.ic_cloud_on)
+                text.text = "MQTT Verbunden"
+            } else {
+                icon.setImageResource(R.drawable.ic_cloud_off)
+                text.text = "MQTT Getrennt"
+            }
+        }
+
     }
 
     override fun onBackPressed() {

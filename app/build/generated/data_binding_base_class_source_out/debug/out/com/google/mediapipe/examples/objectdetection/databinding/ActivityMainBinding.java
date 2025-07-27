@@ -4,6 +4,9 @@ package com.google.mediapipe.examples.objectdetection.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -25,6 +28,15 @@ public final class ActivityMainBinding implements ViewBinding {
   public final FragmentContainerView fragmentContainer;
 
   @NonNull
+  public final ImageView mqttStatusIcon;
+
+  @NonNull
+  public final LinearLayout mqttStatusOverlay;
+
+  @NonNull
+  public final TextView mqttStatusText;
+
+  @NonNull
   public final BottomNavigationView navigation;
 
   @NonNull
@@ -34,10 +46,14 @@ public final class ActivityMainBinding implements ViewBinding {
   public final View view;
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull FragmentContainerView fragmentContainer, @NonNull BottomNavigationView navigation,
-      @NonNull Toolbar toolbar, @NonNull View view) {
+      @NonNull FragmentContainerView fragmentContainer, @NonNull ImageView mqttStatusIcon,
+      @NonNull LinearLayout mqttStatusOverlay, @NonNull TextView mqttStatusText,
+      @NonNull BottomNavigationView navigation, @NonNull Toolbar toolbar, @NonNull View view) {
     this.rootView = rootView;
     this.fragmentContainer = fragmentContainer;
+    this.mqttStatusIcon = mqttStatusIcon;
+    this.mqttStatusOverlay = mqttStatusOverlay;
+    this.mqttStatusText = mqttStatusText;
     this.navigation = navigation;
     this.toolbar = toolbar;
     this.view = view;
@@ -76,6 +92,24 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.mqttStatusIcon;
+      ImageView mqttStatusIcon = ViewBindings.findChildViewById(rootView, id);
+      if (mqttStatusIcon == null) {
+        break missingId;
+      }
+
+      id = R.id.mqttStatusOverlay;
+      LinearLayout mqttStatusOverlay = ViewBindings.findChildViewById(rootView, id);
+      if (mqttStatusOverlay == null) {
+        break missingId;
+      }
+
+      id = R.id.mqttStatusText;
+      TextView mqttStatusText = ViewBindings.findChildViewById(rootView, id);
+      if (mqttStatusText == null) {
+        break missingId;
+      }
+
       id = R.id.navigation;
       BottomNavigationView navigation = ViewBindings.findChildViewById(rootView, id);
       if (navigation == null) {
@@ -94,8 +128,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((CoordinatorLayout) rootView, fragmentContainer, navigation,
-          toolbar, view);
+      return new ActivityMainBinding((CoordinatorLayout) rootView, fragmentContainer,
+          mqttStatusIcon, mqttStatusOverlay, mqttStatusText, navigation, toolbar, view);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

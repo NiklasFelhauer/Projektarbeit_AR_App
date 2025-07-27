@@ -1247,6 +1247,8 @@ drawable heizstab_rot
 drawable ic_baseline_add_24
 drawable ic_baseline_photo_camera_24
 drawable ic_baseline_photo_library_24
+drawable ic_cloud_off
+drawable ic_cloud_on
 drawable ic_minus
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1277,6 +1279,7 @@ drawable pump_orange
 drawable pump_red
 drawable sensors_24px
 drawable settings_24px
+drawable status_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable vlv1_gray
@@ -1494,6 +1497,9 @@ id middle
 id mini
 id motion_base
 id mqttRoot
+id mqttStatusIcon
+id mqttStatusOverlay
+id mqttStatusText
 id mqtt_fragment
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag

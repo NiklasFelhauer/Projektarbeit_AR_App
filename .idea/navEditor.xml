@@ -41,7 +41,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="overviewFragment">
+                  <entry key="overview_fragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -70,6 +70,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="promilleFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-421" />
+                            <option name="y" value="7" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

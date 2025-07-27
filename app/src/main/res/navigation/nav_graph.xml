@@ -58,4 +58,8 @@
         android:id="@+id/overview_fragment"
         android:name="com.google.mediapipe.examples.objectdetection.fragments.OverviewFragment"
         android:label="overview_fragment" />
+    <fragment
+        android:id="@+id/promille_fragment"
+        android:name="com.google.mediapipe.examples.objectdetection.fragments.PromilleFragment"
+        android:label="PromilleFragment" />
 </navigation>

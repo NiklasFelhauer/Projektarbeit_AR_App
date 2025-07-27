@@ -22,6 +22,11 @@
         android:title="@string/menu_camera" />
 
     <item
+        android:id="@+id/overview_fragment"
+        android:icon="@drawable/preview_24px"
+        android:title="@string/menu_overview" />
+
+    <item
         android:id="@id/mqtt_fragment"
         android:icon="@drawable/sensors_24px"
         android:title="@string/menu_mqtt" />
@@ -32,7 +37,8 @@
         android:title="@string/menu_settings" />
 
     <item
-        android:id="@+id/overview_fragment"
-        android:icon="@drawable/settings_24px"
-        android:title="@string/menu_overview" />
+        android:id="@id/promille_fragment"
+        android:icon="@drawable/calculate_24px"
+        android:title="@string/menu_promillerechner" />
+
 </menu>

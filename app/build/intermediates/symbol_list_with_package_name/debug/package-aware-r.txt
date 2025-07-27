@@ -1224,6 +1224,7 @@ drawable avlv_gray
 drawable avlv_green
 drawable avlv_orange
 drawable avlv_red
+drawable bier
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1232,6 +1233,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable calculate_24px
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1268,6 +1270,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable preview_24px
 drawable pump_gray
 drawable pump_green
 drawable pump_orange
@@ -1350,6 +1353,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addBeerButton
 id alertTitle
 id aligned
 id all
@@ -1367,6 +1371,7 @@ id aventil
 id backgroundImage
 id barrier
 id baseline
+id beerCountText
 id beginOnFirstDraw
 id beginning
 id blocking
@@ -1527,6 +1532,8 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id promilleText
+id promille_fragment
 id pump1
 id pump2
 id radio
@@ -1568,6 +1575,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id soberTimeText
 id spacer
 id special_effects_controller_view_tag
 id spinner_delegate
@@ -1663,6 +1671,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id weightInput
 id withText
 id wrap
 id wrap_content
@@ -1741,6 +1750,7 @@ layout design_text_input_password_icon
 layout fragment_camera
 layout fragment_mqtt
 layout fragment_overview
+layout fragment_promille
 layout fragment_settings
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1809,6 +1819,7 @@ string label_models
 string menu_camera
 string menu_mqtt
 string menu_overview
+string menu_promillerechner
 string menu_settings
 string mtrl_chip_close_icon_content_description
 string nav_app_bar_navigate_up_description

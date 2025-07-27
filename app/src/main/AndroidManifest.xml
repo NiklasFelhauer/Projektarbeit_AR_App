@@ -17,7 +17,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.google.mediapipe.examples.objectdetection">
+    package="com.hka.objectdetection">
 
     <!-- Enable instant app support -->
     <dist:module dist:instant="true" />

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-43:/values-ms/values-ms.xml",
+            "outputFile": "com.hka.objectdetection.app-mergeDebugResources-43:/values-ms/values-ms.xml",
             "map": [
                 {
                     "source": "C:\\Users\\nikla\\.gradle\\caches\\8.9\\transforms\\5046810036a2841d2fd842bebf6be4d7\\transformed\\core-1.8.0\\res\\values-ms\\values-ms.xml",

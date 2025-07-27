@@ -16,7 +16,7 @@
 16-->
 17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 18    xmlns:dist="http://schemas.android.com/apk/distribution"
-19    package="com.google.mediapipe.examples.objectdetection"
+19    package="com.hka.objectdetection"
 20    android:versionCode="1"
 21    android:versionName="1.0.0" >
 22
@@ -69,7 +69,7 @@
 48        android:testOnly="true" >
 49        <activity
 49-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:43:9-64:20
-50            android:name="com.google.mediapipe.examples.objectdetection.MainActivity"
+50            android:name="com.hka.objectdetection.MainActivity"
 50-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:44:13-41
 51            android:clearTaskOnLaunch="true"
 51-->C:\Users\nikla\Documents\00_Education\00_Hka\Projektarbeit\Projektarbeit_AR_App\app\src\main\AndroidManifest.xml:45:13-45
@@ -138,7 +138,7 @@
 87-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
 88            android:name="androidx.startup.InitializationProvider"
 88-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:27:13-67
-89            android:authorities="com.google.mediapipe.examples.objectdetection.androidx-startup"
+89            android:authorities="com.hka.objectdetection.androidx-startup"
 89-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:28:13-68
 90            android:exported="false" >
 90-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\nikla\.gradle\caches\8.9\transforms\fe1b1117a53c529afc980e584bb7c78f\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:29:13-37

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.google.mediapipe.examples.objectdetection.app-mergeDebugResources-43:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.hka.objectdetection.app-mergeDebugResources-43:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\nikla\\.gradle\\caches\\8.9\\transforms\\8883d60ed338264ccdd1a25245ea9b94\\transformed\\material-1.0.0\\res\\values-large-v4\\values-large-v4.xml",

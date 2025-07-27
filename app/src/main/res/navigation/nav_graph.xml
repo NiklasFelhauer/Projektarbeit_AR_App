@@ -22,7 +22,7 @@
 
     <fragment
         android:id="@+id/permissions_fragment"
-        android:name="com.google.mediapipe.examples.objectdetection.fragments.PermissionsFragment"
+        android:name="com.hka.objectdetection.fragments.PermissionsFragment"
         android:label="PermissionsFragment">
 
         <action
@@ -35,7 +35,7 @@
 
     <fragment
         android:id="@+id/camera_fragment"
-        android:name="com.google.mediapipe.examples.objectdetection.fragments.CameraFragment"
+        android:name="com.hka.objectdetection.fragments.CameraFragment"
         android:label="CameraFragment">
 
         <action
@@ -48,18 +48,18 @@
 
     <fragment
         android:id="@+id/mqtt_fragment"
-        android:name="com.google.mediapipe.examples.objectdetection.fragments.MQTTFragment"
+        android:name="com.hka.objectdetection.fragments.MQTTFragment"
         android:label="MQTTFragment" />
     <fragment
         android:id="@+id/settings_fragment"
-        android:name="com.google.mediapipe.examples.objectdetection.fragments.SettingsFragment"
+        android:name="com.hka.objectdetection.fragments.SettingsFragment"
         android:label="SettingsFragment" />
     <fragment
         android:id="@+id/overview_fragment"
-        android:name="com.google.mediapipe.examples.objectdetection.fragments.OverviewFragment"
+        android:name="com.hka.objectdetection.fragments.OverviewFragment"
         android:label="overview_fragment" />
     <fragment
         android:id="@+id/promille_fragment"
-        android:name="com.google.mediapipe.examples.objectdetection.fragments.PromilleFragment"
+        android:name="com.hka.objectdetection.fragments.PromilleFragment"
         android:label="PromilleFragment" />
 </navigation>

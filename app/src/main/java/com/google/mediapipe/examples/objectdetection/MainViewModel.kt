@@ -12,7 +12,7 @@ import org.json.JSONObject
 
 class MainViewModel : ViewModel() {
 
-    // 🔹 Object Detection Einstellungen
+    // Object Detection Settings
     private var _delegate: Int = ObjectDetectorHelper.DELEGATE_CPU
     private var _threshold: Float = ObjectDetectorHelper.THRESHOLD_DEFAULT
     private var _maxResults: Int = ObjectDetectorHelper.MAX_RESULTS_DEFAULT
@@ -28,19 +28,19 @@ class MainViewModel : ViewModel() {
     fun setMaxResults(maxResults: Int) { _maxResults = maxResults }
     fun setModel(model: Int) { _model = model }
 
-    // 🔹 MQTT Nachrichten
+    // MQTT Messages
     private val _mqttMessages = MutableLiveData<List<String>>(emptyList())
     val mqttMessages: LiveData<List<String>> get() = _mqttMessages
 
-    // 🔹 Tanks fürs Overlay
+    // Tanks for Overlay
     private val _tankTemperatures = MutableLiveData<Map<String, Float>>(emptyMap())
     val tankTemperatures: LiveData<Map<String, Float>> get() = _tankTemperatures
 
-    // 🔹 Alle Werte inkl. Ventile für globale Nutzung
+    // All values (incl. valves)
     private val _allValues = MutableLiveData<Map<String, Float>>(emptyMap())
     val allValues: LiveData<Map<String, Float>> get() = _allValues
 
-    // 🔹 MQTT Client
+    // MQTT Client
     private var mqttClient: MqttClient? = null
     private val brokerUri = "tcp://192.168.1.12:1883"
     private val topic = "mein/test/topic"
@@ -52,10 +52,15 @@ class MainViewModel : ViewModel() {
     }
 
     fun startMqtt() {
-        if (connected) return
-
         viewModelScope.launch(Dispatchers.IO) {
             try {
+                // 🔹 Alte Verbindung schließen, wenn vorhanden
+                try {
+                    mqttClient?.disconnect()
+                } catch (_: Exception) {}
+
+                connected = false
+
                 mqttClient = MqttClient(brokerUri, MqttClient.generateClientId(), null)
 
                 val options = MqttConnectOptions().apply {
@@ -88,8 +93,8 @@ class MainViewModel : ViewModel() {
                                 }
                             }
 
-                            _allValues.postValue(parsed)        // Alle Werte inkl. Ventile
-                            _tankTemperatures.postValue(tankMap) // Nur Tanks fürs Overlay
+                            _allValues.postValue(parsed)
+                            _tankTemperatures.postValue(tankMap)
 
                             Log.d("MQTT", "Parsed tanks: $tankMap")
                             Log.d("MQTT", "Parsed all: $parsed")

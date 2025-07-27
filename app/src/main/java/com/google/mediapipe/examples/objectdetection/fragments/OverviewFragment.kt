@@ -91,9 +91,9 @@ class OverviewFragment : Fragment() {
 
             val ventil9State = values["ventil_9"] ?: 3f
             when (ventil9State){
-                0f -> binding.ventil9.setImageResource(R.drawable.vlv1_red)
-                1f -> binding.ventil9.setImageResource(R.drawable.vlv1_green)
-                else -> binding.ventil9.setImageResource(R.drawable.vlv1_gray)
+                0f -> binding.ventil9.setImageResource(R.drawable.vlv2_red)
+                1f -> binding.ventil9.setImageResource(R.drawable.vlv2_green)
+                else -> binding.ventil9.setImageResource(R.drawable.vlv2_gray)
             }
 
             // 🔹 Beispiel für eine AValve

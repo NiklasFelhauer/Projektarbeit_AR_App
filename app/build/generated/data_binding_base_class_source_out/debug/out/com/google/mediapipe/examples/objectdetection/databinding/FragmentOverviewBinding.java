@@ -4,8 +4,8 @@ package com.google.mediapipe.examples.objectdetection.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,10 +18,25 @@ import java.lang.String;
 
 public final class FragmentOverviewBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final FrameLayout rootView;
 
   @NonNull
-  public final ImageView pump;
+  public final ImageView aventil;
+
+  @NonNull
+  public final ImageView backgroundImage;
+
+  @NonNull
+  public final ImageView heater1;
+
+  @NonNull
+  public final ImageView heater2;
+
+  @NonNull
+  public final ImageView pump1;
+
+  @NonNull
+  public final ImageView pump2;
 
   @NonNull
   public final TextView tempBoil;
@@ -33,22 +48,63 @@ public final class FragmentOverviewBinding implements ViewBinding {
   public final TextView tempMlt;
 
   @NonNull
-  public final ImageView ventilA;
+  public final ImageView ventil1;
 
-  private FragmentOverviewBinding(@NonNull RelativeLayout rootView, @NonNull ImageView pump,
-      @NonNull TextView tempBoil, @NonNull TextView tempHlt, @NonNull TextView tempMlt,
-      @NonNull ImageView ventilA) {
+  @NonNull
+  public final ImageView ventil2;
+
+  @NonNull
+  public final ImageView ventil3;
+
+  @NonNull
+  public final ImageView ventil4;
+
+  @NonNull
+  public final ImageView ventil5;
+
+  @NonNull
+  public final ImageView ventil6;
+
+  @NonNull
+  public final ImageView ventil7;
+
+  @NonNull
+  public final ImageView ventil8;
+
+  @NonNull
+  public final ImageView ventil9;
+
+  private FragmentOverviewBinding(@NonNull FrameLayout rootView, @NonNull ImageView aventil,
+      @NonNull ImageView backgroundImage, @NonNull ImageView heater1, @NonNull ImageView heater2,
+      @NonNull ImageView pump1, @NonNull ImageView pump2, @NonNull TextView tempBoil,
+      @NonNull TextView tempHlt, @NonNull TextView tempMlt, @NonNull ImageView ventil1,
+      @NonNull ImageView ventil2, @NonNull ImageView ventil3, @NonNull ImageView ventil4,
+      @NonNull ImageView ventil5, @NonNull ImageView ventil6, @NonNull ImageView ventil7,
+      @NonNull ImageView ventil8, @NonNull ImageView ventil9) {
     this.rootView = rootView;
-    this.pump = pump;
+    this.aventil = aventil;
+    this.backgroundImage = backgroundImage;
+    this.heater1 = heater1;
+    this.heater2 = heater2;
+    this.pump1 = pump1;
+    this.pump2 = pump2;
     this.tempBoil = tempBoil;
     this.tempHlt = tempHlt;
     this.tempMlt = tempMlt;
-    this.ventilA = ventilA;
+    this.ventil1 = ventil1;
+    this.ventil2 = ventil2;
+    this.ventil3 = ventil3;
+    this.ventil4 = ventil4;
+    this.ventil5 = ventil5;
+    this.ventil6 = ventil6;
+    this.ventil7 = ventil7;
+    this.ventil8 = ventil8;
+    this.ventil9 = ventil9;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -73,9 +129,39 @@ public final class FragmentOverviewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.pump;
-      ImageView pump = ViewBindings.findChildViewById(rootView, id);
-      if (pump == null) {
+      id = R.id.aventil;
+      ImageView aventil = ViewBindings.findChildViewById(rootView, id);
+      if (aventil == null) {
+        break missingId;
+      }
+
+      id = R.id.backgroundImage;
+      ImageView backgroundImage = ViewBindings.findChildViewById(rootView, id);
+      if (backgroundImage == null) {
+        break missingId;
+      }
+
+      id = R.id.heater1;
+      ImageView heater1 = ViewBindings.findChildViewById(rootView, id);
+      if (heater1 == null) {
+        break missingId;
+      }
+
+      id = R.id.heater2;
+      ImageView heater2 = ViewBindings.findChildViewById(rootView, id);
+      if (heater2 == null) {
+        break missingId;
+      }
+
+      id = R.id.pump1;
+      ImageView pump1 = ViewBindings.findChildViewById(rootView, id);
+      if (pump1 == null) {
+        break missingId;
+      }
+
+      id = R.id.pump2;
+      ImageView pump2 = ViewBindings.findChildViewById(rootView, id);
+      if (pump2 == null) {
         break missingId;
       }
 
@@ -97,14 +183,63 @@ public final class FragmentOverviewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.ventilA;
-      ImageView ventilA = ViewBindings.findChildViewById(rootView, id);
-      if (ventilA == null) {
+      id = R.id.ventil1;
+      ImageView ventil1 = ViewBindings.findChildViewById(rootView, id);
+      if (ventil1 == null) {
         break missingId;
       }
 
-      return new FragmentOverviewBinding((RelativeLayout) rootView, pump, tempBoil, tempHlt,
-          tempMlt, ventilA);
+      id = R.id.ventil2;
+      ImageView ventil2 = ViewBindings.findChildViewById(rootView, id);
+      if (ventil2 == null) {
+        break missingId;
+      }
+
+      id = R.id.ventil3;
+      ImageView ventil3 = ViewBindings.findChildViewById(rootView, id);
+      if (ventil3 == null) {
+        break missingId;
+      }
+
+      id = R.id.ventil4;
+      ImageView ventil4 = ViewBindings.findChildViewById(rootView, id);
+      if (ventil4 == null) {
+        break missingId;
+      }
+
+      id = R.id.ventil5;
+      ImageView ventil5 = ViewBindings.findChildViewById(rootView, id);
+      if (ventil5 == null) {
+        break missingId;
+      }
+
+      id = R.id.ventil6;
+      ImageView ventil6 = ViewBindings.findChildViewById(rootView, id);
+      if (ventil6 == null) {
+        break missingId;
+      }
+
+      id = R.id.ventil7;
+      ImageView ventil7 = ViewBindings.findChildViewById(rootView, id);
+      if (ventil7 == null) {
+        break missingId;
+      }
+
+      id = R.id.ventil8;
+      ImageView ventil8 = ViewBindings.findChildViewById(rootView, id);
+      if (ventil8 == null) {
+        break missingId;
+      }
+
+      id = R.id.ventil9;
+      ImageView ventil9 = ViewBindings.findChildViewById(rootView, id);
+      if (ventil9 == null) {
+        break missingId;
+      }
+
+      return new FragmentOverviewBinding((FrameLayout) rootView, aventil, backgroundImage, heater1,
+          heater2, pump1, pump2, tempBoil, tempHlt, tempMlt, ventil1, ventil2, ventil3, ventil4,
+          ventil5, ventil6, ventil7, ventil8, ventil9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

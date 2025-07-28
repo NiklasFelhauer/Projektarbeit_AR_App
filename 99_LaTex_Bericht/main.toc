@@ -9,4 +9,5 @@
 \contentsline {subsection}{\numberline {3.1}SPS zum Raspberry Pi}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Raspberry Pi zum Smartphone}{6}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Android App}{10}{section.4}%
-\contentsline {section}{\numberline {5}Schluss}{12}{section.5}%
+\contentsline {section}{\numberline {5}Objekterkennungsmodell}{12}{section.5}%
+\contentsline {section}{\numberline {6}Schluss}{13}{section.6}%

@@ -102,7 +102,7 @@ class OverviewFragment : Fragment() {
             }
 
             // 🔹 Beispiel für eine AValve
-            val percent = (values["aventil"] ?: 0f).toInt()
+            val percent = (values["aventil"] ?: 101f).toInt()
             binding.aventilPercent.text = "$percent %"
             binding.aventilProgress.progress = percent
 
@@ -110,6 +110,7 @@ class OverviewFragment : Fragment() {
             val red = ContextCompat.getColor(binding.root.context, R.color.Red)
             val orange = ContextCompat.getColor(binding.root.context, R.color.Orange)
             val green = ContextCompat.getColor(binding.root.context, R.color.Green)
+            val black = ContextCompat.getColor(binding.root.context, R.color.Black)
 
             when {
                 percent <= 10 -> {
@@ -120,9 +121,15 @@ class OverviewFragment : Fragment() {
                     binding.aventilPercent.setTextColor(orange)
                     binding.aventil.setImageResource(R.drawable.avlv_orange)
                 }
-                else -> {
+                percent in 81..100 -> {
                     binding.aventilPercent.setTextColor(green)
                     binding.aventil.setImageResource(R.drawable.avlv_green)
+                }
+                else -> {
+                    binding.aventilPercent.text = "-- %"
+                    binding.aventilProgress.progress = 0
+                    binding.aventilPercent.setTextColor(black)
+                    binding.aventil.setImageResource(R.drawable.avlv_gray)
                 }
             }
 

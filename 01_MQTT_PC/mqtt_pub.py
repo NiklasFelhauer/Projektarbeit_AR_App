@@ -4,13 +4,12 @@ import json
 import paho.mqtt.client as mqtt
 import time
 
-# Callback, wenn verbunden
 def on_connect(client, userdata, flags, rc):
     print(f"Verbunden mit Code: {rc}")
 
 # MQTT-Verbindung einrichten
-broker_address = "192.168.1.12"  # IP-Adresse deines MQTT-Brokers
-topic = "mein/test/topic"        # Topic deiner App
+broker_address = "X.X.X.X"       # IP-Adresse
+topic = "mein/test/topic"        # Topic
 
 client = mqtt.Client()
 client.on_connect = on_connect

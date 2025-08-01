@@ -8,8 +8,8 @@ def on_connect(client, userdata, flags, rc):
     print(f"Verbunden mit Code: {rc}")
 
 # MQTT-Verbindung einrichten
-broker_address = "X.X.X.X"       # IP-Adresse
-topic = "brauanlage/data"        # Topic
+broker_address = "192.168.188.26"        # IP-Adresse des Brokers (Pi)
+topic = "brauanlage/data"                # Topic
 
 client = mqtt.Client()
 client.on_connect = on_connect

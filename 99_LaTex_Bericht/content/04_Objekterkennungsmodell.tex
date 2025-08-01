@@ -1,1 +1,89 @@
 \section{Objekterkennungsmodell}
+
+
+\subsection{Media Pipe Model Maker}
+Eine andere Möglichkeit den Tensorflow Model Maker zu umgehen ist der Verwendung des Media Pipe Model Makers von Google. Durchgeführt mit Google Colab, da hier eine kostenlose GPU zur Verfügungsteht und das Training damit deutlich schneller durchgeführt werden kann.
+\begin{lstlisting}
+    !python --version
+    !pip install --upgrade pip
+    !pip install mediapipe-model-maker
+\end{lstlisting}
+
+\begin{lstlisting}
+    from google.colab import files
+    import os
+    import json
+    import tensorflow as tf
+    assert tf.__version__.startswith('2')
+
+    from mediapipe_model_maker import object_detector
+\end{lstlisting}
+
+Es muss der Datensatz an Bilder im Colab hochgeladen sein. In diesem Beispiel liegt ein Datenset im Pascal VOC-Format vor und heißt \texttt{main\_dataset.zip}. Hierbei ist es auch wichtig auf die richtige Ordnerstruktur zu achten, damit der Model Maker die Bilder und Labels korrekt erkennt. Die Struktur ist wie folgt:
+\begin{lstlisting}
+    main_dataset/
+        train/
+            images/
+                image1.jpg
+                image2.jpg
+            Annotations/
+                image1.xml
+                image2.xml
+        valid/
+            images/
+                image3.jpg
+                image4.jpg
+            Annotations/
+                image3.xml
+                image4.xml
+\end{lstlisting}
+
+
+\begin{lstlisting}
+    !unzip main_dataset.zip
+
+    train_dataset_path = "main_dataset/train"
+    validation_dataset_path = "main_dataset/valid"
+\end{lstlisting}
+
+\begin{lstlisting}
+     train_data = object_detector.Dataset.from_pascal_voc_folder(
+        'main_dataset/train',
+        cache_dir="/tmp/od_data/train",
+    )
+
+    validation_data = object_detector.Dataset.from_pascal_voc_folder(
+        'main_dataset/valid',
+        cache_dir="/tmp/od_data/validation")
+
+\end{lstlisting}
+
+\begin{lstlisting}
+    hparams = object_detector.HParams(batch_size=8, learning_rate=0.3, epochs=50, export_dir='exported_model')
+
+    options = object_detector.ObjectDetectorOptions(
+        supported_model=object_detector.SupportedModels.MOBILENET_V2,
+        hparams=hparams
+    )
+
+    model = object_detector.ObjectDetector.create(
+        train_data=train_data,
+        validation_data=validation_data,
+        options=options
+    )
+
+\end{lstlisting}
+
+\begin{lstlisting}
+    train_data = object_detector.Dataset.from_pascal_voc_folder(train_dataset_path, cache_dir="/tmp/od_data/train")
+    validation_data = object_detector.Dataset.from_pascal_voc_folder(validation_dataset_path, cache_dir="/tmp/od_data/validation")
+    print("train_data size: ", train_data.size)
+    print("validation_data size: ", validation_data.size)
+\end{lstlisting}
+
+Anschließend kann das Model exportiert und heruntergeladen werden. Dabei wird das Modell in das \texttt{.tflite}-Format konvertiert, welches für die Android App benötigt wird. Der Export erfolgt mit dem folgenden Code:
+\begin{lstlisting}
+    model.export_model()
+    !ls exported_model
+    files.download('exported_model/model.tflite')
+\end{lstlisting}

@@ -10,4 +10,5 @@
 \contentsline {subsection}{\numberline {3.2}Raspberry Pi zum Smartphone}{6}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Android App}{10}{section.4}%
 \contentsline {section}{\numberline {5}Objekterkennungsmodell}{12}{section.5}%
-\contentsline {section}{\numberline {6}Schluss}{13}{section.6}%
+\contentsline {subsection}{\numberline {5.1}Media Pipe Model Maker}{12}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Schluss}{14}{section.6}%

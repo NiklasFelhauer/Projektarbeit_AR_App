@@ -3,17 +3,29 @@
 % ====================================
 Die Datenübertragung erfolgt über zwei Wege, zunächst müssen die gemessenen Daten von der SPS zum Raspberry Pi gelangen. Anschließend wird der Raspberry Pi über ein LAN-Kabel mit einem WLAN-Router verbunden. Der Router spannt ein lokales Netzwerk auf, über welches die Daten zum Smartphone weitergeleitet werden, insofern das Smartphone mit dem Roter verbunden ist.
 
-
-
 \subsection{SPS zum Raspberry Pi}
 Die gemessenen Daten werden über ein Ethernet-Kabel mit dem Protokoll OPC UA von der SPS auf den Raspberry Pi übertragen. Diese werden danach mit einem Python Skript empfangen und aufbereitet.
 
 \subsection{Raspberry Pi zum Smartphone}
-Die Datenübertragung vom Raspberry Pi zum Smartphone läuft über einen Router, der als Acces Point fungiert. Dabei wird das Protokoll MQTT (Message Queuing Telemetry Transport) genutzt. 
-\newline 
+Die Datenübertragung vom Raspberry Pi zum Smartphone läuft über einen Router, der als Acces Point fungiert. Dabei wird das Protokoll MQTT (Message Queuing Telemetry Transport) genutzt.
+\subsubsection{MQTT auf dem Raspberry Pi einrichten}
+Zunächst muss der Mosquitto MQTT Broker auf dem Raspberry Pi in der Konsole installiert werden:
+\begin{lstlisting}
+    sudo apt install -y mosquitto mosquitto-clients
+\end{lstlisting}
+Mosquitto als Dienst starten und aktivieren:
+\begin{lstlisting}
+   sudo systemctl enable mosquitto
+   sudo systemctl start mosquitto 
+\end{lstlisting}
+Der aktuelle Status des Mosquitto-Service, kann mit folgendem Code überprüft werden:
+\begin{lstlisting}
+    sudo systemctl status mosquitto
+\end{lstlisting}
+
 Zur Übertragung der Daten vom Raspberry Pi zum Smartphone wird eine Python-Skript erstellt:
 \begin{lstlisting}
-    import time
+import time
 from opcua import Client
 import paho.mqtt.client as mqtt
 import json
@@ -106,53 +118,38 @@ if __name__ == "__main__":
             pass 
 \end{lstlisting}
 
+Nun kann auf dem Raspberry Pi überprüft, ob die MQTT Daten lokal auf dem Pi empfangen werden können. Dazu muss in der Konsole dem Topic gefolgt werden mit:
+\begin{lstlisting}
+    mosquitto_sub -h localhost -t brauanlage/data
+\end{lstlisting}
+Anschließend werden die gesendeten Daten aufgelistet.
 
-\subsubsection*{Testcode auf dem Laptop}
+\subsubsection{Testcode auf dem Laptop}
+Nun kann weiter getestet werden, ob die MQTT Verbindung auch auf einem Gerät im selben Netzwerk funktioniert, zum Beispiel einem Window 11 PC. 
 Zuerst muss in der Konsole die MQTT Bibliothek installiert werden mit:
 \begin{lstlisting}
     pip install paho-mqtt
 \end{lstlisting}
-Anschließend kann auf dem Laptop (Windows 11, 64-Bit-System) das folgende Testprogramm ausgeführt werden. In der Konsolen-Ausgabe werden die empfangenen Datenpakete angezeigt.
+Nun kann der MQTT-Dienst gestartet werden, indem im Installationsverzeichnis die Konfigurationsdatei ausgeführt wird. Standardmäßig befindet sich dieses Verzeichnis unter
+\texttt{C:/Program Files/mosquitto}.
+
 \begin{lstlisting}
-import paho.mqtt.client as mqtt
-
-def on_connect(client, userdata, flags, rc):
-    print(f"Verbunden mit Code: {rc}")
-    client.subscribe("brauanlage/data")
-
-def on_message(client, userdata, msg):
-    print(f"Nachricht empfangen: {msg.topic} {msg.payload.decode()}")
-
-broker_address = "192.168.188.26"  # IP-Adresse des Brokers
-
-client = mqtt.Client()
-client.on_connect = on_connect
-client.on_message = on_message
-client.connect(broker_address, 1883, 60)  # Port 1883 ist Standard (MQTT)
-
-client.loop_forever()
+mosquitto -c mosquitto.conf -v
 \end{lstlisting}
+Falls erforderlich, sollte zusätzlich der Port 1883 in der Windows-Firewall freigegeben werden. Anschließend lässt sich auf dem Laptop (Windows~11, 64-Bit) das Testprogramm auf dem GitHub ausführen. Es gibt ein Testprogramm zu senden und ein weiteres zum Empfangen im Ordner \href{https://github.com/NiklasFelhauer/Projektarbeit_AR_App/tree/main/01_MQTT_PC}{01\_MQTT\_PC}
 
-\subsubsection*{Acces Point}
+\begin{enumerate}
+    \item Empfangen: mqtt\_sub.py
+    \item Senden: mqtt\_pub.py 
+\end{enumerate}
+
+
+\subsubsection{Acces Point einrichten}
 Zur Einreichtung des Acces Points ist der Router zunächst auf Werkseinstellung zurückgesetzt und es wird ein WLAN-Name und Passwort festgelegt. Anschließend wird überprüft, ob der DHCP Server aktiviert ist. Dies ermöglicht es Geräten, automatisch eine IP-Adresse vom Router zu erhalten.\\
 Der Raspberry Pi wird über ein Ethernet-Kabel direkt mit dem Router verbunden und erhält eine statische IP-Adresse. Diese Einstellung wird in den Netzwerkeinstellungen des Router vorgenommen, die allgemein unter \url{http://192.168.178.1} bzw. in unserem Fall unter \url{http://fritz.box} zu finden ist.
 
-\subsubsection*{MQTT auf dem Raspberry Pi einrichten}
-Zunächst muss der Mosquitto MQTT Broker auf dem Raspberry Pi installiert werden:
-\begin{lstlisting}
-    sudo apt install -y mosquitto mosquitto-clients
-\end{lstlisting}
-Mosquitto als Dienst starten und aktivieren:
-\begin{lstlisting}
-   sudo systemctl enable mosquitto
-   sudo systemctl start mosquitto 
-\end{lstlisting}
-Status überprüfen:
-\begin{lstlisting}
-    sudo systemctl status mosquitto
-\end{lstlisting}
 
-\subsubsection*{Passwort für den Datenzugriff}
+\subsubsection{Passwort für den Datenzugriff}
 Für die Sicherstellung, dass nicht jeder Zugriff auf die Daten der SPS erhält, wird ein Passowort erstellt.
 \newline 
 Erstelle ein Passwort für den Benutzer braumeister:

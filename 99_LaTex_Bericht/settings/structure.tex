@@ -17,6 +17,22 @@
 \addbibresource{quellen.bib}
 
 
+\lstdefinelanguage{Kotlin}{
+  morekeywords={val,var,fun,for,if,else,return,null,true,false,class,object},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+}
+
+\lstset{
+  language=Kotlin,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{orange},
+  breaklines=true,
+}
 
 \lstset{language=Python,
         frame=single,

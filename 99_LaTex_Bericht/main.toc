@@ -8,7 +8,18 @@
 \contentsline {section}{\numberline {3}Datenübertragung}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}SPS zum Raspberry Pi}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Raspberry Pi zum Smartphone}{6}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}MQTT auf dem Raspberry Pi einrichten}{6}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Testcode auf dem Laptop}{8}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Acces Point einrichten}{8}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Passwort für den Datenzugriff}{8}{subsubsection.3.2.4}%
 \contentsline {section}{\numberline {4}Android App}{10}{section.4}%
-\contentsline {section}{\numberline {5}Objekterkennungsmodell}{12}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Media Pipe Model Maker}{12}{subsection.5.1}%
-\contentsline {section}{\numberline {6}Schluss}{14}{section.6}%
+\contentsline {subsection}{\numberline {4.1}MainViewModel}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Die verschiedenen Tabs}{11}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Kamera-Tab}{11}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Overview-Tab}{12}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}MQTT-Tab}{12}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Settings-Tab}{12}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Promellerechner-Tab}{12}{subsubsection.4.2.5}%
+\contentsline {section}{\numberline {5}Objekterkennungsmodell}{13}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Media Pipe Model Maker}{13}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Schluss}{15}{section.6}%

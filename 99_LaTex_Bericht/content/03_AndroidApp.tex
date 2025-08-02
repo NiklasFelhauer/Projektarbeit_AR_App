@@ -1,8 +1,48 @@
 \section{Android App}
 
 \subsection{MainViewModel}
-In diesem Projekt spielt das Datenmanagemet eine wichtige Rolle, da sich Werte kontinuierlich ändern und gleichzeit global in der App verfügbar sein müssen. Dieser Datenfluss wird im \verb|MainViewModel| der App gesteuert. Es handelt sich um eine default Android-Komponente, die Daten im Hintergrund unabhängig von der UI (User Interface) verwaltet. 
-Das ist notwendig, weil Tabs oft komplett neu geladen werden, nachdem zwischen den Tabs gewechselt wird.
+
+Das \verb|MainViewModel| bildet die zentrale Datenschnittstelle der App. 
+Es handelt sich um eine Android-Komponente, die Daten unabhängig vom User Interface (UI) im Hintergrund verwaltet.
+Das ist notwendig, weil die einzelnen Tabs beim Wechseln neu geladen werden und lokale Variablen verloren gehen würden.
+Das ViewModel speichert die Werte zentral und stellt sie allen Tabs zur Verfügung.
+
+Im \verb|MainViewModel| wird außerdem die MQTT-Verbindung aufgebaut und alle eingehenden Nachrichten verarbeitet. 
+Die Sensordaten werden dabei im JSON-Format übertragen, zum Beispiel:
+\lstinline|{"tank_1": 65.5, "tank_2":70.2, "tank_3": 23.4, ...}|
+
+Beim Eintreffen einer Nachricht wird diese in eine Datenstruktur umgewandelt (geparsed) und den Tabs bereitgestellt:
+
+\begin{lstlisting}[language=Kotlin]
+override fun messageArrived(topic: String?, message: MqttMessage?) {
+    val raw = message?.toString() ?: return
+    val obj = JSONObject(raw)
+    val parsed = mutableMapOf<String, Float>()
+    obj.keys().forEach { key ->
+        parsed[key] = obj.getDouble(key).toFloat()
+    }
+    _allValues.postValue(parsed)
+}
+\end{lstlisting}
+
+Die App verfügt über die folgenden zwei Datensammlungen:
+\begin{itemize}
+    \item \verb|_tankTemperatures|: enthält die Temperaturwerte der Tanks
+    \item \verb|_allValues|: enthält alle Werte aus der MQTT-Nachricht 
+\end{itemize}
+Beide Variablen sind vom Typ \verb|LiveData|. 
+Das bedeutet, dass sie automatisch alle Bildschirme aktualisieren, sobald sich der Wert ändert.
+Dadurch werden Temperaturänderungen oder Schaltzustände der Brauanlage in Echtzeit in der App sichtbar.
+\\Der grundsätzliche Ablauf vom \verb|MainViewModel| ist vereinfacht in \autoref{fig:DatenflussMainViewModel} dargestellt.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=7cm]{pictures/AndroidApp/MVM.png}
+    \caption{Datenfluss des MainViewModels} \cite{Datenfluss_MainViewModel}
+    \label{fig:DatenflussMainViewModel}
+\end{figure}
+
+\newpage
 
 
 \subsection{Die verschiedenen Tabs}

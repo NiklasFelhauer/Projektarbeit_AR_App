@@ -111,7 +111,27 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aebe5765-d4b7-4875-a235-54299277a322" name="Changes" comment="" />
+    <list default="true" id="aebe5765-d4b7-4875-a235-54299277a322" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/00_Zielsetzung.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/00_Zielsetzung.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/01_Grundlagen.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/01_Grundlagen.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/02_Datenübertragung.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/02_Datenübertragung.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/03_AndroidApp.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/03_AndroidApp.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/03_AndroidApp.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/03_AndroidApp.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/04_Objekterkennungsmodell.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/04_Objekterkennungsmodell.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/99_Schluss.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/99_Schluss.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/@_title_page.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/@_title_page.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.bcf" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.bcf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.blg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.fls" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.fls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.lof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.toc" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +140,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=41091JEHN22594)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\nikla\.android\avd\Pixel_6_API_36.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -157,7 +177,7 @@
     "ScreenshotViewer.SavePath": "C:/Users/nikla/Documents/00_Education/00_Hka/Semester_5/Projektarbeit/LaTex_Projektarbeit/pictures/AndroidApp",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "LaTex",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/nikla/Documents/00_Education/00_Hka/Projektarbeit/Projektarbeit_AR_App/00_Android_App",
     "settings.editor.selected.configurable": "preferences.language.Kotlin"

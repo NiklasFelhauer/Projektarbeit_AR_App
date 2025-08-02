@@ -2373,10 +2373,11 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">quellen.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="2" intorder="1">AppTabs</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Datenfluss_MainViewModel</bcf:citekey>
     <bcf:citekey order="3" intorder="1">AppTabs</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">NummerierungAktorenSensoren</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">jetpackcomposegfg</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">AppTabs</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">NummerierungAktorenSensoren</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">jetpackcomposegfg</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

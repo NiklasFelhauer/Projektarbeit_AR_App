@@ -5,11 +5,6 @@
       <config />
     </shared>
     <layouts>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/anlagen_hintergrund.xml">
-        <config>
-          <theme>@android:style/Theme.Material.Light</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/calculate_24px.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
@@ -111,27 +106,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aebe5765-d4b7-4875-a235-54299277a322" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/00_Zielsetzung.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/00_Zielsetzung.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/01_Grundlagen.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/01_Grundlagen.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/02_Datenübertragung.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/02_Datenübertragung.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/03_AndroidApp.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/03_AndroidApp.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/03_AndroidApp.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/03_AndroidApp.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/04_Objekterkennungsmodell.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/04_Objekterkennungsmodell.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/99_Schluss.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/99_Schluss.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/content/@_title_page.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/content/@_title_page.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.bcf" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.bcf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.blg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.fls" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.fls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.lof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.run.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../99_LaTex_Bericht/main.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../99_LaTex_Bericht/main.toc" afterDir="false" />
-    </list>
+    <list default="true" id="aebe5765-d4b7-4875-a235-54299277a322" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

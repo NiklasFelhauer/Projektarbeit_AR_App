@@ -763,6 +763,7 @@ int attr windowNoTitle 0x7f0402c2
 int bool abc_action_bar_embed_tabs 0x7f050000
 int bool abc_config_actionMenuItemAllCaps 0x7f050001
 int bool mtrl_btn_textappearance_all_caps 0x7f050002
+int color Black 0x7f060091
 int color Green 0x7f060000
 int color Orange 0x7f060001
 int color Red 0x7f060002

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  5 AUG 2025 23:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  14 AUG 2025 12:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1375,32 +1375,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
  <./pictures/AndroidApp/MVM.png>]
-<pictures/AndroidApp/CameraView.png, id=361, 1230.5975pt x 2568.59625pt>
+<pictures/AndroidApp/CameraView.png, id=362, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/CameraView.png Graphic file (type png)
 <use pictures/AndroidApp/CameraView.png>
-Package pdftex.def Info: pictures/AndroidApp/CameraView.png  used on input line 54.
+Package pdftex.def Info: pictures/AndroidApp/CameraView.png  used on input line 55.
 (pdftex.def)             Requested size: 109.04025pt x 227.62204pt.
 LaTeX Font Info:    Font shape `OT1/IBMPlexSans-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 55.
-<pictures/AndroidApp/OverviewTab.png, id=362, 1230.5975pt x 2568.59625pt>
+(Font)              scaled to size 10.0pt on input line 56.
+<pictures/AndroidApp/OverviewTab.png, id=363, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/OverviewTab.png Graphic file (type png)
 <use pictures/AndroidApp/OverviewTab.png>
-Package pdftex.def Info: pictures/AndroidApp/OverviewTab.png  used on input line 60.
+Package pdftex.def Info: pictures/AndroidApp/OverviewTab.png  used on input line 61.
 (pdftex.def)             Requested size: 109.04025pt x 227.62204pt.
-<pictures/AndroidApp/MQTT.png, id=363, 1230.5975pt x 2568.59625pt>
+<pictures/AndroidApp/MQTT.png, id=364, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/MQTT.png Graphic file (type png)
 <use pictures/AndroidApp/MQTT.png>
-Package pdftex.def Info: pictures/AndroidApp/MQTT.png  used on input line 66.
+Package pdftex.def Info: pictures/AndroidApp/MQTT.png  used on input line 67.
 (pdftex.def)             Requested size: 109.04025pt x 227.62204pt.
-<pictures/AndroidApp/Settings.png, id=364, 1230.5975pt x 2568.59625pt>
+<pictures/AndroidApp/Settings.png, id=365, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/Settings.png Graphic file (type png)
 <use pictures/AndroidApp/Settings.png>
-Package pdftex.def Info: pictures/AndroidApp/Settings.png  used on input line 75.
+Package pdftex.def Info: pictures/AndroidApp/Settings.png  used on input line 76.
 (pdftex.def)             Requested size: 109.04025pt x 227.62204pt.
-<pictures/AndroidApp/PromilleRechner.png, id=365, 1230.5975pt x 2568.59625pt>
+<pictures/AndroidApp/PromilleRechner.png, id=366, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/PromilleRechner.png Graphic file (type png)
 <use pictures/AndroidApp/PromilleRechner.png>
-Package pdftex.def Info: pictures/AndroidApp/PromilleRechner.png  used on input line 80.
+Package pdftex.def Info: pictures/AndroidApp/PromilleRechner.png  used on input line 81.
 (pdftex.def)             Requested size: 109.04025pt x 227.62204pt.
 
 
@@ -1519,7 +1519,7 @@ Here is how much of TeX's memory you used:
  1143 hyphenation exceptions out of 8191
  89i,13n,94p,790b,3062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Bold.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Italic.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagk8a.pfb>
-Output written on main.pdf (20 pages, 8088075 bytes).
+Output written on main.pdf (20 pages, 8088556 bytes).
 PDF statistics:
  593 PDF objects out of 1000 (max. 8388607)
  283 named destinations out of 1000 (max. 500000)

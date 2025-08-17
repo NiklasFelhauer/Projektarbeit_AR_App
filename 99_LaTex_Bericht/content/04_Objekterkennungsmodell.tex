@@ -1,21 +1,35 @@
 \section{Objekterkennungsmodell}
 
-\subsection{Media Pipe Model Maker}
-Eine andere Möglichkeit den Tensorflow Model Maker zu umgehen ist der Verwendung des Media Pipe Model Makers von Google. Durchgeführt mit Google Colab, da hier eine kostenlose GPU zur Verfügungsteht und das Training damit deutlich schneller durchgeführt werden kann.
+\subsection{Datenset erstellen}
+Für das Training des Objekterkennungsmodells wird ein eigener Datensatz mit insgesamt 104 Bildern der Brauanlage erstellt. Davon werden 89 Bilder für das Training und 15 Bilder für die Validierung verwendet.
+Da diese Datenmenge sehr klein ist, wird der Datensatz im online-Tool Roboflow künstliche erweitert. Dabei kommen Filter wie Zuschneiden (Crop), Farb- und Helligkeitsanpassung (Saturation, Brightness), Unschärfe (Blur) und Rauschen (Noise) zum Einsatz.
+
+Alle Bilder werden auf eine einheitliche Größe von 640×640 Pixel skaliert. Nach der Erweiterung umfasst der Datensatz 267 Trainingsbilder (95 \%) und 15 Validierungsbilder (5 \%). Der Export erfolgt im Pascal \verb|VOC-Format|, dieser Ordner muss im folgenden noch umstrukturiert werden.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = \textwidth]{pictures/AndroidApp/Roboflow.png}
+    \caption{Bounding Boxen zeichnen mit Roboflow} \cite{Roboflow}
+    \label{fig:Roboflow}
+\end{figure}
+
+
+\subsection{Mediapipe Model Maker}
+Eine andere Möglichkeit den Tensorflow Model Maker zu umgehen ist die Verwendung des Media Pipe Model Makers von Google. Durchgeführt mit Google Colab, da hier eine kostenlose GPU zur Verfügungsteht und das Training damit deutlich schneller durchgeführt werden kann.
 \begin{lstlisting}
-    !python --version
-    !pip install --upgrade pip
-    !pip install mediapipe-model-maker
+!python --version
+!pip install --upgrade pip
+!pip install mediapipe-model-maker
 \end{lstlisting}
 
 \begin{lstlisting}
-    from google.colab import files
-    import os
-    import json
-    import tensorflow as tf
-    assert tf.__version__.startswith('2')
+from google.colab import files
+import os
+import json
+import tensorflow as tf
+assert tf.__version__.startswith('2')
 
-    from mediapipe_model_maker import object_detector
+from mediapipe_model_maker import object_detector
 \end{lstlisting}
 
 Es muss der Datensatz an Bilder im Colab hochgeladen sein. In diesem Beispiel liegt ein Datenset im Pascal VOC-Format vor und heißt \texttt{main\_dataset.zip}. Hierbei ist es auch wichtig auf die richtige Ordnerstruktur zu achten, damit der Model Maker die Bilder und Labels korrekt erkennt. Die Struktur ist wie folgt:
@@ -39,50 +53,64 @@ Es muss der Datensatz an Bilder im Colab hochgeladen sein. In diesem Beispiel li
 
 
 \begin{lstlisting}
-    !unzip main_dataset.zip
+!unzip main_dataset.zip
 
-    train_dataset_path = "main_dataset/train"
-    validation_dataset_path = "main_dataset/valid"
+train_dataset_path = "main_dataset/train"
+validation_dataset_path = "main_dataset/valid"
 \end{lstlisting}
 
 \begin{lstlisting}
-     train_data = object_detector.Dataset.from_pascal_voc_folder(
-        'main_dataset/train',
-        cache_dir="/tmp/od_data/train",
-    )
+train_data = object_detector.Dataset.from_pascal_voc_folder(
+            'main_dataset/train',
+            cache_dir="/tmp/od_data/train",
+            )
 
-    validation_data = object_detector.Dataset.from_pascal_voc_folder(
-        'main_dataset/valid',
-        cache_dir="/tmp/od_data/validation")
+validation_data = object_detector.Dataset.from_pascal_voc_folder(
+                'main_dataset/valid',
+                cache_dir="/tmp/od_data/validation"
+                )
 
 \end{lstlisting}
-
+Im nächsten Schritt kann das eigentliche Training durchgeführt werden. Es wird das vortrainierte \verb|MobileNetV2|-Modell als Basis genutzt, da dieses für mobile Anwendungen optimiert ist. Die Trainingsparamter werden wie folgt festgelegt:
+\begin{itemize}
+    \item \textbf{Batch Size} = 8: Anzahl der Bilder, die gleichzeitig verarbeitet werden
+    \item \textbf{Learning Rate} = 0.3: Bestimmt die Lerngeschwindigkeit. Dieser Wert ist verhältnismäßig hoch, da das vorhandene Modell nur angepasst wird
+    \item \textbf{Epochs} = 50: Wie oft der komplette Datensazt wiederholt wird
+    \item \textbf{Export Directory} = 'exported\_model': Speicherort für das trainierte Modell 
+\end{itemize}
 \begin{lstlisting}
-    hparams = object_detector.HParams(batch_size=8, learning_rate=0.3, epochs=50, export_dir='exported_model')
+hparams = object_detector.HParams(
+    batch_size=8,
+    learning_rate=0.3,
+    epochs=50,
+    export_dir='exported_model'
+)
 
-    options = object_detector.ObjectDetectorOptions(
-        supported_model=object_detector.SupportedModels.MOBILENET_V2,
-        hparams=hparams
-    )
+options = object_detector.ObjectDetectorOptions(
+    supported_model=object_detector.SupportedModels.MOBILENET_V2,
+    hparams=hparams
+)
 
-    model = object_detector.ObjectDetector.create(
-        train_data=train_data,
-        validation_data=validation_data,
-        options=options
-    )
+model = object_detector.ObjectDetector.create(
+    train_data=train_data,
+    validation_data=validation_data,
+    options=options
+)
 
 \end{lstlisting}
-
-\begin{lstlisting}
-    train_data = object_detector.Dataset.from_pascal_voc_folder(train_dataset_path, cache_dir="/tmp/od_data/train")
-    validation_data = object_detector.Dataset.from_pascal_voc_folder(validation_dataset_path, cache_dir="/tmp/od_data/validation")
-    print("train_data size: ", train_data.size)
-    print("validation_data size: ", validation_data.size)
-\end{lstlisting}
-
+Ein Ausschnitt der Konsolenausgabe während des Trainings ist in \autoref{fig:WhileTraining} dargestellt. Während dem Training lassen sich durch den Log schon die ersten Rückschlüsse ziehen:
+Man sieht, dass \texttt{total\_loss} im Verlauf stark sinkt. Das bedeutet, dass das Modell lernt und sich auf die Trainingsdaten anpasst. Auch \texttt{cls\_loss} und \texttt{box\_loss} gehen runter. Das deutet daraufhin, dass die Klassifikation und das Zeichnen der Bounding Boxen der Tanks immer besser funktioniert.
+Die Validierungsverluste (\texttt{val\_total\_loss}) bleiben jedoch relativ hoch. Das bedeutet, dass das Modell mit unbekannten Bildern schlechter lernt als mit den genutzten Trainingsbildern. Das ist hauptsächlich auf die geringe Bilder-Anzahl zurückzuführen.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = \textwidth]{pictures/AndroidApp/whileTraining.jpg}
+    \caption{Konsolenausgabe während des Trainings} \cite{WhileTraining}
+    \label{fig:WhileTraining}
+\end{figure}
+\newpage
 Anschließend kann das Model exportiert und heruntergeladen werden. Dabei wird das Modell in das \texttt{.tflite}-Format konvertiert, welches für die Android App benötigt wird. Der Export erfolgt mit dem folgenden Code:
 \begin{lstlisting}
-    model.export_model()
-    !ls exported_model
-    files.download('exported_model/model.tflite')
+model.export_model()
+!ls exported_model
+files.download('exported_model/model.tflite')
 \end{lstlisting}

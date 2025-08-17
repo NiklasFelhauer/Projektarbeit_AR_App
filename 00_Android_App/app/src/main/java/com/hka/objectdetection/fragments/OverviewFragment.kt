@@ -106,7 +106,7 @@ class OverviewFragment : Fragment() {
             binding.aventilPercent.text = "$percent %"
             binding.aventilProgress.progress = percent
 
-// ✅ Farbe aus colors.xml holen – sicher mit binding.root.context
+            // ✅ Farbe aus colors.xml holen – sicher mit binding.root.context
             val red = ContextCompat.getColor(binding.root.context, R.color.Red)
             val orange = ContextCompat.getColor(binding.root.context, R.color.Orange)
             val green = ContextCompat.getColor(binding.root.context, R.color.Green)

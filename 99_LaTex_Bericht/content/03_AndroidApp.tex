@@ -119,8 +119,16 @@ Die verwendete Namensgebung der Aktoren/Sensoren in der Android App ist in Abbil
 \end{figure}
 
 \subsubsection{MQTT-Tab}
+Dieser Tab dient dazu, die MQTT-Verbindung zu überprüfen und gegebenenfalls die Verbindung zum Broker neu aufzubauen.
+Dafür gibt es einen \glqq Verbinden \grqq -Button, der die Funktion \verb|ViewModel.startMqtt()| aufruft.
+Das \verb|MainViewModel| stellt die rohen MQTT-Daten im JSON-Format zur Verfügung. 
+
 
 \subsubsection{Settings-Tab}
+Im Settings-Tab kann das Objekterkennungsmodell des Camera-Tabs noch detaillierter eingestellt werden. Es können die ML-Paramter wie \verb|Treshold|, \verb|MaxResults|, \verb|Delegate| und \verb|Model| manuell angepasst werden. Diese werden direkt ins \verb|MainViewModel| geschrieben.
+\begin{enumerate}
+    \item \textbf{Threshold}: Die 
+\end{enumerate}
 
 \subsubsection{Promellerechner-Tab}
 

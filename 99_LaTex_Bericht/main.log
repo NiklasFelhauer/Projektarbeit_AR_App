@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  20 AUG 2025 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  20 AUG 2025 18:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1430,7 +1430,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12 <./pictures/AndroidApp/Nummerierung.png>])
+[12 <./pictures/AndroidApp/Nummerierung.png>]
+LaTeX Font Info:    Font shape `OT1/IBMPlexSans-TLF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 159.
+)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1443,7 +1446,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \openout2 = `content/04_Objekterkennungsmodell.aux'.
 
  (content/04_Objekterkennungsmodell.tex
-<pictures/AndroidApp/Roboflow.png, id=408, 1102.1175pt x 551.81157pt>
+<pictures/AndroidApp/Roboflow.png, id=419, 1102.1175pt x 551.81157pt>
 File: pictures/AndroidApp/Roboflow.png Graphic file (type png)
 <use pictures/AndroidApp/Roboflow.png>
 Package pdftex.def Info: pictures/AndroidApp/Roboflow.png  used on input line 11.
@@ -1462,7 +1465,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
  <./pictures/AndroidApp/Roboflow.png>]
-<pictures/AndroidApp/whileTraining.jpg, id=429, 1187.18532pt x 465.23813pt>
+<pictures/AndroidApp/whileTraining.jpg, id=440, 1187.18532pt x 465.23813pt>
 File: pictures/AndroidApp/whileTraining.jpg Graphic file (type jpg)
 <use pictures/AndroidApp/whileTraining.jpg>
 Package pdftex.def Info: pictures/AndroidApp/whileTraining.jpg  used on input line 106.
@@ -1523,9 +1526,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [19
 
 ]
-LaTeX Font Info:    Font shape `OT1/IBMPlexSans-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 30.
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1544,23 +1544,23 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-11>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AA2700B4D2016A133082D2D8D8BE5926;3648.
+(rerunfilecheck)             Checksum: 282EDFEF44DE2444BCC257A406BE167F;3648.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39300 strings out of 468149
- 799814 string characters out of 5431082
- 1944101 words of memory out of 5000000
- 67006 multiletter control sequences out of 15000+600000
- 675017 words of font info for 84 fonts, out of 8000000 for 9000
+ 39318 strings out of 468149
+ 800093 string characters out of 5431082
+ 1944145 words of memory out of 5000000
+ 67014 multiletter control sequences out of 15000+600000
+ 677659 words of font info for 90 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  89i,13n,94p,790b,3062s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Bold.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Italic.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagk8a.pfb>
-Output written on main.pdf (23 pages, 9964151 bytes).
+<C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Bold.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Italic.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (23 pages, 10010332 bytes).
 PDF statistics:
- 626 PDF objects out of 1000 (max. 8388607)
- 293 named destinations out of 1000 (max. 500000)
+ 657 PDF objects out of 1000 (max. 8388607)
+ 297 named destinations out of 1000 (max. 500000)
  263 words of extra memory for PDF output out of 10000 (max. 10000000)
 

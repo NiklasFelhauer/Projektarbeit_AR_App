@@ -127,10 +127,38 @@ Das \verb|MainViewModel| stellt die rohen MQTT-Daten im JSON-Format zur Verfügu
 \subsubsection{Settings-Tab}
 Im Settings-Tab kann das Objekterkennungsmodell des Camera-Tabs noch detaillierter eingestellt werden. Es können die ML-Paramter wie \verb|Treshold|, \verb|MaxResults|, \verb|Delegate| und \verb|Model| manuell angepasst werden. Diese werden direkt ins \verb|MainViewModel| geschrieben.
 \begin{enumerate}
-    \item \textbf{Threshold}: Die 
+    \item \textbf{Threshold}: Die minimal Erkennungssicherheit des Modells, um ein Objekt zu klassifizieren. Default: 0,8 bzw. 80 \%
+    \item \textbf{MaxResults}: Anzahl der gleichzeitig erkannten Objekte. Default: 3
+    \item \textbf{Delegate}: Auswahl, ob die Objekterkennung auf der CPU oder GPU läuft. Die GPU bietet eine höhere Verarbeitungsgeschwindigkeit, jedoch ist diese bei alten Smartphones nicht vorhanden. Default: CPU
+    \item \textbf{Modell}: Auswahl des Objekterkennungsmodells, es gibt das Standardmodell EfficientDetLite2 und das benutzerdefinierte Brauanlagen-Modell. Default: Brauanlage
 \end{enumerate}
 
-\subsubsection{Promellerechner-Tab}
+
+\subsubsection{Promillerechner-Tab}
+Durch Arbeiten an der Brauanlage ist es nicht auszuschließen, dass auch das ein oder andere Bier getrunken wird. Um im Anschluss die Verkehrstüchtigkeit zu gewährleisten, ist in der App ein Promillerechner integriert. Hierbei kann durch Klicken auf den \glqq Bier-Button \grqq die Anzahl der getrunkenen Biere ausgewählt werden. Anschließend wird basierend auf dem Körpergewicht die Zeit berechnet, um wieder nüchtern zu werden. Die Anzahl der Biere kann durch einen langen Klick wieder auf 0 zurückgesetzt werden. 
+
+\noindent 
+Wie in \autoref{eq:modell} gezeigt, ergibt sich die maximale Zeit, um wieder nüchtern zu sein aus der Blutalkoholkonzentration (BAC) und der Abbaurate des menschlichen Körpers.
+
+\begin{equation}\label{eq:modell}
+\begin{aligned}
+\mathrm{BAC} &= \frac{12\,n}{0,68\,m},\\
+t &= \max\!\left\{0,\ \frac{\mathrm{BAC}}{0,1}\right\}
+   = \max\!\left\{0,\ \frac{12\,n}{0,68\,m \cdot 0,1}\right\}.
+\end{aligned}
+\end{equation}
+
+\noindent\textbf{Mit folgenden Zusammenhängen:}
+\begin{description}
+  \item[$\mathrm{BAC}$] Blutalkoholkonzentration in Promille (‰)
+  \item[$n$] Anzahl der getrunkenen Biere, es wird pro Bier \(\approx 12\,\mathrm{g}\) reiner Alkohol angenommen
+  \item[$m$] Körpergewicht in Kilogramm
+  \item[$t$] maximale Zeit bis der Alkohol vollständig abgebaut ist
+\end{description}
+
+\noindent\textit{Hinweis:} Es handelt sich um eine vereinfachte Abschätzung (kein medizinisches Gutachten). Individuelle Faktoren
+(z.\,B. Trinkverlauf, Geschlecht, Magenfüllung, tatsächlicher Alkoholgehalt jedes Bieres) bleiben unberücksichtigt.
+
 
 
 

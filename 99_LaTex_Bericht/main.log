@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  20 AUG 2025 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  20 AUG 2025 20:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1286,7 +1286,7 @@ Overfull \hbox (18.92357pt too wide) in paragraph at lines 153--154
 \OT1/IBMPlexSans-TLF/m/n/10.95 Diese Kom-po-nen-ten eig-nen sich bei-spiels-wei-se auch sehr gu-te zum De-bug-gen. Hier kann []uberpr[]uft
  []
 
-<pictures/AndroidLifecycle.png, id=201, 547.04375pt x 713.66624pt>
+<pictures/AndroidLifecycle.png, id=211, 547.04375pt x 713.66624pt>
 File: pictures/AndroidLifecycle.png Graphic file (type png)
 <use pictures/AndroidLifecycle.png>
 Package pdftex.def Info: pictures/AndroidLifecycle.png  used on input line 157.
@@ -1356,11 +1356,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \openout2 = `content/03_AndroidApp.aux'.
 
  (content/03_AndroidApp.tex
-<pictures/AndroidApp/MVM.png, id=351, 606.01407pt x 354.57469pt>
+<pictures/AndroidApp/MVM.png, id=361, 606.01407pt x 354.57469pt>
 File: pictures/AndroidApp/MVM.png Graphic file (type png)
 <use pictures/AndroidApp/MVM.png>
-Package pdftex.def Info: pictures/AndroidApp/MVM.png  used on input line 40.
+Package pdftex.def Info: pictures/AndroidApp/MVM.png  used on input line 42.
 (pdftex.def)             Requested size: 340.41048pt x 199.16928pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 
 
@@ -1374,34 +1378,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
- <./pictures/AndroidApp/MVM.png>]
-<pictures/AndroidApp/CameraView.png, id=371, 1230.5975pt x 2568.59625pt>
+]
+Overfull \hbox (29.782pt too wide) in paragraph at lines 50--52
+[][]\OT1/cmtt/m/n/10.95 NavHostFragment[]\OT1/IBMPlexSans-TLF/m/n/10.95 , das die ein-zel-nen Tabs (Frag-men-te) ren-dert. Die Tab-Leiste ist als [][]\OT1/cmtt/m/n/10.95 Top Navigation
+ []
+
+<pictures/AndroidApp/CameraView.png, id=379, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/CameraView.png Graphic file (type png)
 <use pictures/AndroidApp/CameraView.png>
-Package pdftex.def Info: pictures/AndroidApp/CameraView.png  used on input line 55.
+Package pdftex.def Info: pictures/AndroidApp/CameraView.png  used on input line 59.
 (pdftex.def)             Requested size: 109.04025pt x 227.62204pt.
 LaTeX Font Info:    Font shape `OT1/IBMPlexSans-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 56.
-<pictures/AndroidApp/OverviewTab.png, id=372, 1230.5975pt x 2568.59625pt>
+(Font)              scaled to size 10.0pt on input line 60.
+<pictures/AndroidApp/OverviewTab.png, id=380, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/OverviewTab.png Graphic file (type png)
 <use pictures/AndroidApp/OverviewTab.png>
-Package pdftex.def Info: pictures/AndroidApp/OverviewTab.png  used on input line 61.
+Package pdftex.def Info: pictures/AndroidApp/OverviewTab.png  used on input line 65.
 (pdftex.def)             Requested size: 109.04025pt x 227.62204pt.
-<pictures/AndroidApp/MQTT.png, id=373, 1230.5975pt x 2568.59625pt>
+<pictures/AndroidApp/MQTT.png, id=381, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/MQTT.png Graphic file (type png)
 <use pictures/AndroidApp/MQTT.png>
-Package pdftex.def Info: pictures/AndroidApp/MQTT.png  used on input line 67.
+Package pdftex.def Info: pictures/AndroidApp/MQTT.png  used on input line 71.
 (pdftex.def)             Requested size: 109.04025pt x 227.62204pt.
-<pictures/AndroidApp/Settings.png, id=374, 1230.5975pt x 2568.59625pt>
+<pictures/AndroidApp/Settings.png, id=382, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/Settings.png Graphic file (type png)
 <use pictures/AndroidApp/Settings.png>
-Package pdftex.def Info: pictures/AndroidApp/Settings.png  used on input line 76.
+Package pdftex.def Info: pictures/AndroidApp/Settings.png  used on input line 80.
 (pdftex.def)             Requested size: 109.04025pt x 227.62204pt.
-<pictures/AndroidApp/PromilleRechner.png, id=375, 1230.5975pt x 2568.59625pt>
+<pictures/AndroidApp/PromilleRechner.png, id=383, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/PromilleRechner.png Graphic file (type png)
 <use pictures/AndroidApp/PromilleRechner.png>
-Package pdftex.def Info: pictures/AndroidApp/PromilleRechner.png  used on input line 81.
+Package pdftex.def Info: pictures/AndroidApp/PromilleRechner.png  used on input line 85.
 (pdftex.def)             Requested size: 109.04025pt x 227.62204pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 
 
@@ -1411,16 +1422,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[11 <./pictures/AndroidApp/CameraView.png> <./pictures/AndroidApp/OverviewTab.png> <./pictures/AndroidApp/MQTT.png> <./pictures/AndroidApp/Settings.png> <./pictures/AndroidApp/PromilleRechner.png>]
-Overfull \hbox (3.36455pt too wide) in paragraph at lines 97--98
+[11 <./pictures/AndroidApp/MVM.png>]
+Overfull \hbox (3.36455pt too wide) in paragraph at lines 101--102
 []\OT1/IBMPlexSans-TLF/m/n/10.95 In der [][]\OT1/cmtt/m/n/10.95 CameraFragment[]\OT1/IBMPlexSans-TLF/m/n/10.95 -Klasse wer-den die Temperatur-Daten aus dem Main-View-Mo-del kon-
  []
 
-<pictures/AndroidApp/Nummerierung.png, id=388, 1084.05pt x 1231.60126pt>
-File: pictures/AndroidApp/Nummerierung.png Graphic file (type png)
-<use pictures/AndroidApp/Nummerierung.png>
-Package pdftex.def Info: pictures/AndroidApp/Nummerierung.png  used on input line 116.
-(pdftex.def)             Requested size: 200.34761pt x 227.62204pt.
 
 
 
@@ -1430,9 +1436,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12 <./pictures/AndroidApp/Nummerierung.png>]
+[12 <./pictures/AndroidApp/CameraView.png> <./pictures/AndroidApp/OverviewTab.png> <./pictures/AndroidApp/MQTT.png> <./pictures/AndroidApp/Settings.png> <./pictures/AndroidApp/PromilleRechner.png>]
+<pictures/AndroidApp/Nummerierung.png, id=402, 1084.05pt x 1231.60126pt>
+File: pictures/AndroidApp/Nummerierung.png Graphic file (type png)
+<use pictures/AndroidApp/Nummerierung.png>
+Package pdftex.def Info: pictures/AndroidApp/Nummerierung.png  used on input line 120.
+(pdftex.def)             Requested size: 225.39107pt x 256.0748pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13 <./pictures/AndroidApp/Nummerierung.png>]
 LaTeX Font Info:    Font shape `OT1/IBMPlexSans-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 159.
+(Font)              scaled to size 10.95pt on input line 163.
 )
 
 
@@ -1442,11 +1463,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[13]
+[14]
 \openout2 = `content/04_Objekterkennungsmodell.aux'.
 
  (content/04_Objekterkennungsmodell.tex
-<pictures/AndroidApp/Roboflow.png, id=419, 1102.1175pt x 551.81157pt>
+<pictures/AndroidApp/Roboflow.png, id=433, 1102.1175pt x 551.81157pt>
 File: pictures/AndroidApp/Roboflow.png Graphic file (type png)
 <use pictures/AndroidApp/Roboflow.png>
 Package pdftex.def Info: pictures/AndroidApp/Roboflow.png  used on input line 11.
@@ -1460,12 +1481,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[14
+[15
 
 
 
  <./pictures/AndroidApp/Roboflow.png>]
-<pictures/AndroidApp/whileTraining.jpg, id=440, 1187.18532pt x 465.23813pt>
+<pictures/AndroidApp/whileTraining.jpg, id=454, 1187.18532pt x 465.23813pt>
 File: pictures/AndroidApp/whileTraining.jpg Graphic file (type jpg)
 <use pictures/AndroidApp/whileTraining.jpg>
 Package pdftex.def Info: pictures/AndroidApp/whileTraining.jpg  used on input line 106.
@@ -1479,7 +1500,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[15]
+[16]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1488,7 +1509,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[16 <./pictures/AndroidApp/whileTraining.jpg>])
+[17 <./pictures/AndroidApp/whileTraining.jpg>])
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1497,7 +1518,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[17]
+[18]
 \openout2 = `content/99_Schluss.aux'.
 
  (content/99_Schluss.tex
@@ -1509,7 +1530,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[18
+[19
 
 
 
@@ -1523,7 +1544,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[19
+[20
 
 ]
 
@@ -1534,7 +1555,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20
+[21
 
 
 
@@ -1544,23 +1565,23 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-11>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 282EDFEF44DE2444BCC257A406BE167F;3648.
+(rerunfilecheck)             Checksum: 6ED1DB408D15CCB52B4E98DA06F62FCD;3970.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39318 strings out of 468149
- 800093 string characters out of 5431082
+ 39323 strings out of 468149
+ 800160 string characters out of 5431082
  1944145 words of memory out of 5000000
- 67014 multiletter control sequences out of 15000+600000
+ 67016 multiletter control sequences out of 15000+600000
  677659 words of font info for 90 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 89i,13n,94p,790b,3062s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,13n,94p,928b,3062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Bold.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Italic.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (23 pages, 10010332 bytes).
+Output written on main.pdf (24 pages, 10014242 bytes).
 PDF statistics:
- 657 PDF objects out of 1000 (max. 8388607)
- 297 named destinations out of 1000 (max. 500000)
- 263 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 671 PDF objects out of 1000 (max. 8388607)
+ 300 named destinations out of 1000 (max. 500000)
+ 279 words of extra memory for PDF output out of 10000 (max. 10000000)
 

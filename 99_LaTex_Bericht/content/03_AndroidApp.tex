@@ -1,4 +1,6 @@
 \section{Android App}
+Die App verbindet die Brauanlage im Automatisierungstechnik-Labor mit dem Smartphone. Sie zeigt Live-Messdaten (z.B. Tanktemperaturen, Ventil-/Pumpenzustände), die per MQTT von einer SPS empfangen werden. Außerdem erkennt sie die drei großen Brauanlagen-Tanks über die Kamera (Objekterkennung) und bietet individuelle Einstellmöglichkeiten. Technisch nutzt die App eine Single-Acitiviy-Architektur, das bedeutet, es gibt eine einzige Hauptseite (MainActivity), die mehrere Bildschirme (Fragmente) beinhaltet, zwischen denen per Tab-Leiste gewechselt werden kann. Ein MainViewModel hält Daten und Einstellungen zentral, damit die Daten beim Tab-Wechsel erhalten bleiben. Änderungen werden über LiveData automatisch in allen Tabs sichtbar und stetig aktualisiert.
+
 
 \subsection{MainViewModel}
 
@@ -44,7 +46,9 @@ Dadurch werden Temperaturänderungen oder Schaltzustände der Brauanlage in Echt
 
 \newpage
 
-
+\subsection{Navigation}
+Die App ist nach der Single-Acitivity-Architektur aufgebaut. Eine \verb|MainActivity| enthält ein \verb|NavHostFragment|, das die einzelnen Tabs (Fragmente) rendert. Die Tab-Leiste ist als \verb|Top Navigation| umgesetzt und wird per \verb|setupWithNavController(...)| direkt mit dem \verb|NavController| verbunden. Dadurch übernimmt die Navigation-Komponente das Umschalten zwischen Tabs automatisch (inklusive korrekter Titel-/Backstack-Verwaltung).
+Ein erneutes Antippen des bereits aktiven Tabs wird bewusst ignoriert, um unnötige Re-Loads zu vermeiden. Der Zurück-Button (\texttt{onBackPressed}) beendet die App.
 \subsection{Die verschiedenen Tabs}
 Die App soll mehrere verschiedenen Funktionen bieten, um diese übersichtlich darzustellen gibt es oben im Bildschirm eine Menu-Bar mit den passenden Symbolen zu jedem Tab. Mit diesem Menu kann zwischen den Tabs gewechselt werden. Die Übersicht dazu ist in \autoref{fig:AppTabs} dargestellt.
 \begin{figure}[h!]
@@ -86,7 +90,7 @@ Die App soll mehrere verschiedenen Funktionen bieten, um diese übersichtlich da
     \label{fig:AppTabs}
 \end{figure}
 
-
+\newpage
 
 \subsubsection{Kamera-Tab}
 Der Kamera-Tab wird standardgemäß als erstes beim Starten der App geöffnet und nutzt die CameraX-API, um den Kamera-Livestream des Smartphones anzuzeigen. Jedes Frame (einzelnes Bild) wird an die \verb|ObjectDetectorHelper|-Klasse geschickt, welche das benutzerdefinierte Tensorflow-Lite Modell \verb|Tanks_V2.tflite| nutzt, um Tanks der Brauanlage zu erkennen und die Koordinaten der zugehörigen Bounding-Boxen zu berechnen.
@@ -113,7 +117,7 @@ Die Symbole der Sensoren und Aktoren ändern ihre Farbe basierend auf dem Zustan
 Die verwendete Namensgebung der Aktoren/Sensoren in der Android App ist in Abbildung \ref{fig:NummerierungAktorenSensoren} zu sehen. 
 \begin{figure}[h!]
     \centering
-    \includegraphics[height=8cm]{pictures/AndroidApp/Nummerierung.png}
+    \includegraphics[height=9cm]{pictures/AndroidApp/Nummerierung.png}
     \caption{Nummerierung der Aktoren/Sensoren} \cite{NummerierungAktorenSensoren}
     \label{fig:NummerierungAktorenSensoren}
 \end{figure}
@@ -159,7 +163,7 @@ t &= \max\!\left\{0,\ \frac{\mathrm{BAC}}{0,1}\right\}
 \noindent\textit{Hinweis:} Es handelt sich um eine vereinfachte Abschätzung (kein medizinisches Gutachten). Individuelle Faktoren
 (z.\,B. Trinkverlauf, Geschlecht, Magenfüllung, tatsächlicher Alkoholgehalt jedes Bieres) bleiben unberücksichtigt.
 
-
+\subsection{MQTT Verbindungsstatus Overlay}
 
 
 

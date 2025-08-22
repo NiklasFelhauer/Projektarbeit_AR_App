@@ -158,4 +158,26 @@ Diese Komponenten eignen sich beispielsweise auch sehr gute zum Debuggen. Hier k
     \caption{Eine vereinfachte Darstellung des Aktivitätslebenszyklus}
     \label{fig:AndroidLifecycle}
 \end{figure}
+
+\subsubsection{Grundbegriffe}
+\paragraph{Acitivity}
+Eine Activity ist das \glqq Fenster \grqq der Android-App. In dieser Projektarbeit wird die Single-Activity-Architektur gewählt. Es gibt demnach nur eine Haupt-Activity, die den gesamten Bereich bereitstellt und übergreifende Elemente wie das MQTT-Verbindungs-Overlay enthält.
+
+\paragraph{Fragment}
+Ein Fragment ist ein eigenständiger Bildschirmbereich innerhalb der Activity. Jeder Tab (Camera, Overview, MQTT, Settings und Promillerechner) ist beispielsweise ein Fragment. Diese lassen sich austauschen bzw. zwischen den Tabs kann gewechselt werden, ohne dass die Activity im Hintergrund neu gestartet werden muss.
+
+\paragraph{ViewModel}
+Das ViewModel ist die \glqq Daten- und Logikzentrale\grqq der App, die unabhängig vom UI-Lebenszyklus arbeitet. Es enthält Daten, die bei einem Tab-Wechsel bestehen bleiben sollen und nicht bei einem Tab-Wechsel verloren gehen.
+
+\paragraph{LiveData}
+Hierbei handelt es sich um eine Klasse für beobachtbare Datenhalter. Wenn sich Werte im ViewModel ändern (z.B. neue MQTT-Daten), dann werden alle UI-Elemente automatisch informiert und aktualisiert, welche diese LiveData abonniert haben. Dadurch werden die Darstellungen immer dann aktualisiert, wenn neue Daten vorliegen.
+
+\paragraph{NavHost und NavController}
+Der NavHost ist ein Countainer, der immer genau eine Fragment anzeigt. Dabei steuert der NavController, welches Fragment im NavHost sichtbar ist. Die Steuerung in der App erfolgt über die Tab-Leiste oben. Ein Tipp auf ein Symbol teilt dem NavController mit, welches Fragment geladen werden soll.
+
+\paragraph{CameraX}
+Die CameraX Bibliothek liefert den Live-Kamerastream und anlaysierbare Einzelbilder.
+
+
+
 \clearpage

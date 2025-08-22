@@ -16,6 +16,13 @@
 \usepackage[backend=biber,style=numeric, sorting=none]{biblatex} % Literaturverzeichnis
 \addbibresource{quellen.bib}
 
+\usepackage[nameinlink]{cleveref} % Referrenzen Test
+\renewcommand{\lstlistingname}{Code}             % für lstlistings umbennen zu Code
+\crefname{listing}{Code}{Codes}
+\Crefname{listing}{Code}{Codes} % für Satzanfang
+
+
+
 
 \lstdefinelanguage{Kotlin}{
   morekeywords={val,var,fun,for,if,else,return,null,true,false,class,object},
@@ -32,6 +39,7 @@
   commentstyle=\color{gray},
   stringstyle=\color{orange},
   breaklines=true,
+  captionpos=b
 }
 
 \lstset{language=Python,
@@ -48,7 +56,8 @@
         showspaces=false,
         showstringspaces=false,
         breaklines=true,
-        morekeywords={self, None, sudo, apt, install}
+        morekeywords={self, None, sudo, apt, install},
+        captionpos=b
         }
 
 

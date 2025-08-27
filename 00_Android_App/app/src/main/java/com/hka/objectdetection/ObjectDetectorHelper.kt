@@ -79,7 +79,7 @@ class ObjectDetectorHelper(
         }
 
         val modelName = when (currentModel) {
-            MODEL_TANKS -> "Tanks_V2.tflite"
+            MODEL_TANKS -> "Brauanlage.tflite"
             MODEL_EFFICIENTDETV2 -> "efficientdet-lite2.tflite"
             else -> "Tanks_V2.tflite"
         }

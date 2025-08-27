@@ -97,16 +97,16 @@ class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs
             val score = String.format("%.2f", category.score())
 
             val temp = tankTemperatures[tankName]
-            val tempText = if (temp != null) " | ${String.format("%.1f°C", temp)}" else " | -- °C"
+            val tempText = if (temp != null) "\n${String.format("%.1f°C", temp)}" else "\n-- °C"
 
             Log.d("Overlay", "Detected: $tankName | Temp: $temp")
 
-            val drawableText = "$tankName $score$tempText"
+            val drawableText = "$tankName $score"
 
 
             textBackgroundPaint.getTextBounds(drawableText, 0, drawableText.length, bounds)
             val textWidth = bounds.width()
-            val textHeight = bounds.height()
+            val textHeight = bounds.height() * 2
             canvas.drawRect(
                 left,
                 top,
@@ -115,7 +115,8 @@ class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs
                 textBackgroundPaint
             )
 
-            canvas.drawText(drawableText, left, top + bounds.height(), textPaint)
+            canvas.drawText("$tankName $score", left, top + bounds.height(), textPaint)
+            canvas.drawText(tempText.trim(), left, top + bounds.height() * 2, textPaint)
         }
     }
 

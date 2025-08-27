@@ -27,12 +27,13 @@ override fun messageArrived(topic: String?, message: MqttMessage?) {
 }
 \end{lstlisting}
 
-Die App verfügt über die folgenden zwei Datensammlungen:
+Die App verfügt über die folgenden drei Datensammlungen:
 \begin{itemize}
     \item \verb|_tankTemperatures|: enthält die Temperaturwerte der Tanks
     \item \verb|_allValues|: enthält alle Werte aus der MQTT-Nachricht 
+    \item \verb|_mqttConnected|: enthält Status der MQTT Verbindung
 \end{itemize}
-Beide Variablen sind vom Typ \verb|LiveData|. 
+Alle Variablen sind vom Typ \verb|LiveData|. 
 Das bedeutet, dass sie automatisch alle Bildschirme aktualisieren, sobald sich der Wert ändert.
 Dadurch werden Temperaturänderungen oder Schaltzustände der Brauanlage in Echtzeit in der App sichtbar.
 \\Der grundsätzliche Ablauf vom \verb|MainViewModel| ist vereinfacht in \autoref{fig:DatenflussMainViewModel} dargestellt. Die Daten werden vom MQTT-Broker an das Smartphone weitergeleitet, dort im \verb|MainViewModel| empfangen und anschließend an die unterschiedlichen Tabs weitergeleitet.

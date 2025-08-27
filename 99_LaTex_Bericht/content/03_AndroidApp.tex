@@ -47,7 +47,7 @@ Dadurch werden Temperaturänderungen oder Schaltzustände der Brauanlage in Echt
 \newpage
 
 \subsection{Navigation}
-Die App ist nach der Single-Acitivity-Architektur aufgebaut. Eine \verb|MainActivity| enthält ein \verb|NavHostFragment|, das die einzelnen Tabs (Fragmente) rendert. Die Tab-Leiste ist als \verb|Top Navigation| umgesetzt und wird per \verb|setupWithNavController(...)| direkt mit dem \verb|NavController| verbunden. Dadurch übernimmt die Navigation-Komponente das Umschalten zwischen Tabs automatisch (inklusive korrekter Titel-/Backstack-Verwaltung).
+Die App ist nach der Single-Acitivity-Architektur aufgebaut. Die \verb|MainActivity| enthält ein \verb|NavHostFragment|, das die einzelnen Tabs (Fragmente) rendert. Die Tab-Leiste ist als \verb|Top Navigation| umgesetzt und wird per \verb|setupWithNavController(...)| direkt mit dem \verb|NavController| verbunden. Dadurch übernimmt die Navigation-Komponente das Umschalten zwischen Tabs automatisch (inklusive korrekter Titel-/Backstack-Verwaltung).
 Ein erneutes Antippen des bereits aktiven Tabs wird bewusst ignoriert, um unnötige Re-Loads zu vermeiden. Der Zurück-Button (\texttt{onBackPressed}) beendet die App.
 \subsection{Die verschiedenen Tabs}
 Die App soll mehrere verschiedenen Funktionen bieten, um diese übersichtlich darzustellen gibt es oben im Bildschirm eine Menu-Bar mit den passenden Symbolen zu jedem Tab. Mit diesem Menu kann zwischen den Tabs gewechselt werden. Die Übersicht dazu ist in \autoref{fig:AppTabs} dargestellt.
@@ -120,13 +120,11 @@ Es gilt folgende Farbzuweisung, die auch in \Cref{lst:ventil} zu sehen ist.
                 else -> binding.ventil1.setImageResource(R.drawable.vlv1_gray)
             }
 \end{lstlisting}
-
-
-Die verwendete Namensgebung der Aktoren/Sensoren in der Android App ist in Abbildung \ref{fig:NummerierungAktorenSensoren} zu sehen. 
+Für diesen Tab wurde die Brauanlage in einer 2D-Ansicht erstellt. In \autoref{fig:NummerierungAktorenSensoren} ist diese und die verwendete Namensgebung der Aktoren/Sensoren der MQTT-Nachricht in rotem Text abgebildet.
 \begin{figure}[h!]
     \centering
     \includegraphics[height=9cm]{pictures/AndroidApp/Nummerierung.png}
-    \caption{Nummerierung der Aktoren/Sensoren} \cite{NummerierungAktorenSensoren}
+    \caption{Namensgebung der Aktoren/Sensoren} \cite{NummerierungAktorenSensoren}
     \label{fig:NummerierungAktorenSensoren}
 \end{figure}
 
@@ -172,6 +170,26 @@ t &= \max\!\left\{0,\ \frac{\mathrm{BAC}}{0,1}\right\}
 (z.\,B. Trinkverlauf, Geschlecht, Magenfüllung, tatsächlicher Alkoholgehalt jedes Bieres) bleiben unberücksichtigt.
 
 \subsection{MQTT Verbindungsstatus Overlay}
+Dieses Overlay ist in der rechten unten Ecke jederzeit in der App sichtbar. Es ist in der \verb|MainActivity| initialiert und beobachtet \verb|viewModel.mqttConnected|. 
+Wenn eine aktive MQTT Verbindung besteht, dann zeigt es \glqq MQTT verbunden\grqq mit einem grünem Symbol und wenn keine Verbindung besteht, dann \glqq MQTT Getrennt\grqq mit rotem Symbol.
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{pictures/AndroidApp/MQTTVerbunden.png}
+        \caption{MQTT Verbunden Overlay}
+        \label{fig:bild1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{pictures/AndroidApp/MQTTGetrennt.png}
+        \caption{MQTT Getrennt Overlay}
+        \label{fig:bild2}
+    \end{subfigure}
+    \label{fig:nebeneinander}
+\end{figure}
 
+\clearpage
 
 

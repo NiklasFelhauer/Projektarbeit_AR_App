@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  27 AUG 2025 14:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  27 AUG 2025 14:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1411,8 +1411,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-Overfull \hbox (29.782pt too wide) in paragraph at lines 50--52
-[][]\OT1/cmtt/m/n/10.95 NavHostFragment[]\OT1/IBMPlexSans-TLF/m/n/10.95 , das die ein-zel-nen Tabs (Frag-men-te) ren-dert. Die Tab-Leiste ist als [][]\OT1/cmtt/m/n/10.95 Top Navigation
+Overfull \hbox (60.90108pt too wide) in paragraph at lines 50--52
+\OT1/IBMPlexSans-TLF/m/n/10.95 Die App ist nach der Single-Acitivity-Architektur auf-ge-baut. Die [][]\OT1/cmtt/m/n/10.95 MainActivity []\OT1/IBMPlexSans-TLF/m/n/10.95 enth[]alt ein [][]\OT1/cmtt/m/n/10.95 NavHostFragment[]\OT1/IBMPlexSans-TLF/m/n/10.95 ,
+ []
+
+
+Overfull \hbox (36.44043pt too wide) in paragraph at lines 50--52
+\OT1/IBMPlexSans-TLF/m/n/10.95 Tabs wird be-wusst igno-riert, um unn[]otige Re-Loads zu ver-mei-den. Der Zur[]uck-Button (\OT1/cmtt/m/n/10.95 onBackPressed\OT1/IBMPlexSans-TLF/m/n/10.95 )
  []
 
 <pictures/AndroidApp/CameraView.png, id=406, 1230.5975pt x 2568.59625pt>
@@ -1473,7 +1478,7 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
 <pictures/AndroidApp/Nummerierung.png, id=430, 1084.05pt x 1231.60126pt>
 File: pictures/AndroidApp/Nummerierung.png Graphic file (type png)
 <use pictures/AndroidApp/Nummerierung.png>
-Package pdftex.def Info: pictures/AndroidApp/Nummerierung.png  used on input line 128.
+Package pdftex.def Info: pictures/AndroidApp/Nummerierung.png  used on input line 126.
 (pdftex.def)             Requested size: 225.39107pt x 256.0748pt.
 
 
@@ -1486,8 +1491,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14 <./pictures/AndroidApp/Nummerierung.png>]
 LaTeX Font Info:    Font shape `OT1/IBMPlexSans-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 171.
-)
+(Font)              scaled to size 10.95pt on input line 169.
+<pictures/AndroidApp/MQTTVerbunden.png, id=446, 156.585pt x 36.88782pt>
+File: pictures/AndroidApp/MQTTVerbunden.png Graphic file (type png)
+<use pictures/AndroidApp/MQTTVerbunden.png>
+Package pdftex.def Info: pictures/AndroidApp/MQTTVerbunden.png  used on input line 179.
+(pdftex.def)             Requested size: 102.42923pt x 24.13045pt.
+<pictures/AndroidApp/MQTTGetrennt.png, id=447, 238.64156pt x 52.69687pt>
+File: pictures/AndroidApp/MQTTGetrennt.png Graphic file (type png)
+<use pictures/AndroidApp/MQTTGetrennt.png>
+Package pdftex.def Info: pictures/AndroidApp/MQTTGetrennt.png  used on input line 186.
+(pdftex.def)             Requested size: 102.42923pt x 22.6182pt.
+
+Overfull \hbox (18.47945pt too wide) in paragraph at lines 173--192
+\OT1/IBMPlexSans-TLF/m/n/10.95 Dieses Over-lay ist in der rech-ten un-ten Ecke je-der-zeit in der App sicht-bar. Es ist in der [][]\OT1/cmtt/m/n/10.95 MainActivity
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1496,16 +1516,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[15]
+[15 <./pictures/AndroidApp/MQTTVerbunden.png> <./pictures/AndroidApp/MQTTGetrennt.png>])
 \openout2 = `content/04_Objekterkennungsmodell.aux'.
 
  (content/04_Objekterkennungsmodell.tex
-<pictures/Objekterkennung/Tank_Farben.jpg, id=461, 4480.74pt x 2233.34375pt>
+<pictures/Objekterkennung/Tank_Farben.jpg, id=466, 4480.74pt x 2233.34375pt>
 File: pictures/Objekterkennung/Tank_Farben.jpg Graphic file (type jpg)
 <use pictures/Objekterkennung/Tank_Farben.jpg>
 Package pdftex.def Info: pictures/Objekterkennung/Tank_Farben.jpg  used on input line 14.
 (pdftex.def)             Requested size: 227.62206pt x 113.44579pt.
-<pictures/AndroidApp/Roboflow.png, id=464, 1102.1175pt x 551.81157pt>
+<pictures/AndroidApp/Roboflow.png, id=469, 1102.1175pt x 551.81157pt>
 File: pictures/AndroidApp/Roboflow.png Graphic file (type png)
 <use pictures/AndroidApp/Roboflow.png>
 Package pdftex.def Info: pictures/AndroidApp/Roboflow.png  used on input line 37.
@@ -1528,6 +1548,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
+
  <./pictures/Objekterkennung/Tank_Farben.jpg>]
 
 
@@ -1547,7 +1568,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [18]
-<pictures/AndroidApp/whileTraining.jpg, id=545, 1187.18532pt x 465.23813pt>
+<pictures/AndroidApp/whileTraining.jpg, id=550, 1187.18532pt x 465.23813pt>
 File: pictures/AndroidApp/whileTraining.jpg Graphic file (type jpg)
 <use pictures/AndroidApp/whileTraining.jpg>
 Package pdftex.def Info: pictures/AndroidApp/whileTraining.jpg  used on input line 137.
@@ -1603,17 +1624,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40975 strings out of 468149
- 838814 string characters out of 5431082
- 1970144 words of memory out of 5000000
- 68640 multiletter control sequences out of 15000+600000
+ 41000 strings out of 468149
+ 839605 string characters out of 5431082
+ 1970673 words of memory out of 5000000
+ 68664 multiletter control sequences out of 15000+600000
  679489 words of font info for 94 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  89i,13n,94p,928b,3062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Bold.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Italic.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (24 pages, 11438248 bytes).
+Output written on main.pdf (24 pages, 11457364 bytes).
 PDF statistics:
- 712 PDF objects out of 1000 (max. 8388607)
- 320 named destinations out of 1000 (max. 500000)
- 308 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 717 PDF objects out of 1000 (max. 8388607)
+ 321 named destinations out of 1000 (max. 500000)
+ 318 words of extra memory for PDF output out of 10000 (max. 10000000)
 

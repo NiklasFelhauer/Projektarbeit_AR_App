@@ -97,7 +97,7 @@
       \field{title}{Nummerierung der Aktoren/Sensoren in der Android App}
       \field{year}{2025}
     \endentry
-    \entry{Roboflow}{misc}{}{}
+    \entry{TankFarben}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=4d56da86921bb240faf3ee04a7b7f088}{%
            family={Felhauer},
@@ -116,6 +116,32 @@
       \field{extraname}{4}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Eigene Darstellung}
+      \field{note}{Eigene Aufnahne}
+      \field{title}{Farbige Griffhalter aus dem 3D-Drucker}
+      \field{year}{2025}
+    \endentry
+    \entry{Roboflow}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4d56da86921bb240faf3ee04a7b7f088}{%
+           family={Felhauer},
+           familyi={F\bibinitperiod},
+           given={Niklas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d56da86921bb240faf3ee04a7b7f088}
+      \strng{fullhash}{4d56da86921bb240faf3ee04a7b7f088}
+      \strng{fullhashraw}{4d56da86921bb240faf3ee04a7b7f088}
+      \strng{bibnamehash}{4d56da86921bb240faf3ee04a7b7f088}
+      \strng{authorbibnamehash}{4d56da86921bb240faf3ee04a7b7f088}
+      \strng{authornamehash}{4d56da86921bb240faf3ee04a7b7f088}
+      \strng{authorfullhash}{4d56da86921bb240faf3ee04a7b7f088}
+      \strng{authorfullhashraw}{4d56da86921bb240faf3ee04a7b7f088}
+      \field{extraname}{5}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Eigene Darstellung}
@@ -139,9 +165,9 @@
       \strng{authornamehash}{4d56da86921bb240faf3ee04a7b7f088}
       \strng{authorfullhash}{4d56da86921bb240faf3ee04a7b7f088}
       \strng{authorfullhashraw}{4d56da86921bb240faf3ee04a7b7f088}
-      \field{extraname}{5}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{extraname}{6}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Eigene Darstellung}
@@ -163,8 +189,8 @@
       \strng{authornamehash}{f1e069787ece74531d112559945c6871}
       \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
       \strng{authorfullhashraw}{f1e069787ece74531d112559945c6871}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Zugriff am 22. Juli 2025}

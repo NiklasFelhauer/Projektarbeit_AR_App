@@ -565,6 +565,13 @@ OUTPUT content\04_Objekterkennungsmodell.aux
 INPUT .\content\04_Objekterkennungsmodell.tex
 INPUT .\content\04_Objekterkennungsmodell.tex
 INPUT content\04_Objekterkennungsmodell.tex
+INPUT .\pictures\Objekterkennung\Tank_Farben.jpg
+INPUT .\pictures\Objekterkennung\Tank_Farben.jpg
+INPUT .\pictures\Objekterkennung\Tank_Farben.jpg
+INPUT .\pictures\Objekterkennung\Tank_Farben.jpg
+INPUT .\pictures\Objekterkennung\Tank_Farben.jpg
+INPUT .\pictures\Objekterkennung\Tank_Farben.jpg
+INPUT .\pictures\Objekterkennung\Tank_Farben.jpg
 INPUT .\pictures\AndroidApp\Roboflow.png
 INPUT .\pictures\AndroidApp\Roboflow.png
 INPUT .\pictures\AndroidApp\Roboflow.png
@@ -572,6 +579,11 @@ INPUT .\pictures\AndroidApp\Roboflow.png
 INPUT .\pictures\AndroidApp\Roboflow.png
 INPUT .\pictures\AndroidApp\Roboflow.png
 INPUT .\pictures\AndroidApp\Roboflow.png
+INPUT C:\Users\nikla\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
+INPUT C:\Users\nikla\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\nikla\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
+INPUT C:\Users\nikla\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\nikla\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT .\pictures\AndroidApp\whileTraining.jpg
 INPUT .\pictures\AndroidApp\whileTraining.jpg
 INPUT .\pictures\AndroidApp\whileTraining.jpg

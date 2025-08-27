@@ -1,11 +1,37 @@
 \section{Objekterkennungsmodell}
 
+\subsection{Vorüberlegungen}
+
+Die drei Tanks sehen sich sehr ähnlich und sind daher schwer zu unterscheiden. Um die Unterscheidung zu vereinfachen und eindeutiger zu machen, werden farbige Griffhalter genutzt, die am Griff jedes Tanks angebracht werden können. Dadurch wird auch die Genauigkeit des späteren Objekterkennungsmodells stark profitieren. Bei der Umsetzung dieser Idee hat der Doktorand Simon Holzhauer geholfen, indem er die Markierungen entworfen und mit dem 3D-Drucker ausgedruckt hat. Die Zuweisung ist wie folgt:
+\begin{itemize}
+    \item tank\_1 (Boil) $\rightarrow$ blau
+    \item tank\_2 (MLT) $\rightarrow$ weiß
+    \item tank\_3 (HLT) $\rightarrow$ rot
+ \end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{pictures/Objekterkennung/Tank_Farben.jpg}
+    \caption{Farbige Griffhalter aus dem 3D-Drucker} \cite{TankFarben}
+    \label{fig:TankFarben}
+\end{figure}
+
+
 \subsection{Datenset erstellen}
-Für das Training des Objekterkennungsmodells wird ein eigener Datensatz mit insgesamt 104 Bildern der Brauanlage erstellt. Davon werden 89 Bilder für das Training und 15 Bilder für die Validierung verwendet.
-Da diese Datenmenge sehr klein ist, wird der Datensatz im online-Tool Roboflow künstliche erweitert. Dabei kommen Filter wie Zuschneiden (Crop), Farb- und Helligkeitsanpassung (Saturation, Brightness), Unschärfe (Blur) und Rauschen (Noise) zum Einsatz.
+Für die Erstellung eines hochwertigen Datensatzes zählt nicht nur die Anzahl der Bilder, sondern vor allem deren Qualität und Vielfalt. Damit das Objekterkennungsmodell möglichst genaue Ergebnisse liefert, sollten die Aufnahmen möglichst viele Variationen in den folgenden Punkten abdecken:
+\begin{enumerate}
+\item \textbf{Beleuchtung:} z. B. Tageslicht, künstliche Beleuchtung, Schatten
+\item \textbf{Perspektive/Blickwinkel:} damit das Modell nicht nur von einer fixen Position funktioniert
+\item \textbf{Hintergrund:} unterschiedliche Hintergründe sorgen dafür, dass sich das Modell nicht ausschließlich am Kontext orientiert
+\item \textbf{Schärfe/Bildqualität:} jedoch sollten unscharfe oder stark verrauschte Bilder vermieden werden
+\item \textbf{Einheitliche Skalierung:} damit das Objekt mit einer vergleichbaren Größenordnung arbeiten kann
+\end{enumerate}
 
-Alle Bilder werden auf eine einheitliche Größe von 640×640 Pixel skaliert. Nach der Erweiterung umfasst der Datensatz 267 Trainingsbilder (95 \%) und 15 Validierungsbilder (5 \%). Der Export erfolgt im Pascal \verb|VOC-Format|, dieser Ordner muss im folgenden noch umstrukturiert werden.
-
+\noindent
+Auf Grundlage dieser Überlegungen besteht der Datensatz aus insgesamt 104 Bildern der Brauanlage. Diese werden im Online-Tool \verb|Roboflow| hochgeladen. Über jeden Tank wird ein Rechteck (Bounding Box) gezeichnet und mit dem entsprechenden Label (tank\_1, tank\_2 und tank\_3) versehen. Dieser Schritt ist in \autoref{fig:Roboflow} dargestellt ist. Davon werden 89 Bilder für das Training und 15 Bilder für die Validierung verwendet.
+Da diese Datenmenge sehr klein ist, wird der Datensatz in \verb|Roboflow| künstlich erweitert. Dabei kommen verschiedene Filter wie Zuschneiden (Crop), Farb- und Helligkeitsanpassung (Saturation, Brightness), Unschärfe (Blur) und Rauschen (Noise) zum Einsatz. Es gibt noch weitere Filter zur Auswahl, wie z.B. die Bilder um $90^\circ$ zu drehen, horizontal/vertikal Spiegeln oder Graufilter anzuweden. Diese Funktionen wurden in einer vorherigen Version des Modells verwendet, jedoch führen diese zu vermehrten Fehlklassifizierungen. Vorallem der Graufilter hat das Modell mit den extra angefertigen Farbigen Griffhalter irritiert. Im der neusten Version, sind nur die oben genannten Filter verwendet.
+\newline\\
+Alle Bilder werden auf eine einheitliche Größe von 640 × 640 Pixel skaliert. Nach der Erweiterung umfasst der Datensatz 267 Trainingsbilder (95 \%) und 15 Validierungsbilder (5 \%). Der Export erfolgt im Pascal \verb|VOC|-Format; dieser Ordner muss anschließend noch umstrukturiert werden.
 \begin{figure}[h!]
     \centering
     \includegraphics[width = \textwidth]{pictures/AndroidApp/Roboflow.png}
@@ -15,7 +41,8 @@ Alle Bilder werden auf eine einheitliche Größe von 640×640 Pixel skaliert. Na
 
 
 \subsection{Mediapipe Model Maker}
-Eine andere Möglichkeit den Tensorflow Model Maker zu umgehen ist die Verwendung des Media Pipe Model Makers von Google. Durchgeführt mit Google Colab, da hier eine kostenlose GPU zur Verfügungsteht und das Training damit deutlich schneller durchgeführt werden kann.
+Eine andere Möglichkeit den Tensorflow Model Maker zu umgehen ist die Verwendung des Media Pipe Model Makers von Google. Durchgeführt mit Google Colab, da hier eine kostenlose online-GPU zur Verfügung steht und das Training damit deutlich schneller durchgeführt werden kann als mit der CPU des PC's.
+Am Anfang wird geprüft, ob Python vorhanden ist (hier Version 3.12.11) und die nötigen Pakete werden geupdatet oder installiert.
 \begin{lstlisting}
 !python --version
 !pip install --upgrade pip
@@ -31,27 +58,31 @@ assert tf.__version__.startswith('2')
 
 from mediapipe_model_maker import object_detector
 \end{lstlisting}
-
-Es muss der Datensatz an Bilder im Colab hochgeladen sein. In diesem Beispiel liegt ein Datenset im Pascal VOC-Format vor und heißt \texttt{main\_dataset.zip}. Hierbei ist es auch wichtig auf die richtige Ordnerstruktur zu achten, damit der Model Maker die Bilder und Labels korrekt erkennt. Die Struktur ist wie folgt:
+\noindent
+Anschließend muss der Datensatz als ZIP-Ordner auf Colab hochgeladen werden. In diesem Beispiel liegt ein Datenset im Pascal VOC-Format vor und heißt \texttt{main\_dataset.zip}. Hierbei ist es auch wichtig auf die richtige Ordnerstruktur zu achten, damit der Model Maker die Bilder und Labels korrekt erkennt. Gegebenfalls müssen neue Ordner angelegt und die Daten verschoben werden. Die Struktur ist wie folgt:
 \begin{lstlisting}
     main_dataset/
         train/
             images/
                 image1.jpg
                 image2.jpg
+                [...]
             Annotations/
                 image1.xml
                 image2.xml
+                [...]
         valid/
             images/
                 image3.jpg
                 image4.jpg
+                [...]
             Annotations/
                 image3.xml
                 image4.xml
+                [...]
 \end{lstlisting}
-
-
+\noindent
+Wenn der Datensatz hochgeladen ist, kann dieser entpackt werden und die Pfade zu den Daten definiert werden.
 \begin{lstlisting}
 !unzip main_dataset.zip
 
@@ -107,8 +138,7 @@ Die Validierungsverluste (\texttt{val\_total\_loss}) bleiben jedoch relativ hoch
     \caption{Konsolenausgabe während des Trainings} \cite{WhileTraining}
     \label{fig:WhileTraining}
 \end{figure}
-\newpage
-Anschließend kann das Model exportiert und heruntergeladen werden. Dabei wird das Modell in das \texttt{.tflite}-Format konvertiert, welches für die Android App benötigt wird. Der Export erfolgt mit dem folgenden Code:
+Abschließend kann das Model exportiert und heruntergeladen werden. Dabei wird das Modell in das \texttt{.tflite}-Format konvertiert, welches für die Android App benötigt wird. Der Export erfolgt mit dem folgenden Code:
 \begin{lstlisting}
 model.export_model()
 !ls exported_model

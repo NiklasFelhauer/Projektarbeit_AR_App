@@ -74,13 +74,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="promilleFragment">
+                  <entry key="promille_fragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-421" />
-                            <option name="y" value="7" />
+                            <option name="x" value="-211" />
+                            <option name="y" value="358" />
                           </Point>
                         </option>
                       </LayoutPositions>

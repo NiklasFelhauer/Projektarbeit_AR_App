@@ -9,6 +9,10 @@ Es handelt sich um eine Android-Komponente, die Daten unabhängig vom User Inter
 Das ist notwendig, weil die einzelnen Tabs beim Wechseln neu geladen werden und lokale Variablen verloren gehen würden.
 Das ViewModel speichert die Werte zentral und stellt sie allen Tabs zur Verfügung.
 
+\subsubsection{Einstellungen für Objekterkennung}
+Es werden die Objekterkennungsvariablen \verb|_delegate, _threshold, _maxResults| und \verb|_model| angelegt. Diese können über den Settings-Tab mithelfe von \glqq Gettern\grqq angepasst werden.
+
+\subsubsection{MQTT-Verbindung}
 Im \verb|MainViewModel| wird außerdem die MQTT-Verbindung aufgebaut und alle eingehenden Nachrichten verarbeitet. 
 Die Sensordaten werden dabei im JSON-Format übertragen, zum Beispiel:
 \lstinline|{"tank_1": 65.5, "tank_2":70.2, "tank_3": 23.4, ...}|
@@ -29,9 +33,9 @@ override fun messageArrived(topic: String?, message: MqttMessage?) {
 
 Die App verfügt über die folgenden drei Datensammlungen:
 \begin{itemize}
-    \item \verb|_tankTemperatures|: enthält die Temperaturwerte der Tanks
-    \item \verb|_allValues|: enthält alle Werte aus der MQTT-Nachricht 
-    \item \verb|_mqttConnected|: enthält Status der MQTT Verbindung
+    \item \verb|_mqttMessages|: Log aller empfangenen MQTT Nachrichten
+    \item \verb|_allValues|: enthält alle Werte aus der MQTT-Nachricht (Ventile, Pumpen und Heizstäbe)
+    \item \verb|_tankTemperatures|: enthält nur die Temperaturwerte der Tanks
 \end{itemize}
 Alle Variablen sind vom Typ \verb|LiveData|. 
 Das bedeutet, dass sie automatisch alle Bildschirme aktualisieren, sobald sich der Wert ändert.

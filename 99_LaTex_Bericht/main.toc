@@ -21,6 +21,8 @@
 \contentsline {subsubsection}{\numberline {3.2.4}Passwort für den Datenzugriff}{9}{subsubsection.3.2.4}%
 \contentsline {section}{\numberline {4}Android App}{11}{section.4}%
 \contentsline {subsection}{\numberline {4.1}MainViewModel}{11}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Einstellungen für Objekterkennung}{11}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}MQTT-Verbindung}{11}{subsubsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.2}Navigation}{12}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Die verschiedenen Tabs}{12}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Kamera-Tab}{13}{subsubsection.4.3.1}%

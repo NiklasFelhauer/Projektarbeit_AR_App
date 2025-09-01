@@ -155,7 +155,7 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/nikla/Documents/00_Education/00_Hka/Projektarbeit/Projektarbeit_AR_App/00_Android_App/app/src/main/assets",
-    "settings.editor.selected.configurable": "preferences.language.Kotlin"
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -250,6 +250,11 @@
       <updated>1753451897093</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

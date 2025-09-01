@@ -42,8 +42,8 @@ class MainViewModel : ViewModel() {
 
     // MQTT Client
     private var mqttClient: MqttClient? = null
-    private val brokerUri = "tcp://192.168.1.12:1883"
-    private val topic = "mein/test/topic"
+    private val brokerUri = "tcp://192.168.188.26:1883"
+    private val topic = "brauanlage/data"
 
     private val _mqttConnected = MutableLiveData<Boolean>(false)
     val mqttConnected: LiveData<Boolean> get() = _mqttConnected

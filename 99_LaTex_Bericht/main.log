@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  27 AUG 2025 22:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  1 SEP 2025 14:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1528,21 +1528,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \openout2 = `content/04_Objekterkennungsmodell.aux'.
 
  (content/04_Objekterkennungsmodell.tex
-<pictures/Objekterkennung/Tank_Farben.jpg, id=476, 4480.74pt x 2233.34375pt>
+<pictures/Objekterkennung/Tank_Farben.jpg, id=477, 4480.74pt x 2233.34375pt>
 File: pictures/Objekterkennung/Tank_Farben.jpg Graphic file (type jpg)
 <use pictures/Objekterkennung/Tank_Farben.jpg>
-Package pdftex.def Info: pictures/Objekterkennung/Tank_Farben.jpg  used on input line 14.
+Package pdftex.def Info: pictures/Objekterkennung/Tank_Farben.jpg  used on input line 24.
 (pdftex.def)             Requested size: 227.62206pt x 113.44579pt.
-<pictures/AndroidApp/Roboflow.png, id=479, 1102.1175pt x 551.81157pt>
-File: pictures/AndroidApp/Roboflow.png Graphic file (type png)
-<use pictures/AndroidApp/Roboflow.png>
-Package pdftex.def Info: pictures/AndroidApp/Roboflow.png  used on input line 37.
-(pdftex.def)             Requested size: 455.24411pt x 227.93661pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--41
-
- []
-
 
 
 
@@ -1558,6 +1548,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
  <./pictures/Objekterkennung/Tank_Farben.jpg>]
+<pictures/AndroidApp/Roboflow.png, id=487, 1102.1175pt x 551.81157pt>
+File: pictures/AndroidApp/Roboflow.png Graphic file (type png)
+<use pictures/AndroidApp/Roboflow.png>
+Package pdftex.def Info: pictures/AndroidApp/Roboflow.png  used on input line 47.
+(pdftex.def)             Requested size: 455.24411pt x 227.93661pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--51
+
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1576,12 +1577,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [18]
-<pictures/AndroidApp/whileTraining.jpg, id=560, 1187.18532pt x 465.23813pt>
+<pictures/AndroidApp/whileTraining.jpg, id=552, 1187.18532pt x 465.23813pt>
 File: pictures/AndroidApp/whileTraining.jpg Graphic file (type jpg)
 <use pictures/AndroidApp/whileTraining.jpg>
-Package pdftex.def Info: pictures/AndroidApp/whileTraining.jpg  used on input line 137.
+Package pdftex.def Info: pictures/AndroidApp/whileTraining.jpg  used on input line 147.
 (pdftex.def)             Requested size: 455.24411pt x 178.40378pt.
-)
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1590,7 +1591,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[19 <./pictures/AndroidApp/whileTraining.jpg>]
+[19 <./pictures/AndroidApp/whileTraining.jpg>])
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[20]
 \openout2 = `content/99_Schluss.aux'.
 
  (content/99_Schluss.tex)
@@ -1602,7 +1612,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20
+[21
 
 
 
@@ -1616,7 +1626,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[21
+[22
 
 
 
@@ -1632,17 +1642,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41004 strings out of 468149
- 839685 string characters out of 5431082
- 1970676 words of memory out of 5000000
- 68666 multiletter control sequences out of 15000+600000
+ 41009 strings out of 468149
+ 839864 string characters out of 5431082
+ 1970744 words of memory out of 5000000
+ 68669 multiletter control sequences out of 15000+600000
  679489 words of font info for 94 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  89i,13n,94p,928b,3062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Bold.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Italic.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/nikla/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (24 pages, 11459275 bytes).
+Output written on main.pdf (25 pages, 11464588 bytes).
 PDF statistics:
- 727 PDF objects out of 1000 (max. 8388607)
- 323 named destinations out of 1000 (max. 500000)
+ 739 PDF objects out of 1000 (max. 8388607)
+ 325 named destinations out of 1000 (max. 500000)
  334 words of extra memory for PDF output out of 10000 (max. 10000000)
 

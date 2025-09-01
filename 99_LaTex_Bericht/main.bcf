@@ -2377,10 +2377,11 @@
     <bcf:citekey order="3" intorder="1">AppTabs</bcf:citekey>
     <bcf:citekey order="4" intorder="1">AppTabs</bcf:citekey>
     <bcf:citekey order="5" intorder="1">NummerierungAktorenSensoren</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">TankFarben</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Roboflow</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">WhileTraining</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">jetpackcomposegfg</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">GoogleMediaPipe</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">TankFarben</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Roboflow</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">WhileTraining</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">jetpackcomposegfg</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

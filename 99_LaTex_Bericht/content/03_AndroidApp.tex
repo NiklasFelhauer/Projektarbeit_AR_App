@@ -8,17 +8,35 @@ Das \verb|MainViewModel| bildet die zentrale Datenschnittstelle der App.
 Es handelt sich um eine Android-Komponente, die Daten unabhängig vom User Interface (UI) im Hintergrund verwaltet.
 Das ist notwendig, weil die einzelnen Tabs beim Wechseln neu geladen werden und lokale Variablen verloren gehen würden.
 Das ViewModel speichert die Werte zentral und stellt sie allen Tabs zur Verfügung.
+\noindent
+Die Kommunikation zwischen den Tabs und dem MainViewModel erfolgt über Variablen. Hierbei liegen grundstätzlich zwei Datentypen vor:
+\begin{enumerate}
+    \item LiveData/MutableLiveData
+    \item Globale Variablen 
+\end{enumerate}
 
-\subsubsection{Einstellungen für Objekterkennung}
-Es werden die Objekterkennungsvariablen \verb|_delegate, _threshold, _maxResults| und \verb|_model| angelegt. Diese können über den Settings-Tab mithelfe von \glqq Gettern\grqq angepasst werden.
+\subsubsection{LiveData/MutableLiveData}
+Dieser Datentyp wird für dynamishe Werte verwendet, die sich häufig ändern (z.B. MQTT Nachrichten). Sie sind privat im MainViewModel beschreibbar und global (in den Tabs) nur lesbar. Dadurch wird eine eindeutige Richtung des Datenflusses festgelegt, nämlich: \\MainViewModel $\rightarrow$ Tabs
+\\Zusätzlich unterscheidet man noch zwischen LiveData und MutableLiveData, es werden im MainViewModel immer beide Varianten deklaieriert, wie im folgenden Codeausschnitt für \\ \verb|mqttMessages| ersichtlich ist:
+\begin{lstlisting}[language=Kotlin]
+// MutableLiveData:
+private val _mqttMessages = MutableLiveData<List<String>>(emptyList())
 
-\subsubsection{MQTT-Verbindung}
-Im \verb|MainViewModel| wird außerdem die MQTT-Verbindung aufgebaut und alle eingehenden Nachrichten verarbeitet. 
-Die Sensordaten werden dabei im JSON-Format übertragen, zum Beispiel:
-\lstinline|{"tank_1": 65.5, "tank_2":70.2, "tank_3": 23.4, "ventil_1": 1, ...}|
+// LiveData:
+val mqttMessages: LiveData<List<String>> get() = _mqttMessages       
+\end{lstlisting}
+Im Code wird dieser Unterschied konsisten mit einem Unterstrich vor dem Variablennamen veranschaulicht. LiveData haben den normalen Namen (z.B. mqttMessages) während MutableLiveData einen Unterstrich vor dem Namen haben (z.B. \_mqttMessages)
+\\
+Im MainViewModel gibt es immer eine private Variable vom Typ MutableLiveData. Diese ist ausschließlich nur dort verfügbar und kann auch nur dort beschrieben werden. Für die Tabs gibt es öffentliche Variablen vom Typ LiveData. In den Fragments (Tabs) können diese LiveData mit \verb|obeserve(...)| beobachtet werden. Bei einer Änderung wird der Wert im Tab automatisch geändert.
+Im folgenden Codeausschnitt registriert sich das Fragment (Tab) mit \\ \texttt{observe(viewLifecycleOwner)} als Beobachter und die UI (hier: textView bzw. eine Textansicht) zeigt sofort die aktuellen Werte an, ohne dass ein manuelles Neuladen notwendig ist.
+\begin{lstlisting}[language=Kotlin]
+viewModel.mqttMessages.observe(viewLifecycleOwner) { messages ->
+    textView.text = messages.joinToString("\n")
+}
+\end{lstlisting}
 
-Beim Eintreffen einer Nachricht wird diese in eine Datenstruktur umgewandelt (geparsed) und den Tabs bereitgestellt:
-
+\subsubsection{MQTT Daten}
+Eingehende MQTT Nachrichten werden im JSON-Format empfangen, geparst und anschließend in verschiedene LiveData-Variablen aufgeteilt:
 \begin{lstlisting}[language=Kotlin]
 override fun messageArrived(topic: String?, message: MqttMessage?) {
     val raw = message?.toString() ?: return
@@ -30,21 +48,34 @@ override fun messageArrived(topic: String?, message: MqttMessage?) {
     _allValues.postValue(parsed)
 }
 \end{lstlisting}
-
-Die App verfügt über die folgenden drei Datensammlungen:
+Dabei entstehen die folgenden drei Datensammlungen:
 \begin{itemize}
-    \item \verb|_mqttMessages|: Log aller empfangenen MQTT Nachrichten
-    \item \verb|_allValues|: enthält alle Werte aus der MQTT-Nachricht (Ventile, Pumpen und Heizstäbe)
-    \item \verb|_tankTemperatures|: enthält nur die Temperaturwerte der Tanks
+    \item \textbf{\_mqttMessages}: Log aller empfangenen Nachrichten
+    \item \textbf{\_allValues}: alle Werte aus der MQTT Nachricht zu Tanktemperaturen, Ventile, Pumpen,...
+    \item \textbf{\_tankTemperatures}: nur die Temperaturen der Tanks
 \end{itemize}
-Alle Variablen sind vom Typ \verb|LiveData|. 
-Das bedeutet, dass sie automatisch alle Bildschirme aktualisieren, sobald sich der Wert ändert.
-Dadurch werden Temperaturänderungen oder Schaltzustände der Brauanlage in Echtzeit in der App sichtbar.
-\\Der grundsätzliche Ablauf vom \verb|MainViewModel| ist vereinfacht in \autoref{fig:MainViewModelDatenfluss} dargestellt. Die Daten werden vom MQTT-Broker an das Smartphone weitergeleitet, dort im \verb|MainViewModel| empfangen und anschließend an die unterschiedlichen Tabs weitergeleitet.
+Hierbei sind alle drei als MutableLiveData im MainViewModel verwaltet und sind für die Tabs über den overserve(...)-Befehl als LiveData zugänglich.
+
+\subsubsection{Globale Variablen}
+Im Settings-Tab werden Werte nicht nur gelesen, sondern auch bearbeitet. Außerdem werden diese Werte nur selten durch den Benutzer im Setting-Tab verändert. Deshalb kommen hier \glqq einfache\grqq Variablen zum Einsatz, die mit get/set-Methoden gelesen/beschrieben werden können. Der folgende Codeausschnitt veranschaulicht das der Threshold-Variable:
+
+\begin{lstlisting}[language=Kotlin]
+// Interne Variable mit Standardwert
+private var _threshold: Float = ObjectDetectorHelper.THRESHOLD_DEFAULT
+
+// Setter: wird vom Settings-Tab aufgreufen, wenn der Nutzer einen Wert anpasst
+fun setThreshold(value: Float) { 
+    _threshold = value 
+}
+
+// Getter: wird z. B. vom CameraFragment beim Start abgefragt
+val currentThreshold: Float 
+    get() = _threshold
+\end{lstlisting}
 
 
-\subsubsection{Datenfluss}
-Grundsätzlich liegen in der App zwei unterschiedliche Datentypen vor: LiveData/MutableLiveData und einfache Variablen, die mit Getter/Setter bearbeitet bzw. gelesen werden können.
+
+
 
 
 \begin{table}[H]
@@ -66,14 +97,14 @@ Grundsätzlich liegen in der App zwei unterschiedliche Datentypen vor: LiveData/
         \bottomrule
   \end{tabular}
 \end{center}
-\caption{Thermische Zeitkonstante $\tau_{th}$}
+\caption{Übersich die privaten Variablen im MainViewModel}
 \end{table}
  
 
 \begin{figure}[h!]
     \centering
     \includegraphics[height=5cm]{pictures/AndroidApp/MainViewModelDatenfluss.png}
-    \caption{Datenfluss der App} \cite{Datenfluss_MainViewModel}
+    \caption{Überblick des Datenflusses der App} \cite{Datenfluss_MainViewModel}
     \label{fig:MainViewModelDatenfluss}
 \end{figure}
 

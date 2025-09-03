@@ -15,7 +15,7 @@ Es werden die Objekterkennungsvariablen \verb|_delegate, _threshold, _maxResults
 \subsubsection{MQTT-Verbindung}
 Im \verb|MainViewModel| wird außerdem die MQTT-Verbindung aufgebaut und alle eingehenden Nachrichten verarbeitet. 
 Die Sensordaten werden dabei im JSON-Format übertragen, zum Beispiel:
-\lstinline|{"tank_1": 65.5, "tank_2":70.2, "tank_3": 23.4, ...}|
+\lstinline|{"tank_1": 65.5, "tank_2":70.2, "tank_3": 23.4, "ventil_1": 1, ...}|
 
 Beim Eintreffen einer Nachricht wird diese in eine Datenstruktur umgewandelt (geparsed) und den Tabs bereitgestellt:
 
@@ -40,14 +40,43 @@ Die App verfügt über die folgenden drei Datensammlungen:
 Alle Variablen sind vom Typ \verb|LiveData|. 
 Das bedeutet, dass sie automatisch alle Bildschirme aktualisieren, sobald sich der Wert ändert.
 Dadurch werden Temperaturänderungen oder Schaltzustände der Brauanlage in Echtzeit in der App sichtbar.
-\\Der grundsätzliche Ablauf vom \verb|MainViewModel| ist vereinfacht in \autoref{fig:DatenflussMainViewModel} dargestellt. Die Daten werden vom MQTT-Broker an das Smartphone weitergeleitet, dort im \verb|MainViewModel| empfangen und anschließend an die unterschiedlichen Tabs weitergeleitet.
+\\Der grundsätzliche Ablauf vom \verb|MainViewModel| ist vereinfacht in \autoref{fig:MainViewModelDatenfluss} dargestellt. Die Daten werden vom MQTT-Broker an das Smartphone weitergeleitet, dort im \verb|MainViewModel| empfangen und anschließend an die unterschiedlichen Tabs weitergeleitet.
+
+
+\subsubsection{Datenfluss}
+Grundsätzlich liegen in der App zwei unterschiedliche Datentypen vor: LiveData/MutableLiveData und einfache Variablen, die mit Getter/Setter bearbeitet bzw. gelesen werden können.
+
+
+\begin{table}[H]
+\begin{center}
+ \begin{tabular}{c|c | c}
+    \toprule
+    Name & Datentyp & Beispiel\\ 
+        \midrule                        
+            \_tankTemperatures & Map\textless String, Float\textgreater  & \{\glqq tank\_1\grqq =65.2, \glqq tank\_2\grqq =33.4, \glqq tank\_3\grqq =44.8\}\\                                
+            \_allValues & Map\textless String, Float\textgreater &  \{\glqq tank\_1\grqq =65.2, ... \glqq ventil\_1\grqq =1, ...\}\\                                
+            \_mqttMessages & List\textless String\textgreater & [ \glqq \{\glqq tank\_1\grqq :65.2 \grqq, ... , \glqq ventil\_1\grqq :1\} , ... ] \grqq \\
+
+        \midrule
+
+            \_delegate & Int & 0 = CPU; 1 = GPU \\
+            \_threshold & Float &  0.8 $\hat{=}$ 80 \%\\
+            \_maxResults & Int & maximal 3 \\ 
+            \_model & Int & 0 = Brauanlage; 1 = EfficientDetLite0 \\  
+        \bottomrule
+  \end{tabular}
+\end{center}
+\caption{Thermische Zeitkonstante $\tau_{th}$}
+\end{table}
+ 
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[height=7cm]{pictures/AndroidApp/MVM.png}
-    \caption{Datenfluss des MainViewModels} \cite{Datenfluss_MainViewModel}
-    \label{fig:DatenflussMainViewModel}
+    \includegraphics[height=5cm]{pictures/AndroidApp/MainViewModelDatenfluss.png}
+    \caption{Datenfluss der App} \cite{Datenfluss_MainViewModel}
+    \label{fig:MainViewModelDatenfluss}
 \end{figure}
+
 
 \newpage
 

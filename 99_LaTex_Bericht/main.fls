@@ -509,7 +509,6 @@ INPUT .\pictures\AndroidApp\MainViewModelDatenfluss.png
 INPUT .\pictures\AndroidApp\MainViewModelDatenfluss.png
 INPUT .\pictures\AndroidApp\MainViewModelDatenfluss.png
 INPUT .\pictures\AndroidApp\MainViewModelDatenfluss.png
-INPUT C:\Users\nikla\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
 INPUT .\pictures\AndroidApp\CameraView.png
 INPUT .\pictures\AndroidApp\CameraView.png
 INPUT .\pictures\AndroidApp\CameraView.png
@@ -546,6 +545,7 @@ INPUT .\pictures\AndroidApp\PromilleRechner.png
 INPUT .\pictures\AndroidApp\PromilleRechner.png
 INPUT .\pictures\AndroidApp\PromilleRechner.png
 INPUT .\pictures\AndroidApp\PromilleRechner.png
+INPUT C:\Users\nikla\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
 INPUT .\pictures\AndroidApp\Nummerierung.png
 INPUT .\pictures\AndroidApp\Nummerierung.png
 INPUT .\pictures\AndroidApp\Nummerierung.png

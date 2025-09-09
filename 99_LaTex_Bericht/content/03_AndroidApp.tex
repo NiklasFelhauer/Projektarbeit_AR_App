@@ -17,7 +17,7 @@ Diese Variablen liegen grundstätzlich in zwei Datentypen vor:
 
 \subsubsection{LiveData/MutableLiveData}
 Dieser Datentyp wird für dynamishe Werte verwendet, die sich häufig ändern (z.B. MQTT Nachrichten). Sie sind privat im MainViewModel beschreibbar und global (in den Tabs) nur lesbar. Dadurch wird eine eindeutige Richtung des Datenflusses festgelegt, nämlich: \\MainViewModel $\rightarrow$ Tabs
-\\Zusätzlich unterscheidet man noch zwischen LiveData und MutableLiveData, es werden im MainViewModel immer beide Varianten deklaieriert, wie im folgenden Codeausschnitt für die Variable \\ \verb|mqttMessages| ersichtlich ist:
+\\Zusätzlich unterscheidet man noch zwischen LiveData und MutableLiveData, es werden im MainViewModel immer beide Varianten deklaieriert, wie im folgenden Codeausschnitt für die Variable \verb|mqttMessages| ersichtlich ist:
 \begin{lstlisting}[language=Kotlin]
 // MutableLiveData:
 private val _mqttMessages = MutableLiveData<List<String>>(emptyList())
@@ -108,7 +108,7 @@ In \autoref{tab:OverviewVariablen} ist eine Übersicht der wichtigsten privaten 
         \midrule                        
             \_tankTemperatures & Map\textless String, Float\textgreater  & \{\glqq tank\_1\grqq =65.2, \glqq tank\_2\grqq =33.4, \glqq tank\_3\grqq =44.8\}\\                                
             \_allValues & Map\textless String, Float\textgreater &  \{\glqq tank\_1\grqq =65.2, ... \glqq ventil\_1\grqq =1, ...\}\\                                
-            \_mqttMessages & List\textless String\textgreater & [ \glqq \{\glqq tank\_1\grqq :65.2 \grqq, ... , \glqq ventil\_1\grqq :1\} , ... ] \grqq \\
+            \_mqttMessages & List\textless String\textgreater & [ \glqq \{\glqq tank\_1\grqq :65.2 \grqq, ... , \glqq ventil\_1\grqq :1\} , ... \grqq ]  \\
 
         \midrule
 
@@ -215,7 +215,7 @@ Für diesen Tab wurde die Brauanlage in einer 2D-Ansicht erstellt. In \autoref{f
 
 \subsubsection{MQTT-Tab}
 Dieser Tab dient dazu, die MQTT-Verbindung zu überprüfen und gegebenenfalls die Verbindung zum Broker neu aufzubauen.
-Dafür gibt es einen \glqq Verbinden \grqq -Button, der die Funktion \verb|ViewModel.startMqtt()| aufruft.
+Dafür gibt es einen \glqq Verbinden\grqq -Button, der die Funktion \verb|ViewModel.startMqtt()| aufruft.
 Das \verb|MainViewModel| stellt die rohen MQTT-Daten im JSON-Format zur Verfügung. 
 
 

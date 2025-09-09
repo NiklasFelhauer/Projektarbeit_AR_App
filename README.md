@@ -1,24 +1,24 @@
-# Brauanlagen AR-App
- <img src="99_LaTex_Bericht/pictures/AndroidApp/Roboflow.png" width="800"/>
+# Brauanlagen AR-App 📱
+ <img src="99_LaTex_Bericht/pictures/AndroidApp/Roboflow.png" width="600"/>
  
 Dieses Projekt ist eine Android-App, die den Status einer Brauanlage visualisiert.  
 Sie verbindet **Sensordaten über MQTT** mit einer benutzerdefinierten **Objekterkennung auf Kamerabildern** und bietet verschiedene Ansichten, um Tanks, Ventile und andere Komponenten zu überwachen.
 
 ---
 
-## 📌 Features
+## Features
 
 - **Kamera-Ansicht**  
-  - Live-Objekterkennung mit TensorFlow Lite (z. B. Tanks erkennen)  
+  - Live-Objekterkennung mit TensorFlow Lite  
   - Overlay zeigt zusätzlich Temperaturdaten der Tanks in Echtzeit  
 
 - **Übersicht (Overview)**  
-  - Visualisierung der gesamten Brauanlage auf einem Hintergrundbild  
+  - Visualisierung aller Pumpen, Ventile und Heizstäbe der Brauanlage  
   - Anzeige der aktuellen Temperaturwerte in den Tanks  
   - Ventile, Pumpen und Heizstäbe ändern ihre Farbe (rot = aus, grün = an, grau = unbekannt)  
 
 - **MQTT-Integration**  
-  - Empfang von Sensordaten (Temperaturen, Ventilzustände etc.) über einen MQTT-Broker  
+  - Empfang von Sensordaten (Temperaturen, Ventilzustände etc.) über einen Raspberry PI als MQTT-Broker  
   - Live-Anzeige von Nachrichten und Verbindungsstatus (verbunden / getrennt / Fehler)  
 
 - **Einstellungen**  
@@ -29,12 +29,12 @@ Sie verbindet **Sensordaten über MQTT** mit einer benutzerdefinierten **Objekte
     - Modellwahl (z. B. Tanks-Modell)  
 
 - **Promille-Rechner 🍻**  
-  - Kleines Gimmick: Berechnung des geschätzten Blutalkoholwerts auf Basis der Anzahl konsumierter Biere und des Körpergewichts  
+  - Berechnung des geschätzten Blutalkoholwerts auf Basis der Anzahl konsumierter Biere und des Körpergewichts  
   - Anzeige der voraussichtlichen Zeit bis zur vollständigen Nüchternheit  
 
 ---
 
-## 🛠️ Architektur
+## Architektur
 
 - **Single-Activity-App** mit `MainActivity` und Navigation über `BottomNavigationView`  
 - **Fragments** für die einzelnen Tabs:  
@@ -52,12 +52,6 @@ Sie verbindet **Sensordaten über MQTT** mit einer benutzerdefinierten **Objekte
   <img src="99_LaTex_Bericht/pictures/AndroidApp/PromilleRechner.png" width="150"/>
 </p>
   
-
-- **ViewModel (MainViewModel)**  
-  - Zentrale Datenhaltung  
-  - MQTT-Client (Eclipse Paho) läuft hier  
-  - Zustände werden als `LiveData` an die UI weitergegeben (Temperaturen, Ventilstatus, MQTT-Messages, etc.)  
-
 ---
 
 ## ⚙️ Installation & Start
@@ -67,5 +61,5 @@ Sie verbindet **Sensordaten über MQTT** mit einer benutzerdefinierten **Objekte
 3. MQTT-Broker-Adresse im `MainViewModel` anpassen:  
 
    ```kotlin
-   private val brokerUri = "tcp://192.168.xxx.xxx:1883"
-   private val topic = "mein/test/topic"
+   private val brokerUri = "tcp://XXXXXXXXXX:1883"
+   private val topic = "brauanlage/data"

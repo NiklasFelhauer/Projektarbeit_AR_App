@@ -1,7 +1,5 @@
 # Brauerei Monitoring & Steuerungs-App 🍺📱
 
-![Kamera-Tab](99_LaTex_Bericht/pictures/AndroidApp/CameraView.png)
-
 Dieses Projekt ist eine Android-App, die den Status einer Brauanlage visualisiert.  
 Sie verbindet **Sensordaten über MQTT** mit einer **Objekterkennung auf Kamerabildern** und bietet verschiedene Ansichten, um Tanks, Ventile und andere Komponenten zu überwachen.
 
@@ -46,9 +44,11 @@ Sie verbindet **Sensordaten über MQTT** mit einer **Objekterkennung auf Kamerab
   - `PromilleFragment` – Promille-Rechner
  
   <p float="left">
-  <img src="99_LaTex_Bericht/pictures/AndroidApp/CameraView.png" width="250"/>
-  <img src="99_LaTex_Bericht/pictures/AndroidApp/CameraView.png" width="250"/>
-  <img src="99_LaTex_Bericht/pictures/AndroidApp/CameraView.png" width="250"/>
+  <img src="99_LaTex_Bericht/pictures/AndroidApp/CameraView.png" width="150"/>
+  <img src="99_LaTex_Bericht/pictures/AndroidApp/OverviewTab.png" width="150"/>
+  <img src="99_LaTex_Bericht/pictures/AndroidApp/MQTT.png" width="150"/>
+  <img src="99_LaTex_Bericht/pictures/AndroidApp/Settings.png" width="150"/>
+  <img src="99_LaTex_Bericht/pictures/AndroidApp/PromilleRechner.png" width="150"/>
 </p>
   
 

@@ -1,5 +1,5 @@
 # Brauerei Monitoring & Steuerungs-App 🍺📱
- <img src="99_LaTex_Bericht/pictures/AndroidApp/Roboflow.png" width="500"/>
+ <img src="99_LaTex_Bericht/pictures/AndroidApp/Roboflow.png" width="800"/>
  
 Dieses Projekt ist eine Android-App, die den Status einer Brauanlage visualisiert.  
 Sie verbindet **Sensordaten über MQTT** mit einer **Objekterkennung auf Kamerabildern** und bietet verschiedene Ansichten, um Tanks, Ventile und andere Komponenten zu überwachen.

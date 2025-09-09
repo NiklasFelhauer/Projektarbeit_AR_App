@@ -141,21 +141,21 @@ Die App soll mehrere verschiedenen Funktionen bieten, um diese übersichtlich da
 \begin{figure}[h!]
     \centering
     % --- Erste Reihe ---
-    \begin{subfigure}[t]{0.32\textwidth}
+    \begin{subfigure}[t]{0.3\textwidth}
         \centering
-        \includegraphics[height=6cm]{pictures/AndroidApp/CameraView.png}
+        \includegraphics[height=7cm]{pictures/AndroidApp/CameraView.png}
         \caption{Kamera}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.32\textwidth}
         \centering
-        \includegraphics[height=6cm]{pictures/AndroidApp/OverviewTab.png}
+        \includegraphics[height=7cm]{pictures/AndroidApp/OverviewTab.png}
         \caption{Overview}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.32\textwidth}
         \centering
-        \includegraphics[height=6cm]{pictures/AndroidApp/MQTT.png}
+        \includegraphics[height=7cm]{pictures/AndroidApp/MQTT.png}
         \caption{MQTT}
     \end{subfigure}
 
@@ -164,12 +164,12 @@ Die App soll mehrere verschiedenen Funktionen bieten, um diese übersichtlich da
     % --- Zweite Reihe ---
     \begin{subfigure}[t]{0.32\textwidth}
         \centering
-        \includegraphics[height=6cm]{pictures/AndroidApp/Settings.png}
+        \includegraphics[height=7cm]{pictures/AndroidApp/Settings.png}
         \caption{Settings}
     \end{subfigure}
     \begin{subfigure}[t]{0.32\textwidth}
         \centering
-        \includegraphics[height=6cm]{pictures/AndroidApp/PromilleRechner.png}
+        \includegraphics[height=7cm]{pictures/AndroidApp/PromilleRechner.png}
         \caption{Promille Rechner}
     \end{subfigure}
 
@@ -178,14 +178,9 @@ Die App soll mehrere verschiedenen Funktionen bieten, um diese übersichtlich da
 \end{figure}
 
 \subsubsection{Kamera-Tab}
-Der Kamera-Tab wird standardgemäß als erstes beim Starten der App geöffnet und nutzt die CameraX-API, um den Kamera-Livestream des Smartphones anzuzeigen. Jedes Frame (einzelnes Bild) wird an die \verb|ObjectDetectorHelper|-Klasse geschickt, welche das benutzerdefinierte Tensorflow-Lite Modell \verb|Brauanlage.tflite| nutzt, um Tanks der Brauanlage zu erkennen und die Koordinaten der zugehörigen Bounding-Boxen zu berechnen.
-In der \verb|OverlayView|-Klasse wird der Tank-Name, Erkennungssicherheit des Modells (Score) und die aktuelle Temperatur als Overlay auf einem erkannten Tank angezeigt. Die Temperaturdaten kommen regelmäßig per MQTT direkt von den Temperatur-Sensoren der Brauanlage im JSON-Format, zum Beispiel als:
-\lstinline|{"tank_1": 65.5, "tank_2":70.2, "tank_3": 23.4, ...}|
-Diese Daten werden im MainViewModel verarbeitet.
-\noindent
-In der \verb|CameraFragment|-Klasse werden die Temperatur-Daten aus dem MainViewModel kontinuierlich beobachtet. 
-
-
+Der Kamera-Tab wird standardgemäß als erstes beim Starten der App geöffnet und nutzt die CameraX-API, um auf den Kamera-Livestream des Smartphones zuzugreifen. Jedes Frame (einzelnes Bild) wird an die \texttt{ObjectDetectorHelper}-Klasse geschickt, welche das benutzerdefinierte Tensorflow-Lite Modell \verb|Brauanlage.tflite| nutzt, um Tanks der Brauanlage zu erkennen und die Koordinaten der zugehörigen Bounding-Boxen zu berechnen.
+In der \verb|OverlayView|-Klasse wird der Tank-Name, Erkennungssicherheit des Modells (Score) und die aktuelle Temperatur als Overlay auf einem erkannten Tank angezeigt. 
+\newpage
 
 \subsubsection{Overview-Tab}
 

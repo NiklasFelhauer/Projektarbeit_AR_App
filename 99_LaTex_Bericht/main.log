@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  9 SEP 2025 14:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  9 SEP 2025 14:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1439,29 +1439,29 @@ Overfull \hbox (1.68861pt too wide) in paragraph at lines 137--139
 File: pictures/AndroidApp/CameraView.png Graphic file (type png)
 <use pictures/AndroidApp/CameraView.png>
 Package pdftex.def Info: pictures/AndroidApp/CameraView.png  used on input line 146.
-(pdftex.def)             Requested size: 81.7755pt x 170.71652pt.
+(pdftex.def)             Requested size: 95.40787pt x 199.16928pt.
 LaTeX Font Info:    Font shape `OT1/IBMPlexSans-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 147.
 <pictures/AndroidApp/OverviewTab.png, id=355, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/OverviewTab.png Graphic file (type png)
 <use pictures/AndroidApp/OverviewTab.png>
 Package pdftex.def Info: pictures/AndroidApp/OverviewTab.png  used on input line 152.
-(pdftex.def)             Requested size: 81.7755pt x 170.71652pt.
+(pdftex.def)             Requested size: 95.40787pt x 199.16928pt.
 <pictures/AndroidApp/MQTT.png, id=356, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/MQTT.png Graphic file (type png)
 <use pictures/AndroidApp/MQTT.png>
 Package pdftex.def Info: pictures/AndroidApp/MQTT.png  used on input line 158.
-(pdftex.def)             Requested size: 81.7755pt x 170.71652pt.
+(pdftex.def)             Requested size: 95.40787pt x 199.16928pt.
 <pictures/AndroidApp/Settings.png, id=357, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/Settings.png Graphic file (type png)
 <use pictures/AndroidApp/Settings.png>
 Package pdftex.def Info: pictures/AndroidApp/Settings.png  used on input line 167.
-(pdftex.def)             Requested size: 81.7755pt x 170.71652pt.
+(pdftex.def)             Requested size: 95.40787pt x 199.16928pt.
 <pictures/AndroidApp/PromilleRechner.png, id=358, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/PromilleRechner.png Graphic file (type png)
 <use pictures/AndroidApp/PromilleRechner.png>
 Package pdftex.def Info: pictures/AndroidApp/PromilleRechner.png  used on input line 172.
-(pdftex.def)             Requested size: 81.7755pt x 170.71652pt.
+(pdftex.def)             Requested size: 95.40787pt x 199.16928pt.
 
 
 
@@ -1481,11 +1481,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [12 <./pictures/AndroidApp/CameraView.png> <./pictures/AndroidApp/OverviewTab.png> <./pictures/AndroidApp/MQTT.png> <./pictures/AndroidApp/Settings.png> <./pictures/AndroidApp/PromilleRechner.png>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 200.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 195.
 <pictures/AndroidApp/Nummerierung.png, id=390, 1084.05pt x 1231.60126pt>
 File: pictures/AndroidApp/Nummerierung.png Graphic file (type png)
 <use pictures/AndroidApp/Nummerierung.png>
-Package pdftex.def Info: pictures/AndroidApp/Nummerierung.png  used on input line 211.
+Package pdftex.def Info: pictures/AndroidApp/Nummerierung.png  used on input line 206.
 (pdftex.def)             Requested size: 225.39107pt x 256.0748pt.
 
 
@@ -1498,19 +1498,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13 <./pictures/AndroidApp/Nummerierung.png>]
 LaTeX Font Info:    Font shape `OT1/IBMPlexSans-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 254.
+(Font)              scaled to size 10.95pt on input line 249.
 <pictures/AndroidApp/MQTTVerbunden.png, id=406, 156.585pt x 36.88782pt>
 File: pictures/AndroidApp/MQTTVerbunden.png Graphic file (type png)
 <use pictures/AndroidApp/MQTTVerbunden.png>
-Package pdftex.def Info: pictures/AndroidApp/MQTTVerbunden.png  used on input line 264.
+Package pdftex.def Info: pictures/AndroidApp/MQTTVerbunden.png  used on input line 259.
 (pdftex.def)             Requested size: 102.42923pt x 24.13045pt.
 <pictures/AndroidApp/MQTTGetrennt.png, id=407, 238.64156pt x 52.69687pt>
 File: pictures/AndroidApp/MQTTGetrennt.png Graphic file (type png)
 <use pictures/AndroidApp/MQTTGetrennt.png>
-Package pdftex.def Info: pictures/AndroidApp/MQTTGetrennt.png  used on input line 271.
+Package pdftex.def Info: pictures/AndroidApp/MQTTGetrennt.png  used on input line 266.
 (pdftex.def)             Requested size: 102.42923pt x 22.6182pt.
 
-Overfull \hbox (18.47945pt too wide) in paragraph at lines 258--277
+Overfull \hbox (18.47945pt too wide) in paragraph at lines 253--272
 \OT1/IBMPlexSans-TLF/m/n/10.95 Dieses Over-lay ist in der rech-ten un-ten Ecke je-der-zeit in der App sicht-bar. Es ist in der [][]\OT1/cmtt/m/n/10.95 MainActivity
  []
 
@@ -1658,7 +1658,7 @@ Here is how much of TeX's memory you used:
  1143 hyphenation exceptions out of 8191
  89i,12n,94p,897b,3062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Bold.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Italic.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (24 pages, 11613183 bytes).
+Output written on main.pdf (24 pages, 11612672 bytes).
 PDF statistics:
  660 PDF objects out of 1000 (max. 8388607)
  259 named destinations out of 1000 (max. 500000)

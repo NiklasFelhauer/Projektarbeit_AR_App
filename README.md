@@ -43,7 +43,14 @@ Sie verbindet **Sensordaten über MQTT** mit einer **Objekterkennung auf Kamerab
   - `OverviewFragment` – Gesamtanlage mit Ventilen/Pumpen/Heizstäben  
   - `MQTTFragment` – Log & Status der MQTT-Nachrichten  
   - `SettingsFragment` – Konfiguration der Objekterkennung  
-  - `PromilleFragment` – Promille-Rechner  
+  - `PromilleFragment` – Promille-Rechner
+ 
+  <p float="left">
+  <img src="99_LaTex_Bericht/pictures/AndroidApp/CameraView.png" width="250"/>
+  <img src="99_LaTex_Bericht/pictures/AndroidApp/CameraView.png" width="250"/>
+  <img src="99_LaTex_Bericht/pictures/AndroidApp/CameraView.png" width="250"/>
+</p>
+  
 
 - **ViewModel (MainViewModel)**  
   - Zentrale Datenhaltung  

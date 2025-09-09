@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  9 SEP 2025 14:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.22)  9 SEP 2025 14:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1425,6 +1425,16 @@ File: pictures/AndroidApp/MainViewModelDatenfluss.png Graphic file (type png)
 <use pictures/AndroidApp/MainViewModelDatenfluss.png>
 Package pdftex.def Info: pictures/AndroidApp/MainViewModelDatenfluss.png  used on input line 131.
 (pdftex.def)             Requested size: 396.66827pt x 142.26378pt.
+
+Overfull \hbox (10.47632pt too wide) in paragraph at lines 137--139
+\OT1/IBMPlexSans-TLF/m/n/10.95 ler(...) di-rekt mit dem Nav-Con-trol-ler ver-bun-den. Da-durch []ubernimmt die Navigation-Komponente
+ []
+
+
+Overfull \hbox (1.68861pt too wide) in paragraph at lines 137--139
+\OT1/IBMPlexSans-TLF/m/n/10.95 das Um-schal-ten zwi-schen Tabs au-to-ma-tisch (in-klu-si-ve kor-rek-ter Titel-/Backstack-Verwaltung).
+ []
+
 <pictures/AndroidApp/CameraView.png, id=354, 1230.5975pt x 2568.59625pt>
 File: pictures/AndroidApp/CameraView.png Graphic file (type png)
 <use pictures/AndroidApp/CameraView.png>
@@ -1648,7 +1658,7 @@ Here is how much of TeX's memory you used:
  1143 hyphenation exceptions out of 8191
  89i,12n,94p,897b,3062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Bold.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans-Italic.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/ibm/plex/plxSans.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/z004bzau/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (24 pages, 11613246 bytes).
+Output written on main.pdf (24 pages, 11613183 bytes).
 PDF statistics:
  660 PDF objects out of 1000 (max. 8388607)
  259 named destinations out of 1000 (max. 500000)

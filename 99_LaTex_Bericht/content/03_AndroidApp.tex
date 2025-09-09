@@ -134,7 +134,7 @@ In \autoref{fig:MainViewModelDatenfluss} ist der komplette Datenfluss vom Raspbe
 \end{figure}
 
 \subsection{Navigation}
-Die App ist nach der Single-Acitivity-Architektur aufgebaut. Die MainActivity enthält ein NavHostFragment, das die einzelnen Tabs (Fragmente) rendert. Die Tab-Leiste ist als Top Navigation umgesetzt und wird per setupWithNavController(...) direkt mit dem NavController verbunden. Dadurch übernimmt die Navigation-Komponente das Umschalten zwischen Tabs automatisch (inklusive korrekter Titel-/Backstack-Verwaltung).
+Die MainActivity enthält außerdem ein \texttt{NavHostFragment}, das die einzelnen Tabs (Fragmente) rendert. Die Tab-Leiste ist als Top Navigation umgesetzt und wird per setupWithNavController(...) direkt mit dem NavController verbunden. Dadurch übernimmt die Navigation-Komponente das Umschalten zwischen Tabs automatisch (inklusive korrekter Titel-/Backstack-Verwaltung).
 Ein erneutes Antippen des bereits aktiven Tabs wird bewusst ignoriert, um unnötige Re-Loads zu vermeiden. Der Zurück-Button (\texttt{onBackPressed}) beendet die App.
 \subsection{Die verschiedenen Tabs}
 Die App soll mehrere verschiedenen Funktionen bieten, um diese übersichtlich darzustellen gibt es oben im Bildschirm eine Menu-Bar mit den passenden Symbolen zu jedem Tab. Mit diesem Menu kann zwischen den Tabs gewechselt werden. Die Übersicht dazu ist in \autoref{fig:AppTabs} dargestellt.

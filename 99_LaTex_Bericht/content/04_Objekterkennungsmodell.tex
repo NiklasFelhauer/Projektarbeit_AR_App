@@ -51,7 +51,7 @@ Alle Bilder werden auf eine einheitliche Größe von 640 × 640 Pixel skaliert. 
 
 
 \subsection{Mediapipe Model Maker}
-Eine andere Möglichkeit den Tensorflow Model Maker zu umgehen ist die Verwendung des Media Pipe Model Makers von Google. Durchgeführt mit Google Colab, da hier eine kostenlose online-GPU zur Verfügung steht und das Training damit deutlich schneller durchgeführt werden kann als mit der CPU des PC's.
+Für das Training des benutzerdefinierten Objekterkennungsmodells wird der von Google bereitgestellte \texttt{Mediapipe Model Maker} genutzt, um das \texttt{EfficientDetLite0} Modell umzutrainieren. Dieses Training wird mit dem cloudbasierten Google Colab Notebook durchgeführt, da hier eine kostenlose online-GPU zur Verfügung steht. Dadurch läuft das Training deutlich schneller als mit der CPU vom PC/Laptop.
 Am Anfang wird geprüft, ob Python vorhanden ist (hier Version 3.12.11) und die nötigen Pakete werden geupdatet oder installiert.
 \begin{lstlisting}
 !python --version

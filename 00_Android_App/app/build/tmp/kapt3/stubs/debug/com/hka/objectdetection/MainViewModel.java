@@ -15,9 +15,9 @@ public final class MainViewModel extends androidx.lifecycle.ViewModel {
     @org.jetbrains.annotations.Nullable()
     private org.eclipse.paho.client.mqttv3.MqttClient mqttClient;
     @org.jetbrains.annotations.NotNull()
-    private final java.lang.String brokerUri = "tcp://192.168.1.12:1883";
+    private final java.lang.String brokerUri = "tcp://192.168.0.100:1883";
     @org.jetbrains.annotations.NotNull()
-    private final java.lang.String topic = "mein/test/topic";
+    private final java.lang.String topic = "brauanlage/data";
     @org.jetbrains.annotations.NotNull()
     private final androidx.lifecycle.MutableLiveData<java.lang.Boolean> _mqttConnected = null;
     

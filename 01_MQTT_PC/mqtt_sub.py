@@ -7,7 +7,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     print(f"Nachricht empfangen: {msg.topic} {msg.payload.decode()}")
 
-broker_address = "192.168.188.26"  # IP-Adresse des Brokers
+broker_address = "192.168.0.100"  # IP-Adresse des Brokers
 
 client = mqtt.Client()
 client.on_connect = on_connect

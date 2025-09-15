@@ -33,9 +33,10 @@ class OverviewFragment : Fragment() {
         // Tanks und Ventile aus dem ViewModel beobachten
         viewModel.allValues.observe(viewLifecycleOwner) { values ->
             // 🔹 Tanks anzeigen
-            binding.tempBoil.text = "${values["tank_1"] ?: "--"} °C"
-            binding.tempMlt.text = "${values["tank_2"] ?: "--"} °C"
-            binding.tempHlt.text = "${values["tank_3"] ?: "--"} °C"
+            binding.tempBoil.text = values["tank_1"]?.let { String.format("%.2f °C", it) } ?: "-- °C"
+            binding.tempMlt.text  = values["tank_2"]?.let { String.format("%.2f °C", it) } ?: "-- °C"
+            binding.tempHlt.text  = values["tank_3"]?.let { String.format("%.2f °C", it) } ?: "-- °C"
+
 
             // 🔹 Beispiel für Ventil 1
             val ventil1State = values["ventil_1"] ?: 3f

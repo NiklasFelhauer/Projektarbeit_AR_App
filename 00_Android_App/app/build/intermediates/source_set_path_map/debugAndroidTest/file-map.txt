@@ -1,0 +1,5 @@
+com.hka.objectdetection.test.app-androidTest-0 /Users/jonawilhelmi/Uni/Semester 5/Projektarbeit/1 Reale Projektarbeit/Projektarbeit_AR_App/00_Android_App/app/build/generated/res/resValues/androidTest/debug
+com.hka.objectdetection.test.app-androidTest-1 /Users/jonawilhelmi/Uni/Semester 5/Projektarbeit/1 Reale Projektarbeit/Projektarbeit_AR_App/00_Android_App/app/build/generated/res/rs/androidTest/debug
+com.hka.objectdetection.test.app-mergeDebugAndroidTestResources-2 /Users/jonawilhelmi/Uni/Semester 5/Projektarbeit/1 Reale Projektarbeit/Projektarbeit_AR_App/00_Android_App/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.hka.objectdetection.test.app-mergeDebugAndroidTestResources-3 /Users/jonawilhelmi/Uni/Semester 5/Projektarbeit/1 Reale Projektarbeit/Projektarbeit_AR_App/00_Android_App/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.hka.objectdetection.test.app-merged_res-4 /Users/jonawilhelmi/Uni/Semester 5/Projektarbeit/1 Reale Projektarbeit/Projektarbeit_AR_App/00_Android_App/app/build/intermediates/merged_res/debugAndroidTest

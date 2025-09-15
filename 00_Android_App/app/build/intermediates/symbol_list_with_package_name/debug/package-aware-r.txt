@@ -1375,10 +1375,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id aventil
-id aventilPercent
-id aventilProgress
-id backgroundImage
 id barrier
 id baseline
 id beerCountText
@@ -1468,8 +1464,6 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
-id heater1
-id heater2
 id home
 id homeAsUp
 id honorRequest
@@ -1528,6 +1522,7 @@ id onAttachStateChangeListener
 id onDateChanged
 id outline
 id overlay
+id overviewCanvas
 id overview_fragment
 id packed
 id parallax
@@ -1547,8 +1542,6 @@ id progress_circular
 id progress_horizontal
 id promilleText
 id promille_fragment
-id pump1
-id pump2
 id radio
 id ratio
 id rectangles
@@ -1625,9 +1618,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
-id tempBoil
-id tempHlt
-id tempMlt
 id text
 id text2
 id textMessages
@@ -1666,15 +1656,6 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id ventil1
-id ventil2
-id ventil3
-id ventil4
-id ventil5
-id ventil6
-id ventil7
-id ventil8
-id ventil9
 id view
 id view_finder
 id view_offset_helper

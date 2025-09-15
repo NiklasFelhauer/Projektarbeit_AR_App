@@ -12,7 +12,9 @@ import androidx.fragment.app.activityViewModels
 import com.hka.objectdetection.MainViewModel
 import com.hka.objectdetection.databinding.FragmentOverviewBinding
 import com.hka.objectdetection.R
-
+import android.graphics.BitmapFactory
+import com.hka.objectdetection.OverviewCanvasView
+import android.graphics.Bitmap
 
 class OverviewFragment : Fragment() {
 
@@ -30,148 +32,128 @@ class OverviewFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Tanks und Ventile aus dem ViewModel beobachten
+        val canvasView = binding.overviewCanvas
+
+        // 1️⃣ Hintergrund setzen
+        canvasView.background = BitmapFactory.decodeResource(resources, R.drawable.anlagen_hintergrund)
+
+        // 2️⃣ OverlayItems vorbereiten (x/y im Designmaßstab, z.B. 1080x1920)
+        canvasView.overlayItems = mutableListOf(
+            // Ventile
+            OverviewCanvasView.OverlayItem("ventil1", BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray), 80f, 630f, designWidth = 50f, designHeight = 50f),
+            OverviewCanvasView.OverlayItem("ventil2", BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray), 285f, 775f, designWidth = 50f, designHeight = 50f),
+            OverviewCanvasView.OverlayItem("ventil3", BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray), 450f, 775f, designWidth = 50f, designHeight = 50f),
+            OverviewCanvasView.OverlayItem("ventil4", BitmapFactory.decodeResource(resources, R.drawable.vlv2_gray), 173f, 1480f, designWidth = 50f, designHeight = 50f),
+            OverviewCanvasView.OverlayItem("ventil5", BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray), 260f, 1408f, designWidth = 50f, designHeight = 50f),
+            OverviewCanvasView.OverlayItem("ventil6", BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray), 450f, 1408f, designWidth = 50f, designHeight = 50f),
+            OverviewCanvasView.OverlayItem("ventil7", BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray), 650f, 1408f, designWidth = 50f, designHeight = 50f),
+            OverviewCanvasView.OverlayItem("ventil8", BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray), 850f, 1408f, designWidth = 50f, designHeight = 50f),
+            OverviewCanvasView.OverlayItem("ventil9", BitmapFactory.decodeResource(resources, R.drawable.vlv2_gray), 765f, 1100f, designWidth = 50f, designHeight = 50f),
+
+            // Pumpen
+            OverviewCanvasView.OverlayItem("pump1", BitmapFactory.decodeResource(resources, R.drawable.pump_gray), 372f, 1280f, designWidth = 70f, designHeight = 70f),
+            OverviewCanvasView.OverlayItem("pump2", BitmapFactory.decodeResource(resources, R.drawable.pump_gray), 755f, 1280f, designWidth = 70f, designHeight = 70f),
+
+            // Heizstäbe
+            OverviewCanvasView.OverlayItem("heater1", BitmapFactory.decodeResource(resources, R.drawable.heizstab_gray), 230f, 615f, designWidth = 167f, designHeight = 36f),
+            OverviewCanvasView.OverlayItem("heater2", BitmapFactory.decodeResource(resources, R.drawable.heizstab_gray), 835f, 615f, designWidth = 167f, designHeight = 36f),
+
+            // AValve
+            OverviewCanvasView.OverlayItem("aventil", BitmapFactory.decodeResource(resources, R.drawable.avlv_gray), 385f, 1100f, designWidth = 70f, designHeight = 70f)
+        )
+
+        canvasView.invalidate() // einmalig initial zeichnen
+
+        // 3️⃣ ViewModel Updates
         viewModel.allValues.observe(viewLifecycleOwner) { values ->
-            // 🔹 Tanks anzeigen
-            binding.tempBoil.text = values["tank_1"]?.let { String.format("%.2f °C", it) } ?: "-- °C"
-            binding.tempMlt.text  = values["tank_2"]?.let { String.format("%.2f °C", it) } ?: "-- °C"
-            binding.tempHlt.text  = values["tank_3"]?.let { String.format("%.2f °C", it) } ?: "-- °C"
 
+            canvasView.overlayItems.forEach { item ->
+                when (item.id) {
+                    // Ventile
+                    "ventil1" -> item.bitmap = when (values["ventil_1"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray)
+                    }
+                    "ventil2" -> item.bitmap = when (values["ventil_2"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray)
+                    }
+                    "ventil3" -> item.bitmap = when (values["ventil_3"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray)
+                    }
+                    "ventil4" -> item.bitmap = when (values["ventil_4"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.vlv2_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.vlv2_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.vlv2_gray)
+                    }
+                    "ventil5" -> item.bitmap = when (values["ventil_5"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray)
+                    }
+                    "ventil6" -> item.bitmap = when (values["ventil_6"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray)
+                    }
+                    "ventil7" -> item.bitmap = when (values["ventil_7"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray)
+                    }
+                    "ventil8" -> item.bitmap = when (values["ventil_8"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.vlv1_gray)
+                    }
+                    "ventil9" -> item.bitmap = when (values["ventil_9"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.vlv2_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.vlv2_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.vlv2_gray)
+                    }
 
-            // 🔹 Beispiel für Ventil 1
-            val ventil1State = values["ventil_1"] ?: 3f
-            when (ventil1State){
-                0f -> binding.ventil1.setImageResource(R.drawable.vlv1_red)
-                1f -> binding.ventil1.setImageResource(R.drawable.vlv1_green)
-                else -> binding.ventil1.setImageResource(R.drawable.vlv1_gray)
-            }
+                    // Pumpen
+                    "pump1" -> item.bitmap = when (values["pumpe_1"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.pump_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.pump_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.pump_gray)
+                    }
+                    "pump2" -> item.bitmap = when (values["pumpe_2"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.pump_red)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.pump_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.pump_gray)
+                    }
 
-            val ventil2State = values["ventil_2"] ?: 3f
-            when (ventil2State){
-                0f -> binding.ventil2.setImageResource(R.drawable.vlv1_red)
-                1f -> binding.ventil2.setImageResource(R.drawable.vlv1_green)
-                else -> binding.ventil2.setImageResource(R.drawable.vlv1_gray)
-            }
+                    // Heizstäbe
+                    "heater1" -> item.bitmap = when (values["heater_1"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.heizstab_rot)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.heizstab_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.heizstab_gray)
+                    }
+                    "heater2" -> item.bitmap = when (values["heater_2"] ?: 3f) {
+                        0f -> BitmapFactory.decodeResource(resources, R.drawable.heizstab_rot)
+                        1f -> BitmapFactory.decodeResource(resources, R.drawable.heizstab_green)
+                        else -> BitmapFactory.decodeResource(resources, R.drawable.heizstab_gray)
+                    }
 
-            val ventil3State = values["ventil_3"] ?: 3f
-            when (ventil3State){
-                0f -> binding.ventil3.setImageResource(R.drawable.vlv1_red)
-                1f -> binding.ventil3.setImageResource(R.drawable.vlv1_green)
-                else -> binding.ventil3.setImageResource(R.drawable.vlv1_gray)
-            }
-
-            val ventil4State = values["ventil_4"] ?: 3f
-            when (ventil4State){
-                0f -> binding.ventil4.setImageResource(R.drawable.vlv2_red)
-                1f -> binding.ventil4.setImageResource(R.drawable.vlv2_green)
-                else -> binding.ventil4.setImageResource(R.drawable.vlv2_gray)
-            }
-
-            val ventil5State = values["ventil_5"] ?: 3f
-            when (ventil5State){
-                0f -> binding.ventil5.setImageResource(R.drawable.vlv1_red)
-                1f -> binding.ventil5.setImageResource(R.drawable.vlv1_green)
-                else -> binding.ventil5.setImageResource(R.drawable.vlv1_gray)
-            }
-
-            val ventil6State = values["ventil_6"] ?: 3f
-            when (ventil6State){
-                0f -> binding.ventil6.setImageResource(R.drawable.vlv1_red)
-                1f -> binding.ventil6.setImageResource(R.drawable.vlv1_green)
-                else -> binding.ventil6.setImageResource(R.drawable.vlv1_gray)
-            }
-
-            val ventil7State = values["ventil_7"] ?: 3f
-            when (ventil7State){
-                0f -> binding.ventil7.setImageResource(R.drawable.vlv1_red)
-                1f -> binding.ventil7.setImageResource(R.drawable.vlv1_green)
-                else -> binding.ventil7.setImageResource(R.drawable.vlv1_gray)
-            }
-
-            val ventil8State = values["ventil_8"] ?: 3f
-            when (ventil8State){
-                0f -> binding.ventil8.setImageResource(R.drawable.vlv1_red)
-                1f -> binding.ventil8.setImageResource(R.drawable.vlv1_green)
-                else -> binding.ventil8.setImageResource(R.drawable.vlv1_gray)
-            }
-
-            val ventil9State = values["ventil_9"] ?: 3f
-            when (ventil9State){
-                0f -> binding.ventil9.setImageResource(R.drawable.vlv2_red)
-                1f -> binding.ventil9.setImageResource(R.drawable.vlv2_green)
-                else -> binding.ventil9.setImageResource(R.drawable.vlv2_gray)
-            }
-
-            // 🔹 Beispiel für eine AValve
-            val percent = (values["aventil"] ?: 101f).toInt()
-            binding.aventilPercent.text = "$percent %"
-            binding.aventilProgress.progress = percent
-
-            // ✅ Farbe aus colors.xml holen – sicher mit binding.root.context
-            val red = ContextCompat.getColor(binding.root.context, R.color.Red)
-            val orange = ContextCompat.getColor(binding.root.context, R.color.Orange)
-            val green = ContextCompat.getColor(binding.root.context, R.color.Green)
-            val black = ContextCompat.getColor(binding.root.context, R.color.Black)
-
-            when {
-                percent <= 10 -> {
-                    binding.aventilPercent.setTextColor(red)
-                    binding.aventil.setImageResource(R.drawable.avlv_red)
-                }
-                percent in 11..80 -> {
-                    binding.aventilPercent.setTextColor(orange)
-                    binding.aventil.setImageResource(R.drawable.avlv_orange)
-                }
-                percent in 81..100 -> {
-                    binding.aventilPercent.setTextColor(green)
-                    binding.aventil.setImageResource(R.drawable.avlv_green)
-                }
-                else -> {
-                    binding.aventilPercent.text = "-- %"
-                    binding.aventilProgress.progress = 0
-                    binding.aventilPercent.setTextColor(black)
-                    binding.aventil.setImageResource(R.drawable.avlv_gray)
+                    // AValve
+                    "aventil" -> {
+                        val percent = (values["aventil"] ?: 101f).toInt()
+                        item.bitmap = when {
+                            percent <= 10 -> BitmapFactory.decodeResource(resources, R.drawable.avlv_red)
+                            percent in 11..80 -> BitmapFactory.decodeResource(resources, R.drawable.avlv_orange)
+                            percent in 81..100 -> BitmapFactory.decodeResource(resources, R.drawable.avlv_green)
+                            else -> BitmapFactory.decodeResource(resources, R.drawable.avlv_gray)
+                        }
+                    }
                 }
             }
 
-
-
-
-
-
-
-
-
-
-            // 🔹 Beispiel für eine Pumpe 1
-            val pump1State = values["pumpe_1"] ?: 3f
-            when (pump1State){
-                0f -> binding.pump1.setImageResource(R.drawable.pump_red)
-                1f -> binding.pump1.setImageResource(R.drawable.pump_green)
-                else -> binding.pump1.setImageResource(R.drawable.pump_gray)
-            }
-
-            val pump2State = values["pumpe_2"] ?: 3f
-            when (pump2State){
-                0f -> binding.pump2.setImageResource(R.drawable.pump_red)
-                1f -> binding.pump2.setImageResource(R.drawable.pump_green)
-                else -> binding.pump2.setImageResource(R.drawable.pump_gray)
-            }
-
-            val heater1State = values["heater_1"] ?: 3f
-            when (heater1State){
-                0f -> binding.heater1.setImageResource(R.drawable.heizstab_rot)
-                1f -> binding.heater1.setImageResource(R.drawable.heizstab_green)
-                else -> binding.heater1.setImageResource(R.drawable.heizstab_gray)
-            }
-
-            val heater2State = values["heater_2"] ?: 3f
-            when (heater2State){
-                0f -> binding.heater2.setImageResource(R.drawable.heizstab_rot)
-                1f -> binding.heater2.setImageResource(R.drawable.heizstab_green)
-                else -> binding.heater2.setImageResource(R.drawable.heizstab_gray)
-            }
-
+            canvasView.invalidate() // Canvas neu zeichnen
         }
     }
 

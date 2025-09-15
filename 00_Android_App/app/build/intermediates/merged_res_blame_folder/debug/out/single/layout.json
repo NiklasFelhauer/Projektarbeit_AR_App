@@ -1,23 +1,27 @@
 [
     {
-        "merged": "com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_mqtt.xml",
-        "source": "com.hka.objectdetection.app-main-47:/layout/fragment_mqtt.xml"
+        "merged": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_overview.xml",
+        "source": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-main-47:/layout/fragment_overview.xml"
     },
     {
-        "merged": "com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_settings.xml",
-        "source": "com.hka.objectdetection.app-main-47:/layout/fragment_settings.xml"
+        "merged": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-main-47:/layout/activity_main.xml"
     },
     {
-        "merged": "com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_promille.xml",
-        "source": "com.hka.objectdetection.app-main-47:/layout/fragment_promille.xml"
+        "merged": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_promille.xml",
+        "source": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-main-47:/layout/fragment_promille.xml"
     },
     {
-        "merged": "com.hka.objectdetection.app-mergeDebugResources-44:/layout/activity_main.xml",
-        "source": "com.hka.objectdetection.app-main-47:/layout/activity_main.xml"
+        "merged": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_camera.xml",
+        "source": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-main-47:/layout/fragment_camera.xml"
     },
     {
-        "merged": "com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_camera.xml",
-        "source": "com.hka.objectdetection.app-main-47:/layout/fragment_camera.xml"
+        "merged": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_settings.xml",
+        "source": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-main-47:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_mqtt.xml",
+        "source": "/Users/jonawilhelmi/.gradle/daemon/8.9/com.hka.objectdetection.app-main-47:/layout/fragment_mqtt.xml"
     },
     {
         "merged": "com.hka.objectdetection.app-mergeDebugResources-44:/layout/fragment_overview.xml",

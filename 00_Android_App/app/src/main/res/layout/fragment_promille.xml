@@ -25,8 +25,8 @@
     <!-- Riesiger Bier-Button -->
     <ImageButton
         android:id="@+id/addBeerButton"
-        android:layout_width="200dp"
-        android:layout_height="400dp"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
         android:src="@drawable/bier"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Bier hinzufügen"

@@ -12,17 +12,30 @@ TEMPERATURE_MLT_INSIDE = 'ns=3;s="Temp_MLT_FloWave";datatype=Double'
 TEMPERATURE_BOIL = 'ns=3;s="I_Temp_1";datatype=Double'
 TEMPERATURE_PV1 = 'ns=3;s="Daten_Bauteile_DB"."BauteileDaten"."FLOWave"."Temperature";datatype=Double'
 FLOW_PV1 = 'ns=3;s="Daten_Bauteile_DB"."BauteileDaten"."FLOWave"."VolumeFlow";datatype=Double'
-
+Q_Ventil_1 = 'ns=3;s="Q_Ventil_1";datatype=Boolean'
+Q_Ventil_2 = 'ns=3;s="Q_Ventil_2";datatype=Boolean'
+Q_Ventil_3 = 'ns=3;s="Q_Ventil_3";datatype=Boolean' 
+Q_Ventil_4 = 'ns=3;s="Q_Ventil_4";datatype=Boolean'
+Q_Ventil_5 = 'ns=3;s="Q_Ventil_5";datatype=Boolean'
+Q_Ventil_6 = 'ns=3;s="Q_Ventil_6";datatype=Boolean'
+Q_Ventil_7 = 'ns=3;s="Q_Ventil_7";datatype=Boolean'
+Q_Ventil_8 = 'ns=3;s="Q_Ventil_8";datatype=Boolean'
+Q_Ventil_9 = 'ns=3;s="Q_Ventil_9";datatype=Boolean'
+Q_Pumpe_1 = 'ns=3;s="Q_Pumpe_1";datatype=Boolean'
+Q_Pumpe_2 = 'ns=3;s="Q_Pumpe_2";datatype=Boolean'
+Q_Heizung_1 = 'ns=3;s="Q_Heizung_1";datatype=Boolean'
+Q_Heizung_2 = 'ns=3;s="Q_Heizung_2";datatype=Boolean'
 
 # MQTT-Einstellungen
-MQTT_BROKER = "192.168.188.26"  # IP-Adresse des Raspberry Pi 
+MQTT_BROKER = "192.168.0.100"  # IP-Adresse des Raspberry Pi 
 MQTT_PORT = 1883
 MQTT_TOPIC = "brauanlage/data"
 
 def read_opcua_data(opc_client):
     """
-    Liest Daten von der SPS ueber OPC UA.
+    Liest Daten von der SPS über OPC UA.
     
+     
     """
     try:
         # Knoten abrufen und Werte auslesen
@@ -32,7 +45,23 @@ def read_opcua_data(opc_client):
         temp_boil = opc_client.get_node(TEMPERATURE_BOIL).get_value()
         temp_pv1 = opc_client.get_node(TEMPERATURE_PV1).get_value()
         fl_pv1 = opc_client.get_node(FLOW_PV1).get_value()
-        return {"temp_hlt": temp_hlt, "temp_mlt_outside": temp_mlt_outside,"temp_mlt_inside": temp_mlt_inside,"temp_boil": temp_boil,"temp_pv1": temp_pv1,"fl_pv1": fl_pv1}
+        q_ventil_1 = float(opc_client.get_node(Q_Ventil_1).get_value())
+        q_ventil_2 = float(opc_client.get_node(Q_Ventil_2).get_value())
+        q_ventil_3 = float(opc_client.get_node(Q_Ventil_3).get_value())
+        q_ventil_4 = float(opc_client.get_node(Q_Ventil_4).get_value())
+        q_ventil_5 = float(opc_client.get_node(Q_Ventil_5).get_value())
+        q_ventil_6 = float(opc_client.get_node(Q_Ventil_6).get_value())
+        q_ventil_7 = float(opc_client.get_node(Q_Ventil_7).get_value())
+        q_ventil_8 = float(opc_client.get_node(Q_Ventil_8).get_value())
+        q_ventil_9 = float(opc_client.get_node(Q_Ventil_9).get_value())
+        q_pumpe_1 = float(opc_client.get_node(Q_Pumpe_1).get_value())
+        q_pumpe_2 = float(opc_client.get_node(Q_Pumpe_2).get_value())
+        q_heizung_1 = float(opc_client.get_node(Q_Heizung_1).get_value())
+        q_heizung_2 = float(opc_client.get_node(Q_Heizung_2).get_value())
+        
+        #"temp_mlt_outside": temp_mlt_outside, "temp_pv1": temp_pv1,
+
+        return {"tank_3": temp_hlt, "tank_2": temp_mlt_inside,"tank_1": temp_boil,"aventil": fl_pv1, "ventil_1": q_ventil_1, "ventil_2": q_ventil_2, "ventil_3": q_ventil_3,"ventil_4": q_ventil_4, "ventil_5": q_ventil_5, "ventil_6": q_ventil_6, "ventil_7": q_ventil_7, "ventil_8": q_ventil_8,"ventil_9": q_ventil_9, "pumpe_1": q_pumpe_1 , "pumpe_2": q_pumpe_2, "heater_1": q_heizung_1, "heater_2": q_heizung_2}
     except Exception as e:
         print(f"Fehler beim Abrufen der OPC UA-Daten: {e}")
         return None
@@ -68,14 +97,15 @@ def main():
                 mqtt_payload = json.dumps(data)
                 mqtt_client.publish(MQTT_TOPIC, mqtt_payload)
                 print(f"MQTT gesendet: {mqtt_payload}")
+                #print(data)
             else:
                 print("Keine Daten empfangen.")
 
-            time.sleep(2)  # Warte 2 Sekunden, bevor die naechsten Daten abgerufen werden
+            time.sleep(2)  # Warte 2 Sekunden, bevor die nächsten Daten abgerufen werden
     except KeyboardInterrupt:
         print("Beende Skript...")
     finally:
-        # Verbindung schliessen
+        # Verbindung schließen
         opc_client.disconnect()
         mqtt_client.loop_stop()
         mqtt_client.disconnect()

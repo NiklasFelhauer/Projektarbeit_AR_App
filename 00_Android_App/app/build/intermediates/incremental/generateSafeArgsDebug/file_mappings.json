@@ -1,1 +1,1 @@
-[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.hka.objectdetection.fragments.PermissionsFragmentDirections","com.hka.objectdetection.fragments.CameraFragmentDirections"]}]
+[{"navFile":"src/main/res/navigation/nav_graph.xml","javaFiles":["com.hka.objectdetection.fragments.PermissionsFragmentDirections","com.hka.objectdetection.fragments.CameraFragmentDirections"]}]

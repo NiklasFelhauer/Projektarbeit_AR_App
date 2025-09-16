@@ -1374,10 +1374,6 @@ int id auto 0x7f09004c
 int id autoComplete 0x7f09004d
 int id autoCompleteToEnd 0x7f09004e
 int id autoCompleteToStart 0x7f09004f
-int id aventil 0x7f090050
-int id aventilPercent 0x7f090051
-int id aventilProgress 0x7f090052
-int id backgroundImage 0x7f090053
 int id barrier 0x7f090054
 int id baseline 0x7f090055
 int id beerCountText 0x7f090056
@@ -1467,8 +1463,6 @@ int id graph_wrap 0x7f0900a9
 int id group_divider 0x7f0900aa
 int id grouping 0x7f0900ab
 int id groups 0x7f0900ac
-int id heater1 0x7f0900ad
-int id heater2 0x7f0900ae
 int id home 0x7f0900af
 int id homeAsUp 0x7f0900b0
 int id honorRequest 0x7f0900b1
@@ -1527,6 +1521,7 @@ int id onAttachStateChangeListener 0x7f0900e5
 int id onDateChanged 0x7f0900e6
 int id outline 0x7f0900e7
 int id overlay 0x7f0900e8
+int id overviewCanvas 0x7f090189
 int id overview_fragment 0x7f0900e9
 int id packed 0x7f0900ea
 int id parallax 0x7f0900eb
@@ -1546,8 +1541,6 @@ int id progress_circular 0x7f0900f8
 int id progress_horizontal 0x7f0900f9
 int id promilleText 0x7f0900fa
 int id promille_fragment 0x7f0900fb
-int id pump1 0x7f0900fc
-int id pump2 0x7f0900fd
 int id radio 0x7f0900fe
 int id ratio 0x7f0900ff
 int id rectangles 0x7f090100
@@ -1624,9 +1617,6 @@ int id tag_transition_group 0x7f090146
 int id tag_unhandled_key_event_manager 0x7f090147
 int id tag_unhandled_key_listeners 0x7f090148
 int id tag_window_insets_animation_callback 0x7f090149
-int id tempBoil 0x7f09014a
-int id tempHlt 0x7f09014b
-int id tempMlt 0x7f09014c
 int id text 0x7f09014d
 int id text2 0x7f09014e
 int id textMessages 0x7f09014f
@@ -1665,15 +1655,6 @@ int id uniform 0x7f09016f
 int id unlabeled 0x7f090170
 int id up 0x7f090171
 int id useLogo 0x7f090172
-int id ventil1 0x7f090173
-int id ventil2 0x7f090174
-int id ventil3 0x7f090175
-int id ventil4 0x7f090176
-int id ventil5 0x7f090177
-int id ventil6 0x7f090178
-int id ventil7 0x7f090179
-int id ventil8 0x7f09017a
-int id ventil9 0x7f09017b
 int id view 0x7f09017c
 int id view_finder 0x7f09017d
 int id view_offset_helper 0x7f09017e

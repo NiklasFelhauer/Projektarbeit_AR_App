@@ -25,14 +25,14 @@ Der aktuelle Status des Mosquitto-Service, kann mit folgendem Code überprüft w
 \noindent
 Zur Übertragung der Daten vom Raspberry Pi zum Smartphone wird eine Python-Skript erstellt, das im \href{https://github.com/NiklasFelhauer/Projektarbeit_AR_App/tree/main/03_Raspberry_Pi}{GitHub-Repository} im Ordner \texttt{03\_Raspberry\_Pi} verfügbar ist. Es wird die Verbindung zur SPS mit OPC UA aufgebaut, die Daten aufbereitet, eine MQTT Verbindung hergestellt und die Daten per MQTT auf dem Topic \texttt{brauanlage/data} gepublished.
 \\ \noindent
-Anschließend kann auf dem Raspberry Pi überprüft, ob die MQTT Daten lokal auf dem Pi empfangen werden können. Dazu muss in der Konsole dem Topic gefolgt werden mit:
+Anschließend kann auf dem Raspberry Pi überprüft werden, ob die MQTT Daten lokal auf dem Pi empfangen werden können. Dazu muss in der Konsole dem Topic gefolgt werden mit:
 \begin{lstlisting}
     mosquitto_sub -h localhost -t brauanlage/data
 \end{lstlisting}
 Anschließend werden die gesendeten Daten aufgelistet. 
 
 \subsubsection{Testcode auf dem Laptop}
-Nun kann weiter getestet werden, ob die MQTT Verbindung auch auf einem Gerät im selben Netzwerk funktioniert, zum Beispiel einem Window 11 PC. 
+Nun kann weiter getestet werden, ob die MQTT Verbindung auch auf einem Gerät im selben Netzwerk funktioniert, zum Beispiel einem Windows 11 PC. 
 Zuerst muss in der Konsole die MQTT Bibliothek installiert werden mit:
 \begin{lstlisting}
     pip install paho-mqtt

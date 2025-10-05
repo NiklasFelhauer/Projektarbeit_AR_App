@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {3.2}Raspberry Pi zum Smartphone}{7}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}MQTT auf dem Raspberry Pi einrichten}{7}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Testcode auf dem Laptop}{7}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Acces Point einrichten}{8}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3}Access Point einrichten}{8}{subsubsection.3.2.3}%
 \contentsline {subsubsection}{\numberline {3.2.4}Passwort für den Datenzugriff}{8}{subsubsection.3.2.4}%
 \contentsline {section}{\numberline {4}Android App}{9}{section.4}%
 \contentsline {subsection}{\numberline {4.1}MainViewModel}{9}{subsection.4.1}%

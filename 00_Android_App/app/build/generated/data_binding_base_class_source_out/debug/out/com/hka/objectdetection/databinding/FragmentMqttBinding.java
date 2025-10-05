@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,10 +22,16 @@ public final class FragmentMqttBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final Button buttonClear;
+
+  @NonNull
   public final Button buttonConnect;
 
   @NonNull
   public final LinearLayout mqttRoot;
+
+  @NonNull
+  public final ScrollView scrollViewMessages;
 
   @NonNull
   public final TextView textMessages;
@@ -32,11 +39,15 @@ public final class FragmentMqttBinding implements ViewBinding {
   @NonNull
   public final TextView textTitle;
 
-  private FragmentMqttBinding(@NonNull LinearLayout rootView, @NonNull Button buttonConnect,
-      @NonNull LinearLayout mqttRoot, @NonNull TextView textMessages, @NonNull TextView textTitle) {
+  private FragmentMqttBinding(@NonNull LinearLayout rootView, @NonNull Button buttonClear,
+      @NonNull Button buttonConnect, @NonNull LinearLayout mqttRoot,
+      @NonNull ScrollView scrollViewMessages, @NonNull TextView textMessages,
+      @NonNull TextView textTitle) {
     this.rootView = rootView;
+    this.buttonClear = buttonClear;
     this.buttonConnect = buttonConnect;
     this.mqttRoot = mqttRoot;
+    this.scrollViewMessages = scrollViewMessages;
     this.textMessages = textMessages;
     this.textTitle = textTitle;
   }
@@ -68,6 +79,12 @@ public final class FragmentMqttBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.buttonClear;
+      Button buttonClear = ViewBindings.findChildViewById(rootView, id);
+      if (buttonClear == null) {
+        break missingId;
+      }
+
       id = R.id.buttonConnect;
       Button buttonConnect = ViewBindings.findChildViewById(rootView, id);
       if (buttonConnect == null) {
@@ -75,6 +92,12 @@ public final class FragmentMqttBinding implements ViewBinding {
       }
 
       LinearLayout mqttRoot = (LinearLayout) rootView;
+
+      id = R.id.scrollViewMessages;
+      ScrollView scrollViewMessages = ViewBindings.findChildViewById(rootView, id);
+      if (scrollViewMessages == null) {
+        break missingId;
+      }
 
       id = R.id.textMessages;
       TextView textMessages = ViewBindings.findChildViewById(rootView, id);
@@ -88,8 +111,8 @@ public final class FragmentMqttBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentMqttBinding((LinearLayout) rootView, buttonConnect, mqttRoot, textMessages,
-          textTitle);
+      return new FragmentMqttBinding((LinearLayout) rootView, buttonClear, buttonConnect, mqttRoot,
+          scrollViewMessages, textMessages, textTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

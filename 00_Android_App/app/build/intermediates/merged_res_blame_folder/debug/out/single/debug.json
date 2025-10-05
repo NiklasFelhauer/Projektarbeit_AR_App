@@ -12,12 +12,12 @@
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\drawable\\vlv1_green.png"
     },
     {
-        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\drawable_vlv2_red.png.flat",
-        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\drawable\\vlv2_red.png"
-    },
-    {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\drawable_pump_gray.png.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\drawable\\pump_gray.png"
+    },
+    {
+        "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\drawable_vlv2_red.png.flat",
+        "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\drawable\\vlv2_red.png"
     },
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\mipmap-mdpi_logo.webp.flat",
@@ -140,10 +140,6 @@
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\drawable\\status_background.xml"
     },
     {
-        "merged": "com.hka.objectdetection.app-merged_res-45:/layout_fragment_promille.xml.flat",
-        "source": "com.hka.objectdetection.app-main-47:/layout/fragment_promille.xml"
-    },
-    {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\drawable_ic_cloud_off.xml.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\drawable\\ic_cloud_off.xml"
     },
@@ -254,6 +250,10 @@
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\drawable_pump_green.png.flat",
         "source": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-main-47:\\drawable\\pump_green.png"
+    },
+    {
+        "merged": "com.hka.objectdetection.app-merged_res-45:/layout_fragment_mqtt.xml.flat",
+        "source": "com.hka.objectdetection.app-main-47:/layout/fragment_mqtt.xml"
     },
     {
         "merged": "C:\\Users\\nikla\\.gradle\\daemon\\8.9\\com.hka.objectdetection.app-merged_res-45:\\drawable_logo_background.xml.flat",

@@ -1382,6 +1382,7 @@ int id beginning 0x7f090054
 int id blocking 0x7f090055
 int id bottom 0x7f090056
 int id bounce 0x7f090057
+int id buttonClear 0x7f090177
 int id buttonConnect 0x7f090058
 int id buttonPanel 0x7f090059
 int id cache_measures 0x7f09005a
@@ -1556,6 +1557,7 @@ int id scroll 0x7f090102
 int id scrollIndicatorDown 0x7f090103
 int id scrollIndicatorUp 0x7f090104
 int id scrollView 0x7f090105
+int id scrollViewMessages 0x7f090178
 int id scrollable 0x7f090106
 int id search_badge 0x7f090107
 int id search_bar 0x7f090108

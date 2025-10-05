@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mqttRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MQTT-Verbindung"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="start">
+
+        <Button
+            android:id="@+id/buttonConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Erneut verbinden" />
+
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verlauf löschen"
+            android:layout_marginStart="12dp"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+
+        <TextView
+            android:id="@+id/textMessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Noch keine Nachrichten"
+            android:paddingTop="16dp"
+            android:textSize="16sp" />
+
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1383,6 +1383,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id buttonClear
 id buttonConnect
 id buttonPanel
 id cache_measures
@@ -1557,6 +1558,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollViewMessages
 id scrollable
 id search_badge
 id search_bar

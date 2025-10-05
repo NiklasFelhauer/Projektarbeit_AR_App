@@ -25,14 +25,23 @@ class MQTTFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 🔥 Manuell verbinden, wenn Button geklickt wird
+        // Manuell verbinden, wenn Button geklickt wird
         binding.buttonConnect.setOnClickListener {
             viewModel.startMqtt()
+        }
+
+        // Verlauf löschen
+        binding.buttonClear.setOnClickListener {
+            viewModel.clearMessages()
         }
 
         // Nachrichten-Log anzeigen
         viewModel.mqttMessages.observe(viewLifecycleOwner) { list ->
             binding.textMessages.text = list.joinToString("\n")
+
+            binding.scrollViewMessages.post {
+                binding.scrollViewMessages.fullScroll(View.FOCUS_DOWN)
+            }
         }
     }
 

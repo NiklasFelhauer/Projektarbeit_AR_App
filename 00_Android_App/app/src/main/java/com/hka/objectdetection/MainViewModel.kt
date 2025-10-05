@@ -130,6 +130,10 @@ class MainViewModel : ViewModel() {
         _mqttMessages.postValue(list)
     }
 
+    fun clearMessages(){
+        _mqttMessages.postValue(emptyList())
+    }
+
     override fun onCleared() {
         super.onCleared()
         try {

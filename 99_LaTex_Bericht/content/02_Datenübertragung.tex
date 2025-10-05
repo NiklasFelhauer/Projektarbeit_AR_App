@@ -1,13 +1,13 @@
 \clearpage
 \section{Datenübertragung}
 % ====================================
-Die Datenübertragung erfolgt über zwei Wege, zunächst müssen die gemessenen Daten von der SPS zum Raspberry Pi gelangen. Anschließend wird der Raspberry Pi über ein LAN-Kabel mit einem WLAN-Router verbunden. Der Router spannt ein lokales Netzwerk auf, über welches die Daten zum Smartphone weitergeleitet werden, insofern das Smartphone mit dem Roter verbunden ist.
+Die Datenübertragung erfolgt über zwei Wege, zunächst müssen die gemessenen Daten von der SPS zum Raspberry Pi gelangen. Anschließend wird der Raspberry Pi über ein LAN-Kabel mit einem WLAN-Router verbunden. Der Router spannt ein lokales Netzwerk auf, über welches die Daten zum Smartphone weitergeleitet werden, insofern das Smartphone mit dem Router verbunden ist.
 
 \subsection{SPS zum Raspberry Pi}
 Die gemessenen Daten werden über ein Ethernet-Kabel mit dem Protokoll OPC UA von der SPS auf den Raspberry Pi übertragen. Diese werden danach mit einem Python Skript empfangen und aufbereitet.
 
 \subsection{Raspberry Pi zum Smartphone}
-Die Datenübertragung vom Raspberry Pi zum Smartphone läuft über einen Router, der als Acces Point fungiert. Dabei wird das Protokoll MQTT (Message Queuing Telemetry Transport) genutzt.
+Die Datenübertragung vom Raspberry Pi zum Smartphone läuft über einen Router, der als Access Point fungiert. Dabei wird das Protokoll MQTT (Message Queuing Telemetry Transport) genutzt.
 \subsubsection{MQTT auf dem Raspberry Pi einrichten}
 Zunächst muss der Mosquitto MQTT Broker auf dem Raspberry Pi in der Konsole installiert werden:
 \begin{lstlisting}
@@ -23,7 +23,7 @@ Der aktuelle Status des Mosquitto-Service, kann mit folgendem Code überprüft w
     sudo systemctl status mosquitto
 \end{lstlisting}
 \noindent
-Zur Übertragung der Daten vom Raspberry Pi zum Smartphone wird eine Python-Skript erstellt, das im \href{https://github.com/NiklasFelhauer/Projektarbeit_AR_App/tree/main/03_Raspberry_Pi}{GitHub-Repository} im Ordner \texttt{03\_Raspberry\_Pi} verfügbar ist. Es wird die Verbindung zur SPS mit OPC UA aufgebaut, die Daten aufbereitet, eine MQTT Verbindung hergestellt und die Daten per MQTT auf dem Topic \texttt{brauanlage/data} gepublished.
+Zur Übertragung der Daten vom Raspberry Pi zum Smartphone wird ein Python-Skript erstellt, das im \href{https://github.com/NiklasFelhauer/Projektarbeit_AR_App/tree/main/03_Raspberry_Pi}{GitHub-Repository} im Ordner \texttt{03\_Raspberry\_Pi} verfügbar ist. Es wird die Verbindung zur SPS mit OPC UA aufgebaut, die Daten aufbereitet, eine MQTT Verbindung hergestellt und die Daten per MQTT auf dem Topic \texttt{brauanlage/data} gepublished.
 \\ \noindent
 Anschließend kann auf dem Raspberry Pi überprüft werden, ob die MQTT Daten lokal auf dem Pi empfangen werden können. Dazu muss in der Konsole dem Topic gefolgt werden mit:
 \begin{lstlisting}
@@ -51,8 +51,8 @@ Falls erforderlich, sollte zusätzlich der Port 1883 in der Windows-Firewall fre
 \end{enumerate}
 
 
-\subsubsection{Acces Point einrichten}
-Zur Einreichtung des Acces Points ist der Router zunächst auf Werkseinstellung zurückgesetzt und es wird ein WLAN-Name und Passwort festgelegt. Anschließend wird überprüft, ob der DHCP Server aktiviert ist. Dies ermöglicht es Geräten, automatisch eine IP-Adresse vom Router zu erhalten.\\
+\subsubsection{Access Point einrichten}
+Zur Einreichtung des Access Points ist der Router zunächst auf Werkseinstellung zurückgesetzt und es wird ein WLAN-Name und Passwort festgelegt. Anschließend wird überprüft, ob der DHCP Server aktiviert ist. Dies ermöglicht es Geräten, automatisch eine IP-Adresse vom Router zu erhalten.\\
 Der Raspberry Pi wird über ein Ethernet-Kabel direkt mit dem Router verbunden und erhält eine statische IP-Adresse. Diese Einstellung wird in den Netzwerkeinstellungen des Router vorgenommen, die allgemein unter \url{http://192.168.178.1} bzw. in unserem Fall unter \url{http://fritz.box} zu finden ist.
 
 

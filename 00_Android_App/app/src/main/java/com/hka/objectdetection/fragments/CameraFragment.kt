@@ -115,7 +115,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
         fragmentCameraBinding.overlay.setRunningMode(RunningMode.LIVE_STREAM)
 
-        // 🔥 Temperaturdaten aus ViewModel beobachten und ins Overlay geben
+        //  Temperaturdaten aus ViewModel beobachten und ins Overlay geben
         viewModel.tankTemperatures.observe(viewLifecycleOwner) { temps ->
             Log.d("CameraFragment", "Observer got temps: $temps")
             fragmentCameraBinding.overlay.setTemperatures(temps)

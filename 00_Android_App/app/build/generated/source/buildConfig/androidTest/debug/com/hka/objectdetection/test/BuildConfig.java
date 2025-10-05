@@ -1,6 +1,4 @@
-/**
- * Automatically generated file. DO NOT MODIFY
- */
+
 package com.hka.objectdetection.test;
 
 public final class BuildConfig {

@@ -29,10 +29,6 @@ import com.hka.objectdetection.R
 
 private val PERMISSIONS_REQUIRED = arrayOf(Manifest.permission.CAMERA)
 
-/**
- * The sole purpose of this fragment is to request permissions and, once granted, display the camera
- * fragment to the user.
- */
 class PermissionsFragment : Fragment() {
 
     private val requestPermissionLauncher =

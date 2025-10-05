@@ -1,6 +1,6 @@
 \section{Objekterkennungsmodell}
 Für die Objekterkennung kommt ein TensorFlow Lite Modell zum Einsatz, da dieses speziell für mobile Geräte optimiert ist. Es ist schnell, ressourcenschonend und läuft ohne Internetverbindung direkt auf dem Smartphone. 
-Als Basis dient das Modell \verb|EfficientDetLite0|, da es ein gutes Gleichgewicht zwischen Genauigkeit und Geschwindigkeit bietet. Es ist mit einem COCO-Datensatz vortrainiert, das bereits hundertausende Bilder mit verschiedenen Objekte aus dem Alltag enthält. Dadurch ist eine präszise Objekterkennung bereits gegeben, die nur noch auf die Tanks der Brauanlage \glqq umtrainiert\grqq werden muss. Der große Vorteil hierbei ist, dass keine riesige Menge an Bildern benötigt wird und eine vergleichsweise kleine Sammlung an annotierten Bildern ausreicht, um ein präzises Modell zu erstellen.
+Als Basis dient das Modell \verb|MobileNetV2|, da es ein gutes Gleichgewicht zwischen Genauigkeit und Geschwindigkeit bietet. Es ist mit einem COCO-Datensatz vortrainiert, das bereits hundertausende Bilder mit verschiedenen Objekte aus dem Alltag enthält. Dadurch ist eine präszise Objekterkennung bereits gegeben, die nur noch auf die Tanks der Brauanlage \glqq umtrainiert\grqq werden muss. Der große Vorteil hierbei ist, dass keine riesige Menge an Bildern benötigt wird und eine vergleichsweise kleine Sammlung an annotierten Bildern ausreicht, um ein präzises Modell zu erstellen.
 \\
 Das benutzerdefinierte Modell verarbeitet Farbbilder mit einer Größe von 256 x 256 Pixel. Diese Bildgröße ist klein genug, um die Berechnungen effizient zu halten und gleichzeitig groß genug, um die Tanks zuverlässig zu erkennen. 
 Als Zahlenformat wird \verb|float32| verwendet. Dieses ist zwar rechenintesiver als die leichteren \verb|float16| oder \verb|int8| Formate aber bietet eine höhere Genauigkeit. Das ist vor allem notwendig, da der verwendete Trainingsdatensatz sehr klein ist. 
@@ -51,7 +51,7 @@ Alle Bilder werden auf eine einheitliche Größe von 640 × 640 Pixel skaliert. 
 
 
 \subsection{Mediapipe Model Maker}
-Für das Training des benutzerdefinierten Objekterkennungsmodells wird der von Google bereitgestellte \texttt{Mediapipe Model Maker} genutzt, um das \texttt{EfficientDetLite0} Modell umzutrainieren. Dieses Training wird mit dem cloudbasierten Google Colab Notebook durchgeführt, da hier eine kostenlose online-GPU zur Verfügung steht. Dadurch läuft das Training deutlich schneller als mit der CPU vom PC/Laptop.
+Für das Training des benutzerdefinierten Objekterkennungsmodells wird der von Google bereitgestellte \texttt{Mediapipe Model Maker} genutzt, um das \texttt{MobileNetV2} Modell umzutrainieren. Dieses Training wird mit dem cloudbasierten Google Colab Notebook durchgeführt, da hier eine kostenlose online-GPU zur Verfügung steht. Dadurch läuft das Training deutlich schneller als mit der CPU vom PC/Laptop.
 Am Anfang wird geprüft, ob Python vorhanden ist (hier Version 3.12.11) und die nötigen Pakete werden geupdatet oder installiert.
 \begin{lstlisting}
 !python --version

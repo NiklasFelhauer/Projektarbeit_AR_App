@@ -19,6 +19,78 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{raspberrypi_official_doc}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.raspberrypi.com/documentation/}}
+      \field{note}{abgerufen am 12. März 2025}
+      \field{title}{Raspberry Pi Documentation}
+    \endentry
+    \entry{raspberrypi4_datasheet}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf}}
+      \field{note}{abgerufen am 3. März 2025}
+      \field{title}{Raspberry Pi 4 Model B Produkt­übersicht (Product Brief)}
+    \endentry
+    \entry{heise_accesspoint_2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=916258e06098de2ba549bc7c3274d058}{%
+           family={Online},
+           familyi={O\bibinitperiod},
+           given={Heise},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{916258e06098de2ba549bc7c3274d058}
+      \strng{fullhash}{916258e06098de2ba549bc7c3274d058}
+      \strng{fullhashraw}{916258e06098de2ba549bc7c3274d058}
+      \strng{bibnamehash}{916258e06098de2ba549bc7c3274d058}
+      \strng{authorbibnamehash}{916258e06098de2ba549bc7c3274d058}
+      \strng{authornamehash}{916258e06098de2ba549bc7c3274d058}
+      \strng{authorfullhash}{916258e06098de2ba549bc7c3274d058}
+      \strng{authorfullhashraw}{916258e06098de2ba549bc7c3274d058}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.heise.de/ratgeber/Access-Point-Funktion-und-Einsatzgebiete-1234567.html}}
+      \field{note}{abgerufen am 10. Juni 2025}
+      \field{title}{Was ist ein Access Point und wie funktioniert er?}
+    \endentry
+    \entry{wikipedia_accesspoint_2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=e2ceeea38f8620383cfbd3e99c5c0cd8}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           given={Wikipedia},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{fullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{fullhashraw}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{bibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorbibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authornamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorfullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorfullhashraw}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://de.wikipedia.org/wiki/Access_Point}}
+      \field{note}{abgerufen am 8. Juni 2025}
+      \field{title}{Access Point}
+    \endentry
+    \entry{android_activity_lifecycle_de}{misc}{}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://developer.android.com/guide/components/activities/activity-lifecycle?hl=de}}
+      \field{note}{abgerufen am 12. Feburar 2025}
+      \field{title}{Aktivitätslebenszyklus – Android Developers}
+    \endentry
     \entry{Datenfluss_MainViewModel}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=83af69fb2217c1db6fec35068d15df76}{%
@@ -36,8 +108,8 @@
       \strng{authorfullhash}{83af69fb2217c1db6fec35068d15df76}
       \strng{authorfullhashraw}{83af69fb2217c1db6fec35068d15df76}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Eigene Darstellung}
@@ -62,8 +134,8 @@
       \strng{authorfullhash}{83af69fb2217c1db6fec35068d15df76}
       \strng{authorfullhashraw}{83af69fb2217c1db6fec35068d15df76}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Eigene Darstellung}
@@ -88,8 +160,8 @@
       \strng{authorfullhash}{83af69fb2217c1db6fec35068d15df76}
       \strng{authorfullhashraw}{83af69fb2217c1db6fec35068d15df76}
       \field{extraname}{3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Eigene Darstellung}
@@ -111,8 +183,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Zugriff am 18. Juni 2025}
@@ -142,8 +214,8 @@
       \strng{authorfullhash}{83af69fb2217c1db6fec35068d15df76}
       \strng{authorfullhashraw}{83af69fb2217c1db6fec35068d15df76}
       \field{extraname}{4}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Eigene Darstellung}
@@ -168,8 +240,8 @@
       \strng{authorfullhash}{83af69fb2217c1db6fec35068d15df76}
       \strng{authorfullhashraw}{83af69fb2217c1db6fec35068d15df76}
       \field{extraname}{5}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Eigene Darstellung}
@@ -194,8 +266,8 @@
       \strng{authorfullhash}{83af69fb2217c1db6fec35068d15df76}
       \strng{authorfullhashraw}{83af69fb2217c1db6fec35068d15df76}
       \field{extraname}{6}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Eigene Darstellung}

@@ -6,7 +6,7 @@
 
 % ==========================
 \subsection{Raspberry Pi}
-Ein Raspberry Pi ist ein kompakter, kostengünstiger Einplatinencomputer, der ursprünglich von der Raspberry Pi Foundation entwickelt wurde. Durch seine kompakte Größe und den niedrigen Preis ist er ein vielseitiges und leistungsfähiges Werkzeug. Der Raspberry Pi wird von kleineren Projekten bis hin zu anspruchsvollen Anwendungen eingesetzt.
+Ein Raspberry Pi ist ein kompakter, kostengünstiger Einplatinencomputer, der ursprünglich von der Raspberry Pi Foundation entwickelt wurde. Durch seine kompakte Größe und den niedrigen Preis ist er ein vielseitiges und leistungsfähiges Werkzeug. Der Raspberry Pi wird von kleineren Projekten bis hin zu anspruchsvollen Anwendungen eingesetzt \cite{raspberrypi_official_doc}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newline 
 \newline 
@@ -18,7 +18,7 @@ Der Preis liegt etwa zwischen 12 € (Raspberry Pi Zero) und etwa 100 € (für 
 \newline 
 \newline 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Ein Raspberry Pi besitzt folgende Hardwareeigenschaften:
+Ein Raspberry Pi besitzt folgende Hardwareeigenschaften \cite{raspberrypi4_datasheet}:
 \begin{enumerate}
     \item Prozessor und Arbeitsspeicher:
     \begin{itemize}
@@ -42,11 +42,13 @@ Ein Raspberry Pi besitzt folgende Hardwareeigenschaften:
         \item USB Kabel am PC/Laptop
     \end{itemize}   
 \end{enumerate}
+
+
  
 \newpage
 % ==========================
 \subsubsection{Access Point}
-Ein Access Point ist ein Gerät, das als Schnittstelle zwischen kabelgebundenen Netzwerken (z. B. einem Router) und drahtlosen Geräten dient. Er ermöglicht es drahtlosen Geräten wie Smartphones, Laptops oder IoT-Geräten, eine Verbindung zum Netzwerk herzustellen. 
+Ein Access Point ist ein Gerät, das als Schnittstelle zwischen kabelgebundenen Netzwerken (z. B. einem Router) und drahtlosen Geräten dient. Er ermöglicht es drahtlosen Geräten wie Smartphones, Laptops oder IoT-Geräten, eine Verbindung zum Netzwerk herzustellen \cite{heise_accesspoint_2025}.
 \newline 
 \newline 
 Die Hauptfunktionen eines Access Points sind Bereitstellung eines drahtlosen Netzwerks (WLAN), die Verbindung mit kabelgebundenen Netzwerken und Netzwerksicherheit.
@@ -55,7 +57,7 @@ Bei der Bereitstellung eines drahtlosen Netzwerks erstellt der Access Point ein 
 \newline
 Bei der Verbindung mit kabelgebundenen Netzwerken ist der Access Point normalerweise mit einem Router, Switch oder Server über ein Ethernet-Kabel verbunden. So verbindet er die drahtlosen Geräte mit dem bestehenden Netzwerk.
 \newline 
-Außerdem bietet der Access Point Sicherheitsprotokolle zur Verschlüsselung der Daten.
+Außerdem bietet der Access Point Sicherheitsprotokolle zur Verschlüsselung der Daten \cite{wikipedia_accesspoint_2025}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newline 
 Es gibt verschiedene Anwendungsbereiche des Access Points. Dazu gehören das Erweitern von Netzwerken, die Erstellung lokaler Netwerke und die Mobile Anwendung eines Access Points. 
@@ -86,6 +88,7 @@ Access Points besitzen verschiedene Vorteile:
     \item Isolierte Netzwerke: Für spezifische Anwendungen kann ein eigenständiges, lokales Netzwerk eingerichtet werden, das völlig unabhängig vom Internet arbeitet. 
 \end{itemize}
 \newpage
+
  
  
 % ==========================
@@ -124,7 +127,7 @@ Wir haben uns für das MQTT-Protokoll entschieden, welches folgende Vorteile bie
 Die Programmierung der App wird mit dem Programm \texttt{Android Studio Ladybug} in der Version \texttt{2024.2.1 Patch 2} verwendet. Als Programmiersprache wird Kotlin gewählt, da diese sich besonders gut für die Entwicklung einer Android App eignet.
 \\
 \noindent In einer Android App wird alles in \glqq Aktivitäten\grqq organisiert. Dabei kann man sich eine Aktivität wie ein Bildschirm in der App vorstellen. Beispielsweise ist die Startseite eine Aktivität und der Bildschirm, der die MQTT Daten anzeigt eine andere Aktivität.
-Jede Aktivität ist gleich aufgebaut und hat einen festen Lebenszyklus, der aus folgenden Komponenten besteht. Diese sind auch in \autoref{fig:AndroidLifecycle} dargestellt.
+Jede Aktivität ist gleich aufgebaut und hat einen festen Lebenszyklus, der aus folgenden Komponenten besteht. Diese sind auch in \autoref{fig:AndroidLifecycle} dargestellt.\cite{android_activity_lifecycle_de}
 \begin{enumerate}
     \item \textbf{onCreate()}: wird aufgerufen, wenn die Aktivität zum ersten Mal erstellt wird
     \item \textbf{onStart()}: Die Aktivität wird für den Nutzer sichtbar, dieser kann aber noch nicht mit der App interagieren
@@ -139,7 +142,7 @@ Diese Komponenten eignen sich beispielsweise auch sehr gute zum Debuggen. Hier k
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{pictures/AndroidLifecycle.png}
-    \caption{Eine vereinfachte Darstellung des Aktivitätslebenszyklus}
+    \caption{Eine vereinfachte Darstellung des Aktivitätslebenszyklus \cite{android_activity_lifecycle_de}}
     \label{fig:AndroidLifecycle}
 \end{figure}
 

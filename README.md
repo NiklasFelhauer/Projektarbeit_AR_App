@@ -1,4 +1,4 @@
-# Brauanlagen AR-App 📱
+# Brauanlagen AR-App
  <img src="99_LaTex_Bericht/pictures/AndroidApp/Roboflow.png" width="600"/>
  
 Dieses Projekt ist eine Android-App, die den Status einer Brauanlage visualisiert.  
@@ -28,7 +28,7 @@ Sie verbindet **Sensordaten über MQTT** mit einer benutzerdefinierten **Objekte
     - Delegate (CPU / GPU)  
     - Modellwahl (z. B. Tanks-Modell)  
 
-- **Promille-Rechner 🍻**  
+- **Promille-Rechner**  
   - Berechnung des geschätzten Blutalkoholwerts auf Basis der Anzahl konsumierter Biere und des Körpergewichts  
   - Anzeige der voraussichtlichen Zeit bis zur vollständigen Nüchternheit  
 
@@ -54,7 +54,7 @@ Sie verbindet **Sensordaten über MQTT** mit einer benutzerdefinierten **Objekte
   
 ---
 
-## ⚙️ Installation & Start
+## Installation & Start
 
 1. Projekt in **Android Studio** öffnen.  
 2. Dependencies syncen (`Gradle`).  
